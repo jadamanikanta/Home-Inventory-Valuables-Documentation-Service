@@ -1,0 +1,2683 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HomeVault - Admin Dashboard</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+   
+
+    <aside class="dashboard-sidebar">
+
+        <button class="dashboard-sidebar-close" id="dashboardSidebarClose" type="button" aria-label="Close dashboard menu">
+    <i data-lucide="x"></i>
+</button>
+
+        <div class="dashboard-sidebar-top">
+
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="logo.png"
+                        alt="HomeVault - Home Inventory & Valuables Documentation"
+                    >
+
+                    <span class="logo-text">
+
+                        Home<span class="logo-header-secondary">
+                            Vault
+                        </span>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <nav class="dashboard-navigation">
+
+
+                <a
+                    href="#overview"
+                    class="dashboard-nav-link active"
+                    data-page="overview"
+                >
+
+                    <i data-lucide="layout-dashboard"></i>
+
+                    <span>
+                        Overview
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#inventory"
+                    class="dashboard-nav-link"
+                    data-page="inventory"
+                >
+
+                    <i data-lucide="package-search"></i>
+
+                    <span>
+                        My Inventory
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#rooms"
+                    class="dashboard-nav-link"
+                    data-page="rooms"
+                >
+
+                    <i data-lucide="door-open"></i>
+
+                    <span>
+                        Rooms & Progress
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#upload"
+                    class="dashboard-nav-link"
+                    data-page="upload"
+                >
+
+                    <i data-lucide="cloud-upload"></i>
+
+                    <span>
+                        Upload Items
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#reports"
+                    class="dashboard-nav-link"
+                    data-page="reports"
+                >
+
+                    <i data-lucide="file-bar-chart-2"></i>
+
+                    <span>
+                        Inventory Reports
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#appointments"
+                    class="dashboard-nav-link"
+                    data-page="appointments"
+                >
+
+                    <i data-lucide="calendar-days"></i>
+
+                    <span>
+                        Appointments
+                    </span>
+
+                </a>
+
+
+                <div class="dashboard-nav-divider"></div>
+
+
+                <a
+                    href="#notifications"
+                    class="dashboard-nav-link"
+                    data-page="notifications"
+                >
+
+                    <i data-lucide="bell"></i>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                    <small class="notification-count">
+                        3
+                    </small>
+
+                </a>
+
+
+                <a
+                    href="#profile"
+                    class="dashboard-nav-link"
+                    data-page="profile"
+                >
+
+                    <i data-lucide="user-round"></i>
+
+                    <span>
+                        Account Settings
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+        </div>
+
+
+        <div class="dashboard-sidebar-bottom">
+
+
+            <div class="sidebar-help">
+
+                <div class="sidebar-help-icon">
+
+                    <i data-lucide="circle-help"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Need Help?
+                    </strong>
+
+                    <span>
+                        Contact our support team
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="dashboard-logout"
+            >
+
+                <i data-lucide="log-out"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+
+            <div class="sidebar-copyright">
+
+                HomeVault Admin Portal
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    
+
+    <main class="dashboard-main">
+
+
+       
+
+        <header class="dashboard-topbar">
+     
+            <button class="dashboard-menu-toggle" id="dashboardMenuToggle" type="button" aria-label="Open dashboard menu">
+    <i data-lucide="menu"></i>
+</button>
+
+            <div class="dashboard-topbar-welcome">
+
+                <span>
+                    Admin Dashboard
+                </span>
+
+                <strong>
+                    Welcome back, Admin
+                </strong>
+
+            </div>
+
+
+            <div class="dashboard-topbar-actions">
+
+
+                <button
+                    type="button"
+                    class="dashboard-icon-button"
+                    id="themeToggle"
+                    aria-label="Toggle theme"
+                >
+
+                    <i data-lucide="moon"></i>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="dashboard-icon-button"
+                    id="rtlToggle"
+                >
+                    RTL
+                </button>
+
+
+                <button
+                    type="button"
+                    class="dashboard-icon-button dashboard-notification-button"
+                    id="notificationButton"
+                >
+
+                    <i data-lucide="bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+                <!-- PROFILE DROPDOWN -->
+
+                <div class="dashboard-profile-wrapper">
+
+
+                    <button
+                        type="button"
+                        class="dashboard-profile-button"
+                        id="profileButton"
+                    >
+
+                        <span class="dashboard-profile-avatar">
+                            AD
+                        </span>
+
+                        <span class="dashboard-profile-details">
+
+                            <strong>
+                                Admin
+                            </strong>
+
+                            <small>
+                                Administrator
+                            </small>
+
+                        </span>
+
+                        <i data-lucide="chevron-down"></i>
+
+                    </button>
+
+
+                    <div
+                        class="dashboard-profile-dropdown"
+                        id="profileDropdown"
+                    >
+
+
+                        <div class="profile-dropdown-header">
+
+                            <span class="profile-dropdown-avatar">
+                                AD
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Admin
+                                </strong>
+
+                                <span>
+                                    Administrator
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-dropdown-divider"></div>
+
+
+                        <a href="#profile">
+
+                            <i data-lucide="user-round"></i>
+
+                            My Profile
+
+                        </a>
+
+
+                        <a href="#notifications">
+
+                            <i data-lucide="bell"></i>
+
+                            Notifications
+
+                            <small>
+                                3
+                            </small>
+
+                        </a>
+
+
+                        <a href="#settings">
+
+                            <i data-lucide="settings-2"></i>
+
+                            Dashboard Settings
+
+                        </a>
+
+
+                        <div class="profile-dropdown-divider"></div>
+
+
+                        <a
+                            href="index.html"
+                            class="profile-dropdown-logout"
+                        >
+
+                            <i data-lucide="log-out"></i>
+
+                            Logout
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="dashboard-content">
+
+
+            <!-- OVERVIEW -->
+
+            <section
+                class="dashboard-page active"
+                id="overview"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="layout-dashboard"></i>
+
+                            Overview
+
+                        </span>
+
+                        <h1>
+                            Welcome to Admin Dashboard
+                        </h1>
+
+                        <p>
+                            Manage home inventory documentation,
+                            uploaded items, room progress, reports,
+                            appointments, and client activity from
+                            one organized workspace.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="#upload"
+                        class="dashboard-primary-button"
+                    >
+
+                        <i data-lucide="plus"></i>
+
+                        Add New Item
+
+                    </a>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+
+                <div class="dashboard-overall-progress">
+
+                    <div class="dashboard-progress-info">
+
+                        <div>
+
+                            <span>
+                                Documentation Progress
+                            </span>
+
+                            <strong>
+                                68% Complete
+                            </strong>
+
+                        </div>
+
+                        <span>
+                            34 of 50 items documented
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-progress-bar">
+
+                        <span style="width:68%;"></span>
+
+                    </div>
+
+
+                    <div class="dashboard-progress-footer">
+
+                        <span>
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            34 documented
+
+                        </span>
+
+
+                        <span>
+
+                            <i data-lucide="clock-3"></i>
+
+                            16 remaining
+
+                        </span>
+
+
+                        <span>
+                            Updated today
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- METRICS -->
+
+                <div class="dashboard-metrics">
+
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="dashboard-metric-icon">
+
+                            <i data-lucide="package-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Items
+                            </span>
+
+                            <strong>
+                                50
+                            </strong>
+
+                            <small>
+                                34 documented
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="dashboard-metric-icon">
+
+                            <i data-lucide="door-open"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Rooms
+                            </span>
+
+                            <strong>
+                                6
+                            </strong>
+
+                            <small>
+                                4 completed
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="dashboard-metric-icon">
+
+                            <i data-lucide="file-check-2"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Reports
+                            </span>
+
+                            <strong>
+                                3
+                            </strong>
+
+                            <small>
+                                1 recently generated
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="dashboard-metric-icon">
+
+                            <i data-lucide="calendar-check-2"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Next Visit
+                            </span>
+
+                            <strong>
+                                Sep 28
+                            </strong>
+
+                            <small>
+                                10:30 AM
+                            </small>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- OVERVIEW GRID -->
+
+                <div class="dashboard-overview-grid">
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="dashboard-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    Room Progress
+                                </span>
+
+                                <h2>
+                                    Documentation by Room
+                                </h2>
+
+                            </div>
+
+                            <a href="#rooms">
+
+                                View All
+
+                                <i data-lucide="arrow-up-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="dashboard-room-list">
+
+
+                            <div class="dashboard-room-item">
+
+                                <div class="dashboard-room-icon">
+                                    <i data-lucide="sofa"></i>
+                                </div>
+
+                                <div class="dashboard-room-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Living Room
+                                        </strong>
+
+                                        <span>
+                                            12 / 12 items
+                                        </span>
+
+                                    </div>
+
+                                    <div class="dashboard-mini-progress">
+                                        <span style="width:100%;"></span>
+                                    </div>
+
+                                </div>
+
+                                <b>
+                                    100%
+                                </b>
+
+                            </div>
+
+
+                            <div class="dashboard-room-item">
+
+                                <div class="dashboard-room-icon">
+                                    <i data-lucide="bed-double"></i>
+                                </div>
+
+                                <div class="dashboard-room-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Master Bedroom
+                                        </strong>
+
+                                        <span>
+                                            8 / 10 items
+                                        </span>
+
+                                    </div>
+
+                                    <div class="dashboard-mini-progress">
+                                        <span style="width:80%;"></span>
+                                    </div>
+
+                                </div>
+
+                                <b>
+                                    80%
+                                </b>
+
+                            </div>
+
+
+                            <div class="dashboard-room-item">
+
+                                <div class="dashboard-room-icon">
+                                    <i data-lucide="utensils"></i>
+                                </div>
+
+                                <div class="dashboard-room-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Kitchen
+                                        </strong>
+
+                                        <span>
+                                            6 / 9 items
+                                        </span>
+
+                                    </div>
+
+                                    <div class="dashboard-mini-progress">
+                                        <span style="width:67%;"></span>
+                                    </div>
+
+                                </div>
+
+                                <b>
+                                    67%
+                                </b>
+
+                            </div>
+
+
+                            <div class="dashboard-room-item">
+
+                                <div class="dashboard-room-icon">
+                                    <i data-lucide="briefcase"></i>
+                                </div>
+
+                                <div class="dashboard-room-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Home Office
+                                        </strong>
+
+                                        <span>
+                                            5 / 8 items
+                                        </span>
+
+                                    </div>
+
+                                    <div class="dashboard-mini-progress">
+                                        <span style="width:63%;"></span>
+                                    </div>
+
+                                </div>
+
+                                <b>
+                                    63%
+                                </b>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="dashboard-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    Recent Activity
+                                </span>
+
+                                <h2>
+                                    Latest Updates
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="dashboard-activity-list">
+
+
+                            <div class="dashboard-activity-item">
+
+                                <div class="dashboard-activity-icon">
+                                    <i data-lucide="upload"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        3 new photos uploaded
+                                    </strong>
+
+                                    <span>
+                                        Kitchen · 24 minutes ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="dashboard-activity-item">
+
+                                <div class="dashboard-activity-icon">
+                                    <i data-lucide="file-check-2"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Inventory report generated
+                                    </strong>
+
+                                    <span>
+                                        September 2026 Report
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="dashboard-activity-item">
+
+                                <div class="dashboard-activity-icon">
+                                    <i data-lucide="calendar-check-2"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Appointment confirmed
+                                    </strong>
+
+                                    <span>
+                                        September 28 · 10:30 AM
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="dashboard-activity-item">
+
+                                <div class="dashboard-activity-icon">
+                                    <i data-lucide="check-circle-2"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Living Room completed
+                                    </strong>
+
+                                    <span>
+                                        Documentation completed
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- UPCOMING -->
+
+                <div class="dashboard-upcoming">
+
+                    <div class="dashboard-upcoming-icon">
+
+                        <i data-lucide="calendar-clock"></i>
+
+                    </div>
+
+                    <div class="dashboard-upcoming-content">
+
+                        <span>
+                            Upcoming Appointment
+                        </span>
+
+                        <strong>
+                            Home Documentation Visit
+                        </strong>
+
+                        <small>
+                            Monday, September 28, 2026 · 10:30 AM
+                        </small>
+
+                    </div>
+
+                    <a
+                        href="#appointments"
+                        class="dashboard-secondary-button"
+                    >
+
+                        View Appointment
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- INVENTORY -->
+
+            <section
+                class="dashboard-page"
+                id="inventory"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="package-search"></i>
+
+                            Inventory
+
+                        </span>
+
+                        <h1>
+                            My Inventory
+                        </h1>
+
+                        <p>
+                            Review documented household belongings,
+                            item details, categories, rooms, and
+                            documentation status.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#upload"
+                        class="dashboard-primary-button"
+                    >
+
+                        <i data-lucide="plus"></i>
+
+                        Add Item
+
+                    </a>
+
+                </div>
+
+
+                <div class="inventory-toolbar">
+
+                    <div class="inventory-search">
+
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search inventory items..."
+                        >
+
+                    </div>
+
+
+                    <select>
+
+                        <option>
+                            All Rooms
+                        </option>
+
+                        <option>
+                            Living Room
+                        </option>
+
+                        <option>
+                            Kitchen
+                        </option>
+
+                        <option>
+                            Master Bedroom
+                        </option>
+
+                        <option>
+                            Home Office
+                        </option>
+
+                    </select>
+
+
+                    <select>
+
+                        <option>
+                            All Status
+                        </option>
+
+                        <option>
+                            Documented
+                        </option>
+
+                        <option>
+                            Pending
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="inventory-table">
+
+                    <div class="inventory-table-head">
+
+                        <span>
+                            Item
+                        </span>
+
+                        <span>
+                            Room
+                        </span>
+
+                        <span>
+                            Category
+                        </span>
+
+                        <span>
+                            Status
+                        </span>
+
+                        <span>
+                            Action
+                        </span>
+
+                    </div>
+
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-item">
+
+                            <div class="inventory-item-image">
+                                <i data-lucide="tv"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Samsung Smart TV
+                                </strong>
+
+                                <span>
+                                    Electronics · HV-001
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span>
+                            Living Room
+                        </span>
+
+                        <span>
+                            Electronics
+                        </span>
+
+                        <b class="status-complete">
+                            Documented
+                        </b>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-item">
+
+                            <div class="inventory-item-image">
+                                <i data-lucide="armchair"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Leather Sofa
+                                </strong>
+
+                                <span>
+                                    Furniture · HV-002
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span>
+                            Living Room
+                        </span>
+
+                        <span>
+                            Furniture
+                        </span>
+
+                        <b class="status-complete">
+                            Documented
+                        </b>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div class="inventory-row">
+
+                        <div class="inventory-item">
+
+                            <div class="inventory-item-image">
+                                <i data-lucide="laptop"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    MacBook Pro
+                                </strong>
+
+                                <span>
+                                    Electronics · HV-003
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span>
+                            Home Office
+                        </span>
+
+                        <span>
+                            Electronics
+                        </span>
+
+                        <b class="status-pending">
+                            Pending
+                        </b>
+
+                        <button>
+                            Complete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ROOMS -->
+
+            <section
+                class="dashboard-page"
+                id="rooms"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="door-open"></i>
+
+                            Documentation
+
+                        </span>
+
+                        <h1>
+                            Rooms & Progress
+                        </h1>
+
+                        <p>
+                            Track the documentation status of each
+                            room and identify areas that still require
+                            photos or item details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="room-dashboard-grid">
+
+
+                    <article class="room-dashboard-card completed">
+
+                        <div class="room-dashboard-icon">
+                            <i data-lucide="sofa"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Living Room
+                            </span>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            12 of 12 items documented
+                        </p>
+
+                        <div class="dashboard-mini-progress">
+                            <span style="width:100%;"></span>
+                        </div>
+
+                        <button>
+                            View Room
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </article>
+
+
+                    <article class="room-dashboard-card">
+
+                        <div class="room-dashboard-icon">
+                            <i data-lucide="bed-double"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Master Bedroom
+                            </span>
+
+                            <strong>
+                                80%
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            8 of 10 items documented
+                        </p>
+
+                        <div class="dashboard-mini-progress">
+                            <span style="width:80%;"></span>
+                        </div>
+
+                        <button>
+                            Continue
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </article>
+
+
+                    <article class="room-dashboard-card">
+
+                        <div class="room-dashboard-icon">
+                            <i data-lucide="utensils"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Kitchen
+                            </span>
+
+                            <strong>
+                                67%
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            6 of 9 items documented
+                        </p>
+
+                        <div class="dashboard-mini-progress">
+                            <span style="width:67%;"></span>
+                        </div>
+
+                        <button>
+                            Continue
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </article>
+
+
+                    <article class="room-dashboard-card">
+
+                        <div class="room-dashboard-icon">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Home Office
+                            </span>
+
+                            <strong>
+                                63%
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            5 of 8 items documented
+                        </p>
+
+                        <div class="dashboard-mini-progress">
+                            <span style="width:63%;"></span>
+                        </div>
+
+                        <button>
+                            Continue
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- UPLOAD -->
+
+            <section
+                class="dashboard-page"
+                id="upload"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="cloud-upload"></i>
+
+                            Documentation
+
+                        </span>
+
+                        <h1>
+                            Upload Items
+                        </h1>
+
+                        <p>
+                            Upload photographs and provide essential
+                            information for household belongings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="upload-dashboard-grid">
+
+
+                    <div class="upload-dropzone">
+
+                        <div class="upload-dropzone-icon">
+
+                            <i data-lucide="image-plus"></i>
+
+                        </div>
+
+                        <h2>
+                            Upload Item Photos
+                        </h2>
+
+                        <p>
+                            Drag and drop your photos here or select
+                            files from your device.
+                        </p>
+
+                        <button class="dashboard-primary-button">
+
+                            <i data-lucide="upload"></i>
+
+                            Choose Photos
+
+                        </button>
+
+                        <small>
+                            JPG, PNG or WEBP · Maximum 10 MB per file
+                        </small>
+
+                    </div>
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="dashboard-panel-heading">
+
+                            <div>
+
+                                <span>
+                                    Upload Checklist
+                                </span>
+
+                                <h2>
+                                    Before You Submit
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="upload-checklist">
+
+                            <div>
+                                <i data-lucide="check-circle-2"></i>
+                                Photograph the item clearly
+                            </div>
+
+                            <div>
+                                <i data-lucide="check-circle-2"></i>
+                                Select the correct room
+                            </div>
+
+                            <div>
+                                <i data-lucide="check-circle-2"></i>
+                                Add item description
+                            </div>
+
+                            <div>
+                                <i data-lucide="check-circle-2"></i>
+                                Add purchase information when available
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+            <section
+                class="dashboard-page"
+                id="reports"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="file-bar-chart-2"></i>
+
+                            Reports
+
+                        </span>
+
+                        <h1>
+                            Inventory Reports
+                        </h1>
+
+                        <p>
+                            Access generated inventory documentation
+                            prepared for review, records, and insurance
+                            purposes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-dashboard-grid">
+
+
+                    <article class="report-card">
+
+                        <div class="report-card-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                September 2026
+                            </span>
+
+                            <h2>
+                                Complete Home Inventory
+                            </h2>
+
+                            <p>
+                                50 items · 6 rooms · 34 documented
+                            </p>
+
+                        </div>
+
+                        <div class="report-card-actions">
+
+                            <button>
+                                <i data-lucide="eye"></i>
+                                Preview
+                            </button>
+
+                            <button>
+                                <i data-lucide="download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="report-card">
+
+                        <div class="report-card-icon">
+                            <i data-lucide="archive"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                August 2026
+                            </span>
+
+                            <h2>
+                                Initial Inventory Report
+                            </h2>
+
+                            <p>
+                                36 items · 4 rooms documented
+                            </p>
+
+                        </div>
+
+                        <div class="report-card-actions">
+
+                            <button>
+                                <i data-lucide="eye"></i>
+                                Preview
+                            </button>
+
+                            <button>
+                                <i data-lucide="download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="report-card">
+
+    <div class="report-card-icon">
+        <i data-lucide="file-check-2"></i>
+    </div>
+
+    <div>
+
+        <span>
+            September 2026
+        </span>
+
+        <h2>
+            Updated Home Inventory Report
+        </h2>
+
+        <p>
+            52 items · 6 rooms documented
+        </p>
+
+    </div>
+
+    <div class="report-card-actions">
+
+        <button>
+            <i data-lucide="eye"></i>
+            Preview
+        </button>
+
+        <button>
+            <i data-lucide="download"></i>
+            Download
+        </button>
+
+    </div>
+
+</article>
+
+
+<article class="report-card">
+
+    <div class="report-card-icon">
+        <i data-lucide="shield-check"></i>
+    </div>
+
+    <div>
+
+        <span>
+            October 2026
+        </span>
+
+        <h2>
+            Insurance Documentation Report
+        </h2>
+
+        <p>
+            68 items · 8 rooms documented
+        </p>
+
+    </div>
+
+    <div class="report-card-actions">
+
+        <button>
+            <i data-lucide="eye"></i>
+            Preview
+        </button>
+
+        <button>
+            <i data-lucide="download"></i>
+            Download
+        </button>
+
+    </div>
+
+</article>
+
+                </div>
+
+            </section>
+
+
+
+         
+
+            <section
+                class="dashboard-page"
+                id="appointments"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="calendar-days"></i>
+
+                            Scheduling
+
+                        </span>
+
+                        <h1>
+                            Appointments
+                        </h1>
+
+                        <p>
+                            Review upcoming documentation visits and
+                            manage your scheduled HomeVault services.
+                        </p>
+
+                    </div>
+
+                    <button class="dashboard-primary-button">
+
+                        <i data-lucide="calendar-plus"></i>
+
+                        Schedule Service
+
+                    </button>
+
+                </div>
+
+
+                <div class="appointment-card">
+
+                    <div class="appointment-date">
+
+                        <span>
+                            SEP
+                        </span>
+
+                        <strong>
+                            28
+                        </strong>
+
+                        <small>
+                            MON
+                        </small>
+
+                    </div>
+
+
+                    <div class="appointment-details">
+
+                        <span>
+                            Upcoming Appointment
+                        </span>
+
+                        <h2>
+                            Home Documentation Visit
+                        </h2>
+
+                        <p>
+                            Monday, September 28, 2026 · 10:30 AM
+                        </p>
+
+                        <small>
+                            A HomeVault documentation specialist will
+                            review remaining rooms and assist with
+                            item photography.
+                        </small>
+
+                    </div>
+
+
+                    <div class="appointment-status">
+                        Confirmed
+                    </div>
+
+                </div>
+
+                <div class="appointment-card">
+
+    <div class="appointment-date">
+
+        <span>
+            SEP
+        </span>
+
+        <strong>
+            28
+        </strong>
+
+        <small>
+            MON
+        </small>
+
+    </div>
+
+
+    <div class="appointment-details">
+
+        <span>
+            Upcoming Appointment
+        </span>
+
+        <h2>
+            Home Documentation Visit
+        </h2>
+
+        <p>
+            Monday, September 28, 2026 · 10:30 AM
+        </p>
+
+        <small>
+            A HomeVault documentation specialist will review remaining
+            rooms and assist with item photography.
+        </small>
+
+    </div>
+
+
+    <div class="appointment-status">
+        Confirmed
+    </div>
+
+</div>
+
+
+<div class="appointment-card">
+
+    <div class="appointment-date">
+
+        <span>
+            OCT
+        </span>
+
+        <strong>
+            02
+        </strong>
+
+        <small>
+            FRI
+        </small>
+
+    </div>
+
+
+    <div class="appointment-details">
+
+        <span>
+            Scheduled Visit
+        </span>
+
+        <h2>
+            Valuables Documentation Review
+        </h2>
+
+        <p>
+            Friday, October 2, 2026 · 2:00 PM
+        </p>
+
+        <small>
+            Review selected valuables, confirm item information,
+            and complete outstanding documentation requirements.
+        </small>
+
+    </div>
+
+
+    <div class="appointment-status">
+        Confirmed
+    </div>
+
+</div>
+
+
+<div class="appointment-card">
+
+    <div class="appointment-date">
+
+        <span>
+            OCT
+        </span>
+
+        <strong>
+            07
+        </strong>
+
+        <small>
+            WED
+        </small>
+
+    </div>
+
+
+    <div class="appointment-details">
+
+        <span>
+            Documentation Session
+        </span>
+
+        <h2>
+            Room Inventory Completion
+        </h2>
+
+        <p>
+            Wednesday, October 7, 2026 · 11:00 AM
+        </p>
+
+        <small>
+            Complete remaining room records, verify photographed items,
+            and update the household inventory information.
+        </small>
+
+    </div>
+
+
+    <div class="appointment-status">
+        Pending
+    </div>
+
+</div>
+
+
+<div class="appointment-card">
+
+    <div class="appointment-date">
+
+        <span>
+            OCT
+        </span>
+
+        <strong>
+            14
+        </strong>
+
+        <small>
+            WED
+        </small>
+
+    </div>
+
+
+    <div class="appointment-details">
+
+        <span>
+            Follow-up Appointment
+        </span>
+
+        <h2>
+            Inventory Report Review
+        </h2>
+
+        <p>
+            Wednesday, October 14, 2026 · 3:30 PM
+        </p>
+
+        <small>
+            Review the completed inventory report, discuss final updates,
+            and prepare the documentation for insurance reference.
+        </small>
+
+    </div>
+
+
+    <div class="appointment-status">
+        Scheduled
+    </div>
+
+</div>
+
+            </section>
+
+
+
+            
+
+            <section
+                class="dashboard-page"
+                id="notifications"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="bell"></i>
+
+                            Notifications
+
+                        </span>
+
+                        <h1>
+                            Notifications
+                        </h1>
+
+                        <p>
+                            Stay updated with documentation activity,
+                            reports, appointments, and account updates.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="notification-list">
+
+
+                    <div class="notification-item unread">
+
+                        <div class="notification-item-icon">
+                            <i data-lucide="file-check-2"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Your inventory report is ready
+                            </strong>
+
+                            <p>
+                                The September 2026 inventory report has
+                                been generated and is available to view.
+                            </p>
+
+                            <small>
+                                2 hours ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification-item unread">
+
+                        <div class="notification-item-icon">
+                            <i data-lucide="calendar-check-2"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Appointment confirmed
+                            </strong>
+
+                            <p>
+                                Your Home Documentation Visit is confirmed
+                                for September 28 at 10:30 AM.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification-item">
+
+                        <div class="notification-item-icon">
+                            <i data-lucide="upload"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Uploads received
+                            </strong>
+
+                            <p>
+                                Three new kitchen item photographs have
+                                been successfully added.
+                            </p>
+
+                            <small>
+                                September 22, 2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+     
+
+            <section
+                class="dashboard-page"
+                id="profile"
+            >
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+
+                            <i data-lucide="user-round"></i>
+
+                            Account
+
+                        </span>
+
+                        <h1>
+                            Account Settings
+                        </h1>
+
+                        <p>
+                            Manage administrator information and
+                            dashboard preferences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-dashboard-card">
+
+                    <div class="profile-large-avatar">
+                        AD
+                    </div>
+
+                    <div class="profile-main-info">
+
+                        <span>
+                            Administrator
+                        </span>
+
+                        <h2>
+                            HomeVault Admin
+                        </h2>
+
+                        <p>
+                            admin@homevault.example
+                        </p>
+
+                    </div>
+
+                    <button class="dashboard-secondary-button">
+
+                        <i data-lucide="pencil"></i>
+
+                        Edit Profile
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script> 
+    document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* =========================================================
+       THEME
+    ========================================================= */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (localStorage.getItem("theme") === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    if (themeToggle) {
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+
+            if (document.body.classList.contains("dark")) {
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+                themeToggle.innerHTML =
+                    '<i data-lucide="sun"></i>';
+
+            } else {
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+
+                themeToggle.innerHTML =
+                    '<i data-lucide="moon"></i>';
+
+            }
+
+
+            lucide.createIcons();
+
+        });
+
+    }
+
+
+    /* =========================================================
+       RTL
+    ========================================================= */
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("direction") || "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute(
+                        "dir",
+                        "ltr"
+                    );
+
+                localStorage.setItem(
+                    "direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent =
+                    "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute(
+                        "dir",
+                        "rtl"
+                    );
+
+                localStorage.setItem(
+                    "direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent =
+                    "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const dashboardMenuToggle =
+    document.getElementById("dashboardMenuToggle");
+
+const dashboardSidebar =
+    document.querySelector(".dashboard-sidebar");
+
+const dashboardSidebarClose =
+    document.getElementById("dashboardSidebarClose");
+
+
+let dashboardOverlay =
+    document.querySelector(".dashboard-sidebar-overlay");
+
+
+if (!dashboardOverlay) {
+
+    dashboardOverlay =
+        document.createElement("div");
+
+    dashboardOverlay.className =
+        "dashboard-sidebar-overlay";
+
+    document.body.appendChild(
+        dashboardOverlay
+    );
+
+}
+
+
+function openDashboardSidebar() {
+
+    if (!dashboardSidebar) return;
+
+    dashboardSidebar.classList.add("open");
+
+    dashboardOverlay.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeDashboardSidebar() {
+
+    if (!dashboardSidebar) return;
+
+    dashboardSidebar.classList.remove("open");
+
+    dashboardOverlay.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+if (dashboardMenuToggle) {
+
+    dashboardMenuToggle.addEventListener(
+        "click",
+        openDashboardSidebar
+    );
+
+}
+
+
+if (dashboardSidebarClose) {
+
+    dashboardSidebarClose.addEventListener(
+        "click",
+        closeDashboardSidebar
+    );
+
+}
+
+
+if (dashboardOverlay) {
+
+    dashboardOverlay.addEventListener(
+        "click",
+        closeDashboardSidebar
+    );
+
+}
+
+
+document
+    .querySelectorAll(".dashboard-nav-link")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    window.innerWidth <= 1024
+                ) {
+
+                    closeDashboardSidebar();
+
+                }
+
+            }
+        );
+
+    });
+
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (
+            window.innerWidth > 1024
+        ) {
+
+            closeDashboardSidebar();
+
+        }
+
+    }
+);
+
+
+
+    const profileButton =
+        document.getElementById("profileButton");
+
+
+    const profileDropdown =
+        document.getElementById("profileDropdown");
+
+
+    if (profileButton && profileDropdown) {
+
+        profileButton.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            profileDropdown.classList.toggle("show");
+
+        });
+
+
+        profileDropdown.addEventListener(
+            "click",
+            (event) => {
+
+                event.stopPropagation();
+
+            }
+        );
+
+
+        document.addEventListener("click", () => {
+
+            profileDropdown.classList.remove("show");
+
+        });
+
+    }
+
+
+    /* =========================================================
+       SIDEBAR NAVIGATION
+    ========================================================= */
+
+    const navLinks =
+        document.querySelectorAll(
+            ".dashboard-nav-link"
+        );
+
+
+    const dashboardPages =
+        document.querySelectorAll(
+            ".dashboard-page"
+        );
+
+
+    function showPage(pageName) {
+
+        navLinks.forEach((link) => {
+
+            link.classList.toggle(
+                "active",
+                link.dataset.page === pageName
+            );
+
+        });
+
+
+        dashboardPages.forEach((page) => {
+
+            page.classList.toggle(
+                "active",
+                page.id === pageName
+            );
+
+        });
+
+
+        window.history.replaceState(
+            null,
+            "",
+            "#" + pageName
+        );
+
+
+        lucide.createIcons();
+
+    }
+
+
+    navLinks.forEach((link) => {
+
+        link.addEventListener("click", (event) => {
+
+            event.preventDefault();
+
+
+            const pageName =
+                link.dataset.page;
+
+
+            showPage(pageName);
+
+        });
+
+    });
+
+
+    /* =========================================================
+       LINKS THAT OPEN DASHBOARD SECTIONS
+    ========================================================= */
+
+    document
+        .querySelectorAll(
+            'a[href^="#"]'
+        )
+        .forEach((link) => {
+
+            link.addEventListener(
+                "click",
+                (event) => {
+
+                    const target =
+                        link.getAttribute("href")
+                            .replace("#", "");
+
+
+                    const targetPage =
+                        document.getElementById(target);
+
+
+                    if (targetPage) {
+
+                        event.preventDefault();
+
+                        showPage(target);
+
+                    }
+
+                }
+            );
+
+        });
+
+
+    /* =========================================================
+       LOAD HASH
+    ========================================================= */
+
+    const initialPage =
+        window.location.hash
+            .replace("#", "");
+
+
+    if (
+        initialPage &&
+        document.getElementById(initialPage)
+    ) {
+
+        showPage(initialPage);
+
+    } else {
+
+        showPage("overview");
+
+    }
+
+
+    /* =========================================================
+       NOTIFICATION BUTTON
+    ========================================================= */
+
+    const notificationButton =
+        document.getElementById(
+            "notificationButton"
+        );
+
+
+    if (notificationButton) {
+
+        notificationButton.addEventListener(
+            "click",
+            () => {
+
+                showPage("notifications");
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       ICONS
+    ========================================================= */
+
+    lucide.createIcons();
+
+});
+
+
+
+</script>
+
+</body>
+
+</html>

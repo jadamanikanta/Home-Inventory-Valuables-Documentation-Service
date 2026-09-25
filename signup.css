@@ -1,0 +1,2364 @@
+
+:root {
+
+    --font-family: "Manrope", sans-serif;
+
+    --primary: #123B5D;
+    --primary-dark: #0B263D;
+
+    --secondary: #16A6A1;
+    --secondary-dark: #0F817D;
+
+    --bg-color: #F6F9FB;
+    --text-color: #17212B;
+
+    --card-bg: #FFFFFF;
+    --border-color: #D9E2E8;
+
+    --primary-light: rgba(18,59,93,0.12);
+    --secondary-light: rgba(22,166,161,0.12);
+
+    --heading-color: #102A43;
+    --text-light: #64748B;
+
+    --text-color-rgb: 23,33,43;
+}
+
+
+body.dark {
+
+    --bg-color: #0D1720;
+    --text-color: #E8EEF2;
+
+    --card-bg: #14232E;
+    --border-color: #29404D;
+
+    --primary: #3B82C4;
+    --primary-dark: #256A9C;
+
+    --secondary: #20C4BE;
+    --secondary-dark: #0F817D;
+
+    --primary-light: rgba(59,130,196,0.18);
+    --secondary-light: rgba(32,196,190,0.15);
+
+    --heading-color: #F4F8FA;
+    --text-light: #9BAFBB;
+
+    --text-color-rgb: 232,238,242;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    font-family: var(--font-family);
+
+    background: var(--bg-color);
+
+    color: var(--text-color);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+button {
+    border: 0;
+}
+
+
+.auth-main {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: var(--bg-color);
+}
+
+
+
+
+.auth-controls {
+
+    position: fixed;
+
+    top: 24px;
+
+    right: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 100;
+}
+
+
+.auth-rtl-button,
+.auth-theme-button {
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(255,255,255,0.78);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    color:
+        var(--heading-color);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(18,59,93,0.08);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.auth-rtl-button {
+
+    padding: 0 13px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.auth-theme-button {
+
+    width: 38px;
+}
+
+
+.auth-theme-button svg {
+
+    width: 17px;
+    height: 17px;
+}
+
+
+.auth-rtl-button:hover,
+.auth-theme-button:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        var(--secondary);
+}
+
+
+body.dark .auth-rtl-button,
+body.dark .auth-theme-button {
+
+    background:
+        rgba(20,35,46,0.85);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.20);
+}
+
+
+
+
+.inventory-scene {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.inventory-scene::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -15%;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(22,166,161,0.18),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(18,59,93,0.16),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 78% 80%,
+            rgba(22,166,161,0.13),
+            transparent 28%
+        );
+
+    animation:
+        sceneAmbient
+        12s
+        ease-in-out
+        infinite alternate;
+}
+
+
+.inventory-scene::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--bg-color) 0%,
+            rgba(246,249,251,0.72) 24%,
+            rgba(246,249,251,0.20) 50%,
+            rgba(246,249,251,0.72) 76%,
+            var(--bg-color) 100%
+        );
+
+    z-index: 2;
+}
+
+
+.scene-item {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 18px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,0.56);
+
+    border:
+        1px solid
+        rgba(18,59,93,0.09);
+
+    box-shadow:
+        0 22px 55px
+        rgba(18,59,93,0.08);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 5;
+
+    opacity: 0.82;
+}
+
+
+.scene-image {
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+}
+
+
+.scene-image svg {
+
+    width: 22px;
+    height: 22px;
+}
+
+
+.scene-item strong {
+
+    display: block;
+
+    color:
+        var(--heading-color);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.scene-item span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color:
+        var(--text-light);
+
+    font-size: 9px;
+
+    white-space: nowrap;
+}
+
+
+.scene-photo {
+
+    left: 8%;
+
+    top: 22%;
+
+    animation:
+        photoFloat
+        8s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-appraisal {
+
+    right: 7%;
+
+    top: 27%;
+
+    animation:
+        appraisalFloat
+        9s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-report {
+
+    right: 10%;
+
+    bottom: 19%;
+
+    animation:
+        reportFloat
+        8.5s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-document {
+
+    position: absolute;
+
+    width: 68px;
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,0.52);
+
+    border:
+        1px solid
+        rgba(18,59,93,0.08);
+
+    color:
+        var(--secondary);
+
+    box-shadow:
+        0 18px 50px
+        rgba(18,59,93,0.07);
+
+    backdrop-filter: blur(7px);
+
+    z-index: 4;
+
+    opacity: 0.62;
+}
+
+
+.scene-document svg {
+
+    width: 27px;
+    height: 27px;
+}
+
+
+.scene-document-one {
+
+    left: 18%;
+
+    bottom: 19%;
+
+    transform: rotate(-12deg);
+
+    animation:
+        documentFloatOne
+        7s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-document-two {
+
+    right: 22%;
+
+    top: 14%;
+
+    transform: rotate(10deg);
+
+    animation:
+        documentFloatTwo
+        8s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-document-three {
+
+    left: 10%;
+
+    bottom: 11%;
+
+    transform: rotate(8deg);
+
+    animation:
+        documentFloatThree
+        9s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-line {
+
+    position: absolute;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(22,166,161,0.25),
+            transparent
+        );
+
+    z-index: 3;
+
+    transform-origin: left center;
+}
+
+
+.scene-line-one {
+
+    width: 300px;
+
+    left: 19%;
+
+    top: 42%;
+
+    transform: rotate(18deg);
+
+    animation:
+        linePulse
+        5s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-line-two {
+
+    width: 280px;
+
+    right: 18%;
+
+    top: 43%;
+
+    transform: rotate(-20deg);
+
+    animation:
+        linePulse
+        6s
+        ease-in-out
+        infinite reverse;
+}
+
+
+.scene-line-three {
+
+    width: 250px;
+
+    left: 20%;
+
+    bottom: 31%;
+
+    transform: rotate(-17deg);
+
+    animation:
+        linePulse
+        7s
+        ease-in-out
+        infinite;
+}
+
+
+.scene-glow {
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+
+    filter: blur(45px);
+
+    opacity: 0.22;
+
+    z-index: 1;
+}
+
+
+.scene-glow-one {
+
+    left: 3%;
+
+    top: 5%;
+
+    background:
+        var(--secondary);
+
+    animation:
+        glowMoveOne
+        13s
+        ease-in-out
+        infinite alternate;
+}
+
+
+.scene-glow-two {
+
+    right: 3%;
+
+    bottom: 5%;
+
+    background:
+        var(--primary);
+
+    animation:
+        glowMoveTwo
+        15s
+        ease-in-out
+        infinite alternate;
+}
+
+
+/* =========================================================
+   SIGNUP CARD
+========================================================= */
+
+.signup-card {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+
+    max-width: 470px;
+
+    max-height: calc(100vh - 55px);
+
+    overflow: hidden;
+
+    padding: 25px 38px 24px;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid
+        rgba(217,226,232,0.95);
+
+    border-radius: 23px;
+
+    box-shadow:
+        0 35px 90px
+        rgba(18,59,93,0.22),
+        0 10px 35px
+        rgba(18,59,93,0.10),
+        0 2px 8px
+        rgba(18,59,93,0.08);
+
+    backdrop-filter: blur(20px);
+
+    animation:
+        signupCardIn
+        0.8s
+        cubic-bezier(.22,1,.36,1)
+        both;
+}
+
+
+body.dark .signup-card {
+
+    background:
+        rgba(20,35,46,0.96);
+
+    border-color:
+        rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 35px 90px
+        rgba(0,0,0,0.42),
+        0 10px 35px
+        rgba(0,0,0,0.25);
+}
+
+
+
+
+.signup-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+
+.signup-logo a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+}
+
+
+.signup-logo img {
+
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+}
+
+
+.signup-logo-text {
+
+    color:
+        var(--primary);
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.signup-logo-text span {
+
+    color:
+        var(--secondary);
+}
+
+
+
+
+.signup-heading {
+
+    text-align: center;
+
+    margin-bottom: 16px;
+}
+
+
+.signup-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 30px;
+
+    background:
+        var(--secondary-light);
+
+    color:
+        var(--secondary-dark);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+
+.signup-eyebrow svg {
+
+    width: 12px;
+    height: 12px;
+}
+
+
+.signup-heading h1 {
+
+    margin-top: 5px;
+
+    color:
+        var(--heading-color);
+
+    font-size: 23px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+}
+
+
+.signup-heading h1 span {
+
+    color:
+        var(--secondary);
+}
+
+
+.signup-heading p {
+
+    max-width: 350px;
+
+    margin: 7px auto 0;
+
+    color:
+        var(--text-light);
+
+    font-size: 8px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.signup-form {
+
+    width: 100%;
+}
+
+
+.signup-field {
+
+    margin-bottom: 9px;
+}
+
+
+.signup-field label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--heading-color);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+.signup-input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+.signup-input-wrapper > svg {
+
+    position: absolute;
+
+    left: 12px;
+
+    top: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    color:
+        var(--text-light);
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+.signup-input-wrapper input {
+
+    width: 100%;
+
+    height: 38px;
+
+    padding:
+        0 13px 0 37px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        var(--bg-color);
+
+    color:
+        var(--text-color);
+
+    font-size: 9px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.signup-input-wrapper input::placeholder {
+
+    color:
+        var(--text-light);
+
+    opacity: 0.8;
+}
+
+
+.signup-input-wrapper input:focus {
+
+    border-color:
+        var(--secondary);
+
+    background:
+        var(--card-bg);
+
+    box-shadow:
+        0 0 0 3px
+        var(--secondary-light);
+}
+
+
+.password-wrapper input {
+
+    padding-right: 38px;
+}
+
+
+.password-toggle {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 7px;
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    color:
+        var(--text-light);
+
+    cursor: pointer;
+}
+
+
+.password-toggle svg {
+
+    width: 14px;
+    height: 14px;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.signup-terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin:
+        9px 0 10px;
+
+    color:
+        var(--text-light);
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+.signup-terms input {
+
+    width: 12px;
+    height: 12px;
+
+    margin-top: 1px;
+
+    accent-color:
+        var(--secondary);
+
+    flex-shrink: 0;
+}
+
+
+.signup-terms a {
+
+    color:
+        var(--secondary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.signup-submit {
+
+    width: 100%;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 9px;
+
+    background:
+        var(--primary);
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(18,59,93,0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.signup-submit svg {
+
+    width: 14px;
+    height: 14px;
+}
+
+
+.signup-submit:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        var(--secondary);
+
+    box-shadow:
+        0 13px 28px
+        rgba(22,166,161,0.20);
+}
+
+
+.signup-submit:disabled {
+
+    opacity: 0.75;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+
+
+.signup-divider {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        9px 0 10px;
+}
+
+
+.signup-divider::before,
+.signup-divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        var(--border-color);
+}
+
+
+.signup-divider span {
+
+    padding:
+        0 9px;
+
+    color:
+        var(--text-light);
+
+    font-size: 7px;
+
+    white-space: nowrap;
+}
+
+
+
+
+.social-signup {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+
+.social-button {
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 9px;
+
+    background:
+        var(--card-bg);
+
+    color:
+        var(--heading-color);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.social-button svg {
+
+    width: 15px;
+    height: 15px;
+}
+
+
+.social-button:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        var(--secondary);
+
+    box-shadow:
+        0 8px 20px
+        rgba(18,59,93,0.08);
+}
+
+
+
+
+.signup-login {
+
+    margin-top: 8px;
+
+    text-align: center;
+
+    color:
+        var(--text-light);
+
+    font-size: 11px;
+}
+
+
+.signup-login a {
+
+    margin-left: 3px;
+
+    color:
+        var(--secondary);
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.signup-login a:hover {
+
+    color:
+        var(--primary);
+}
+
+
+/* =========================================================
+   RTL
+========================================================= */
+
+html[dir="rtl"] .auth-controls {
+
+    right: auto;
+
+    left: 28px;
+}
+
+
+html[dir="rtl"] .signup-heading,
+html[dir="rtl"] .signup-field,
+html[dir="rtl"] .signup-terms {
+
+    text-align: right;
+}
+
+
+html[dir="rtl"] .signup-heading p {
+
+    margin-left: 0;
+
+    margin-right: 0;
+}
+
+
+html[dir="rtl"] .signup-input-wrapper > svg {
+
+    left: auto;
+
+    right: 12px;
+}
+
+
+html[dir="rtl"] .signup-input-wrapper input {
+
+    padding:
+        0 37px 0 13px;
+}
+
+
+html[dir="rtl"] .password-wrapper input {
+
+    padding-right: 37px;
+
+    padding-left: 38px;
+}
+
+
+html[dir="rtl"] .password-toggle {
+
+    right: auto;
+
+    left: 7px;
+}
+
+
+html[dir="rtl"] .signup-submit svg {
+
+    transform:
+        rotate(180deg);
+}
+
+
+html[dir="rtl"] .signup-login a {
+
+    margin-left: 0;
+
+    margin-right: 3px;
+}
+
+
+html[dir="rtl"] .scene-photo {
+
+    left: auto;
+
+    right: 8%;
+}
+
+
+html[dir="rtl"] .scene-appraisal {
+
+    right: auto;
+
+    left: 7%;
+}
+
+
+html[dir="rtl"] .scene-report {
+
+    right: auto;
+
+    left: 10%;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes signupCardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes photoFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            rotate(-2deg);
+    }
+
+    50% {
+
+        transform:
+            translate3d(18px,-22px,0)
+            rotate(2deg);
+    }
+}
+
+
+@keyframes appraisalFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            rotate(2deg);
+    }
+
+    50% {
+
+        transform:
+            translate3d(-20px,18px,0)
+            rotate(-2deg);
+    }
+}
+
+
+@keyframes reportFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translate3d(0,0,0)
+            rotate(-1deg);
+    }
+
+    50% {
+
+        transform:
+            translate3d(-15px,-20px,0)
+            rotate(2deg);
+    }
+}
+
+
+@keyframes documentFloatOne {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -25px;
+    }
+}
+
+
+@keyframes documentFloatTwo {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 20px;
+    }
+}
+
+
+@keyframes documentFloatThree {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -18px;
+    }
+}
+
+
+@keyframes linePulse {
+
+    0%,
+    100% {
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.65;
+    }
+}
+
+
+@keyframes sceneAmbient {
+
+    from {
+
+        transform:
+            scale(1)
+            translate(0,0);
+    }
+
+    to {
+
+        transform:
+            scale(1.08)
+            translate(15px,-10px);
+    }
+}
+
+
+@keyframes glowMoveOne {
+
+    from {
+        transform: translate(0,0);
+    }
+
+    to {
+        transform: translate(80px,60px);
+    }
+}
+
+
+@keyframes glowMoveTwo {
+
+    from {
+        transform: translate(0,0);
+    }
+
+    to {
+        transform: translate(-70px,-50px);
+    }
+}
+
+
+/* =========================================================
+   DARK BACKGROUND
+========================================================= */
+
+body.dark .inventory-scene::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--bg-color) 0%,
+            rgba(13,23,32,0.75) 24%,
+            rgba(13,23,32,0.22) 50%,
+            rgba(13,23,32,0.75) 76%,
+            var(--bg-color) 100%
+        );
+}
+
+
+body.dark .scene-item,
+body.dark .scene-document {
+
+    background:
+        rgba(20,35,46,0.52);
+
+    border-color:
+        rgba(255,255,255,0.07);
+
+    box-shadow:
+        0 20px 55px
+        rgba(0,0,0,0.22);
+}
+
+
+
+
+@media (max-width: 1024px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .auth-main {
+        width: 100%;
+        height: auto;
+        padding: 2px 25px 35px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .auth-controls {
+        top: 18px;
+        right: 24px;
+        gap: 8px;
+    }
+
+    .auth-rtl-button,
+    .auth-theme-button {
+        height: 38px;
+    }
+
+    .auth-rtl-button {
+        padding: 0 13px;
+        font-size: 11px;
+    }
+
+    .auth-theme-button {
+        width: 38px;
+    }
+
+    .auth-theme-button svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .inventory-scene {
+        opacity: 0.65;
+    }
+
+    .scene-item {
+        transform: scale(0.85);
+    }
+
+    .scene-photo {
+        left: 1%;
+        top: 21%;
+    }
+
+    .scene-appraisal {
+        right: 1%;
+        top: 25%;
+    }
+
+    .scene-report {
+        right: 3%;
+        bottom: 17%;
+    }
+
+    .scene-document-one {
+        left: 8%;
+        bottom: 17%;
+    }
+
+    .scene-document-two {
+        right: 13%;
+        top: 13%;
+    }
+
+    .scene-document-three {
+        left: 7%;
+        bottom: 10%;
+    }
+
+    .scene-line-one {
+        width: 240px;
+        left: 14%;
+        top: 41%;
+    }
+
+    .scene-line-two {
+        width: 220px;
+        right: 14%;
+        top: 42%;
+    }
+
+    .scene-line-three {
+        width: 210px;
+        left: 15%;
+        bottom: 30%;
+    }
+
+    .scene-glow {
+        width: 220px;
+        height: 220px;
+    }
+
+    .signup-card {
+        width: 100%;
+        max-width: 470px;
+        max-height: calc(100vh - 100px);
+        margin: 0 auto;
+        padding: 10px 38px;
+        border-radius: 23px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .signup-logo {
+        margin-bottom: 6px;
+    }
+
+    .signup-logo a {
+        gap: 8px;
+    }
+
+    .signup-logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .signup-logo-text {
+        font-size: 21px;
+    }
+
+    .signup-heading {
+        margin-bottom: 16px;
+    }
+
+    .signup-eyebrow {
+        padding: 5px 9px;
+        font-size: 8px;
+    }
+
+    .signup-eyebrow svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .signup-heading h1 {
+        font-size: 20px;
+        line-height: 1.15;
+        letter-spacing: -0.8px;
+    }
+
+    .signup-heading p {
+        max-width: 350px;
+        margin-top: 7px;
+        font-size: 8px;
+        line-height: 1.55;
+    }
+
+    .signup-field {
+        margin-bottom: 5px;
+    }
+
+    .signup-field label {
+        margin-bottom: 4px;
+        font-size: 9px;
+    }
+
+    .signup-input-wrapper input {
+        height: 34px;
+        padding: 0 13px 0 37px;
+        font-size: 9px;
+        border-radius: 9px;
+    }
+
+    .signup-input-wrapper > svg {
+        left: 12px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .password-wrapper input {
+        padding-right: 38px;
+    }
+
+    .password-toggle {
+        right: 7px;
+        width: 27px;
+        height: 27px;
+    }
+
+    .password-toggle svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .signup-terms {
+        gap: 7px;
+        margin: 6px 0 10px;
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .signup-terms input {
+        width: 12px;
+        height: 12px;
+    }
+
+    .signup-submit {
+        height: 32px;
+        gap: 7px;
+        border-radius: 9px;
+        font-size: 10px;
+    }
+
+    .signup-submit svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .signup-divider {
+        margin: 5px 0 10px;
+    }
+
+    .signup-divider span {
+        padding: 0 9px;
+        font-size: 7px;
+    }
+
+    .social-signup {
+        gap: 8px;
+    }
+
+    .social-button {
+        height: 32px;
+        gap: 7px;
+        border-radius: 9px;
+        font-size: 9px;
+    }
+
+    .social-button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .signup-login {
+        margin-top: 6px;
+        font-size: 11px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 24px;
+    }
+
+    html[dir="rtl"] .signup-input-wrapper > svg {
+        left: auto;
+        right: 12px;
+    }
+
+    html[dir="rtl"] .signup-input-wrapper input {
+        padding: 0 37px 0 13px;
+    }
+
+    html[dir="rtl"] .password-wrapper input {
+        padding-right: 37px;
+        padding-left: 38px;
+    }
+
+    html[dir="rtl"] .password-toggle {
+        right: auto;
+        left: 7px;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .auth-main {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 35px 20px 25px;
+        align-items: flex-start;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .auth-controls {
+        top: 12px;
+        right: 20px;
+        gap: 7px;
+    }
+
+    .auth-rtl-button,
+    .auth-theme-button {
+        height: 36px;
+    }
+
+    .auth-rtl-button {
+        padding: 0 12px;
+        font-size: 10px;
+    }
+
+    .auth-theme-button {
+        width: 36px;
+    }
+
+    .auth-theme-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .inventory-scene {
+        opacity: 0.45;
+    }
+
+    .scene-item {
+        transform: scale(0.75);
+    }
+
+    .scene-photo {
+        left: -4%;
+        top: 20%;
+    }
+
+    .scene-appraisal {
+        right: -4%;
+        top: 25%;
+    }
+
+    .scene-report {
+        right: -3%;
+        bottom: 15%;
+    }
+
+    .scene-document-one {
+        left: 5%;
+        bottom: 15%;
+    }
+
+    .scene-document-two {
+        right: 8%;
+        top: 12%;
+    }
+
+    .scene-document-three {
+        left: 5%;
+        bottom: 8%;
+    }
+
+    .scene-line-one,
+    .scene-line-two,
+    .scene-line-three {
+        width: 180px;
+    }
+
+    .scene-glow {
+        width: 200px;
+        height: 200px;
+    }
+
+    .signup-card {
+        width: 100%;
+        max-width: 470px;
+        max-height: none;
+        margin: 0 auto;
+        padding: 12px 32px;
+        border-radius: 22px;
+        overflow: visible;
+        animation: none;
+    }
+
+    .signup-logo {
+        margin-bottom: 8px;
+    }
+
+    .signup-logo a {
+        gap: 6px;
+    }
+
+    .signup-logo img {
+        width: 37px;
+        height: 37px;
+    }
+
+    .signup-logo-text {
+        font-size: 21px;
+    }
+
+    .signup-heading {
+        margin-bottom: 8px;
+    }
+
+    .signup-eyebrow {
+        padding: 5px 9px;
+        font-size: 8px;
+    }
+
+    .signup-eyebrow svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .signup-heading h1 {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.6px;
+    }
+
+    .signup-heading p {
+        max-width: 340px;
+        margin-top: 6px;
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .signup-field {
+        margin-bottom: 5px;
+    }
+
+    .signup-field label {
+        margin-bottom: 4px;
+        font-size: 9px;
+    }
+
+    .signup-input-wrapper input {
+        height: 38px;
+        padding: 0 13px 0 37px;
+        font-size: 9px;
+        border-radius: 9px;
+    }
+
+    .signup-input-wrapper > svg {
+        left: 12px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .password-wrapper input {
+        padding-right: 38px;
+    }
+
+    .password-toggle {
+        right: 7px;
+        width: 27px;
+        height: 27px;
+    }
+
+    .password-toggle svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .signup-terms {
+        gap: 7px;
+        margin: 9px 0 10px;
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .signup-terms input {
+        width: 12px;
+        height: 12px;
+    }
+
+    .signup-submit {
+        height: 32px;
+        font-size: 10px;
+        border-radius: 9px;
+    }
+
+    .signup-submit svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .signup-divider {
+        margin: 6px 0;
+    }
+
+    .signup-divider span {
+        padding: 0 8px;
+        font-size: 7px;
+    }
+
+    .social-signup {
+        gap: 8px;
+    }
+
+    .social-button {
+        height: 30px;
+        gap: 6px;
+        font-size: 9px;
+        border-radius: 9px;
+    }
+
+    .social-button svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .signup-login {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 20px;
+    }
+
+    html[dir="rtl"] .signup-input-wrapper > svg {
+        left: auto;
+        right: 12px;
+    }
+
+    html[dir="rtl"] .signup-input-wrapper input {
+        padding: 0 37px 0 13px;
+    }
+
+    html[dir="rtl"] .password-wrapper input {
+        padding-right: 37px;
+        padding-left: 38px;
+    }
+
+    html[dir="rtl"] .password-toggle {
+        right: auto;
+        left: 7px;
+    }
+
+}
+
+
+
+@media (max-width: 360px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    .auth-main {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 48px 12px 20px;
+        align-items: flex-start;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .auth-controls {
+        top: 8px;
+        right: 12px;
+        gap: 6px;
+    }
+
+    .auth-rtl-button,
+    .auth-theme-button {
+        height: 34px;
+    }
+
+    .auth-rtl-button {
+        padding: 0 11px;
+        font-size: 10px;
+    }
+
+    .auth-theme-button {
+        width: 34px;
+    }
+
+    .auth-theme-button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .inventory-scene {
+        display: none;
+    }
+
+    .signup-card {
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+        padding: 12px 20px 18px;
+        border-radius: 18px;
+        overflow: visible;
+        animation: none;
+    }
+
+    .signup-logo {
+        margin-bottom: 5px;
+    }
+
+    .signup-logo a {
+        gap: 3px;
+    }
+
+    .signup-logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .signup-logo-text {
+        font-size: 19px;
+    }
+
+    .signup-heading {
+        margin-bottom: 8px;
+    }
+
+    .signup-eyebrow {
+        padding: 4px 8px;
+        font-size: 7px;
+    }
+
+    .signup-eyebrow svg {
+        width: 11px;
+        height: 11px;
+    }
+
+    .signup-heading h1 {
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+
+    .signup-heading p {
+        max-width: 270px;
+        margin-top: 6px;
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .signup-field {
+        margin-bottom: 6px;
+    }
+
+    .signup-field label {
+        margin-bottom: 3px;
+        font-size: 8px;
+    }
+
+    .signup-input-wrapper input {
+        height: 34px;
+        padding: 0 12px 0 36px;
+        font-size: 9px;
+        border-radius: 8px;
+    }
+
+    .signup-input-wrapper > svg {
+        left: 11px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .password-wrapper input {
+        padding-right: 36px;
+    }
+
+    .password-toggle {
+        right: 6px;
+        width: 26px;
+        height: 26px;
+    }
+
+    .password-toggle svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .signup-terms {
+        gap: 6px;
+        margin: 9px 0 10px;
+        font-size: 7px;
+        line-height: 1.5;
+    }
+
+    .signup-terms input {
+        width: 12px;
+        height: 12px;
+    }
+
+    .signup-submit {
+        height: 36px;
+        font-size: 9px;
+        border-radius: 8px;
+    }
+
+    .signup-submit svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .signup-divider {
+        margin: 10px 0;
+    }
+
+    .signup-divider span {
+        padding: 0 7px;
+        font-size: 7px;
+    }
+
+    .social-signup {
+        gap: 6px;
+    }
+
+    .social-button {
+        height: 32px;
+        gap: 5px;
+        font-size: 8px;
+        border-radius: 8px;
+    }
+
+    .social-button svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .signup-login {
+        margin-top: 7px;
+        font-size: 10px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 12px;
+    }
+
+    html[dir="rtl"] .signup-input-wrapper > svg {
+        left: auto;
+        right: 11px;
+    }
+
+    html[dir="rtl"] .signup-input-wrapper input {
+        padding: 0 36px 0 12px;
+    }
+
+    html[dir="rtl"] .password-wrapper input {
+        padding-right: 36px;
+        padding-left: 36px;
+    }
+
+    html[dir="rtl"] .password-toggle {
+        right: auto;
+        left: 6px;
+    }
+
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}

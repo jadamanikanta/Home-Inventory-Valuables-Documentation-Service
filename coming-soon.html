@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Coming Soon | HomeVault</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <style>
+
+        :root {
+
+            --font-family: "Manrope", sans-serif;
+
+            --primary: #123B5D;
+            --primary-dark: #0B263D;
+
+            --secondary: #16A6A1;
+            --secondary-dark: #0F817D;
+
+            --bg-color: #F6F9FB;
+            --text-color: #17212B;
+
+            --card-bg: #FFFFFF;
+            --border-color: #D9E2E8;
+
+            --primary-light: rgba(18, 59, 93, 0.12);
+            --secondary-light: rgba(22, 166, 161, 0.12);
+
+            --heading-color: #102A43;
+            --text-light: #64748B;
+
+        }
+
+
+        body.dark {
+
+            --bg-color: #0D1720;
+            --text-color: #E8EEF2;
+
+            --card-bg: #14232E;
+            --border-color: #29404D;
+
+            --primary: #3B82C4;
+            --primary-dark: #256A9C;
+
+            --secondary: #20C4BE;
+            --secondary-dark: #0F817D;
+
+            --primary-light: rgba(59, 130, 196, 0.18);
+            --secondary-light: rgba(32, 196, 190, 0.15);
+
+            --heading-color: #F4F8FA;
+            --text-light: #9BAFBB;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: var(--font-family);
+
+            background: var(--bg-color);
+
+            color: var(--text-color);
+
+            overflow: hidden;
+
+            transition:
+                background 0.35s ease,
+                color 0.35s ease;
+
+        }
+
+
+        .coming-page {
+
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+            min-height: 620px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            overflow: hidden;
+
+        }
+
+
+        .page-controls {
+
+            position: fixed;
+
+            top: 22px;
+            right: 24px;
+
+            z-index: 50;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+        .control-button {
+
+            height: 42px;
+            min-width: 42px;
+
+            padding: 0 13px;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 10px;
+
+            background: var(--card-bg);
+
+            color: var(--heading-color);
+
+            font-family: var(--font-family);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            box-shadow:
+                0 8px 25px rgba(18, 59, 93, 0.08);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+
+        }
+
+
+        .control-button:hover {
+
+            transform: translateY(-2px);
+
+            border-color: var(--secondary);
+
+        }
+
+
+        .control-button svg {
+
+            width: 17px;
+            height: 17px;
+
+        }
+
+
+        .background-glow {
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            filter: blur(20px);
+
+            opacity: 0.65;
+
+        }
+
+
+        .glow-one {
+
+            top: -300px;
+            left: -200px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(22, 166, 161, 0.20),
+                    transparent 67%
+                );
+
+            animation:
+                glowMoveOne
+                10s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        .glow-two {
+
+            right: -300px;
+            bottom: -300px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(18, 59, 93, 0.18),
+                    transparent 67%
+                );
+
+            animation:
+                glowMoveTwo
+                12s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        .orbit {
+
+            position: absolute;
+
+            width: 620px;
+            height: 620px;
+
+            border: 1px solid var(--secondary);
+
+            border-radius: 50%;
+
+            opacity: 0.055;
+
+            animation:
+                orbitRotate
+                28s
+                linear
+                infinite;
+
+        }
+
+
+        .orbit-two {
+
+            width: 450px;
+            height: 450px;
+
+            opacity: 0.045;
+
+            animation-duration: 22s;
+
+            animation-direction: reverse;
+
+        }
+
+
+        .floating-document {
+
+            position: absolute;
+
+            width: 190px;
+
+            padding: 15px;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 14px;
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--card-bg) 88%,
+                    transparent
+                );
+
+            backdrop-filter: blur(13px);
+
+            box-shadow:
+                0 20px 55px rgba(18, 59, 93, 0.08);
+
+            opacity: 0.55;
+
+        }
+
+
+        .document-one {
+
+            left: 7%;
+            top: 25%;
+
+            transform: rotate(-6deg);
+
+            animation:
+                floatOne
+                7s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        .document-two {
+
+            right: 7%;
+            bottom: 24%;
+
+            transform: rotate(6deg);
+
+            animation:
+                floatTwo
+                8s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        .document-top {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .document-icon {
+
+            width: 34px;
+            height: 34px;
+
+            border-radius: 9px;
+
+            background: var(--secondary-light);
+
+            color: var(--secondary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .document-icon svg {
+
+            width: 17px;
+            height: 17px;
+
+        }
+
+
+        .document-title {
+
+            width: 75px;
+            height: 7px;
+
+            border-radius: 20px;
+
+            background: var(--border-color);
+
+        }
+
+
+        .document-lines {
+
+            display: grid;
+
+            gap: 7px;
+
+        }
+
+
+        .document-lines span {
+
+            height: 6px;
+
+            border-radius: 20px;
+
+            background: var(--border-color);
+
+        }
+
+
+        .document-lines span:nth-child(2) {
+            width: 75%;
+        }
+
+
+        .document-lines span:nth-child(3) {
+            width: 53%;
+        }
+
+
+        .coming-content {
+
+            position: relative;
+
+            z-index: 10;
+
+            width: 100%;
+
+            max-width: 650px;
+
+            text-align: center;
+
+            animation:
+                contentIn
+                0.9s
+                cubic-bezier(.22, 1, .36, 1)
+                both;
+
+        }
+
+
+        .brand {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .brand-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            text-decoration: none;
+
+            color: var(--primary);
+
+        }
+
+
+        .brand-link img {
+
+            width: 46px;
+            height: 46px;
+
+            object-fit: contain;
+
+        }
+
+
+        .brand-name {
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+
+            white-space: nowrap;
+
+        }
+
+
+        .brand-name span {
+
+            color: var(--secondary);
+
+        }
+
+
+        .coming-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            padding: 7px 13px;
+
+            border-radius: 30px;
+
+            background: var(--secondary-light);
+
+            color: var(--secondary-dark);
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.8px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .coming-badge svg {
+
+            width: 13px;
+            height: 13px;
+
+        }
+
+
+        .coming-content h1 {
+
+            color: var(--heading-color);
+
+            font-size: clamp(36px, 5vw, 58px);
+
+            line-height: 1.08;
+
+            letter-spacing: -2px;
+
+            font-weight: 800;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .coming-content h1 span {
+
+            color: var(--secondary);
+
+        }
+
+
+        .coming-description {
+
+            max-width: 535px;
+
+            margin: 0 auto;
+
+            color: var(--text-light);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .countdown {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            max-width: 430px;
+
+            margin: 27px auto 24px;
+
+        }
+
+
+        .count-box {
+
+            padding: 13px 8px;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 12px;
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--card-bg) 88%,
+                    transparent
+                );
+
+            box-shadow:
+                0 12px 35px rgba(18, 59, 93, 0.06);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+
+        }
+
+
+        .count-box:hover {
+
+            transform: translateY(-3px);
+
+            border-color: var(--secondary);
+
+        }
+
+
+        .count-number {
+
+            display: block;
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+        }
+
+
+        .count-label {
+
+            display: block;
+
+            margin-top: 4px;
+
+            color: var(--text-light);
+
+            font-size: 8px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.6px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .notify-form {
+
+            display: flex;
+
+            align-items: center;
+
+            max-width: 470px;
+
+            height: 48px;
+
+            margin: 0 auto;
+
+            padding: 4px;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 11px;
+
+            background: var(--card-bg);
+
+            box-shadow:
+                0 15px 40px rgba(18, 59, 93, 0.08);
+
+        }
+
+
+        .notify-form input {
+
+            flex: 1;
+
+            min-width: 0;
+
+            height: 100%;
+
+            padding: 0 14px;
+
+            border: 0;
+
+            outline: 0;
+
+            background: transparent;
+
+            color: var(--text-color);
+
+            font-family: var(--font-family);
+
+            font-size: 11px;
+
+        }
+
+
+        .notify-form input::placeholder {
+
+            color: var(--text-light);
+
+        }
+
+
+        .notify-button {
+
+            height: 40px;
+
+            padding: 0 17px;
+
+            border: 0;
+
+            border-radius: 8px;
+
+            background: var(--primary);
+
+            color: #ffffff;
+
+            font-family: var(--font-family);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            white-space: nowrap;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+
+        }
+
+
+        .notify-button:hover {
+
+            background: var(--primary-dark);
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .notify-button svg {
+
+            width: 14px;
+            height: 14px;
+
+        }
+
+
+        .form-message {
+
+            min-height: 18px;
+
+            margin-top: 9px;
+
+            color: var(--secondary);
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+        }
+
+
+        .feature-row {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 22px;
+
+            margin-top: 18px;
+
+        }
+
+
+        .feature-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            color: var(--text-light);
+
+            font-size: 9px;
+
+        }
+
+
+        .feature-item svg {
+
+            width: 13px;
+            height: 13px;
+
+            color: var(--secondary);
+
+        }
+
+
+        @keyframes contentIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px)
+                    scale(0.98);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        @keyframes glowMoveOne {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(40px, 25px);
+            }
+
+        }
+
+
+        @keyframes glowMoveTwo {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-35px, -25px);
+            }
+
+        }
+
+
+        @keyframes orbitRotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        @keyframes floatOne {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(-6deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-15px)
+                    rotate(-3deg);
+            }
+
+        }
+
+
+        @keyframes floatTwo {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(6deg);
+            }
+
+            50% {
+                transform:
+                    translateY(15px)
+                    rotate(3deg);
+            }
+
+        }
+
+
+        @media (max-width: 1024px) {
+
+            .coming-page {
+                padding: 25px;
+            }
+
+            .document-one {
+                left: 2%;
+            }
+
+            .document-two {
+                right: 2%;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .coming-page {
+
+                height: 100svh;
+
+                min-height: 600px;
+
+                padding: 20px;
+
+            }
+
+
+            .page-controls {
+
+                top: 14px;
+                right: 15px;
+
+            }
+
+
+            .control-button {
+
+                height: 38px;
+                min-width: 38px;
+
+            }
+
+
+            .floating-document {
+
+                opacity: 0.3;
+
+            }
+
+
+            .document-one {
+
+                left: -75px;
+
+                top: 20%;
+
+            }
+
+
+            .document-two {
+
+                right: -75px;
+
+                bottom: 19%;
+
+            }
+
+
+            .brand {
+
+                gap: 8px;
+
+                margin-bottom: 19px;
+
+            }
+
+
+            .brand-link img {
+
+                width: 40px;
+                height: 40px;
+
+            }
+
+
+            .brand-name {
+
+                font-size: 19px;
+
+            }
+
+
+            .coming-content h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .coming-description {
+
+                max-width: 450px;
+
+                font-size: 11px;
+
+            }
+
+
+            .countdown {
+
+                max-width: 390px;
+
+                margin-top: 23px;
+
+            }
+
+
+            .notify-form {
+
+                max-width: 430px;
+
+            }
+
+        }
+
+
+        @media (max-width: 360px) {
+
+            .coming-page {
+
+                height: 100svh;
+
+                min-height: 100svh;
+
+                padding: 15px;
+
+            }
+
+
+            .page-controls {
+
+                top: 8px;
+                right: 8px;
+
+                gap: 5px;
+
+            }
+
+
+            .control-button {
+
+                height: 34px;
+                min-width: 34px;
+
+                padding: 0 9px;
+
+                border-radius: 8px;
+
+                font-size: 8px;
+
+            }
+
+
+            .control-button svg {
+
+                width: 14px;
+                height: 14px;
+
+            }
+
+
+            .brand {
+
+                gap: 7px;
+
+                margin-bottom: 15px;
+
+            }
+
+
+            .brand-link img {
+
+                width: 34px;
+                height: 34px;
+
+            }
+
+
+            .brand-name {
+
+                font-size: 17px;
+
+            }
+
+
+            .coming-badge {
+
+                padding: 6px 9px;
+
+                font-size: 7px;
+
+            }
+
+
+            .coming-badge svg {
+
+                width: 11px;
+                height: 11px;
+
+            }
+
+
+            .coming-content h1 {
+
+                font-size: 29px;
+
+                letter-spacing: -1px;
+
+                margin-bottom: 9px;
+
+            }
+
+
+            .coming-description {
+
+                max-width: 300px;
+
+                font-size: 9px;
+
+                line-height: 1.55;
+
+            }
+
+
+            .countdown {
+
+                gap: 5px;
+
+                margin-top: 19px;
+
+                margin-bottom: 18px;
+
+            }
+
+
+            .count-box {
+
+                padding: 10px 4px;
+
+                border-radius: 8px;
+
+            }
+
+
+            .count-number {
+
+                font-size: 19px;
+
+            }
+
+
+            .count-label {
+
+                font-size: 6px;
+
+            }
+
+
+            .notify-form {
+
+                height: 43px;
+
+                padding: 3px;
+
+            }
+
+
+            .notify-form input {
+
+                padding: 0 9px;
+
+                font-size: 9px;
+
+            }
+
+
+            .notify-button {
+
+                height: 35px;
+
+                padding: 0 10px;
+
+                border-radius: 7px;
+
+                font-size: 8px;
+
+            }
+
+
+            .notify-button svg {
+
+                width: 12px;
+                height: 12px;
+
+            }
+
+
+            .feature-row {
+
+                gap: 12px;
+
+                margin-top: 12px;
+
+            }
+
+
+            .feature-item {
+
+                gap: 4px;
+
+                font-size: 7px;
+
+            }
+
+
+            .feature-item svg {
+
+                width: 11px;
+                height: 11px;
+
+            }
+
+
+            .floating-document {
+
+                opacity: 0.15;
+
+                transform: scale(0.55);
+
+            }
+
+
+            .document-one {
+
+                left: -120px;
+
+                top: 17%;
+
+            }
+
+
+            .document-two {
+
+                right: -120px;
+
+                bottom: 15%;
+
+            }
+
+
+            .orbit {
+
+                width: 390px;
+                height: 390px;
+
+            }
+
+
+            .orbit-two {
+
+                width: 290px;
+                height: 290px;
+
+            }
+
+        }
+
+
+        html[dir="rtl"] .page-controls {
+
+            right: auto;
+
+            left: 24px;
+
+        }
+
+
+        html[dir="rtl"] .document-one {
+
+            left: auto;
+
+            right: 7%;
+
+        }
+
+
+        html[dir="rtl"] .document-two {
+
+            right: auto;
+
+            left: 7%;
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            html[dir="rtl"] .document-one {
+
+                right: -75px;
+
+            }
+
+
+            html[dir="rtl"] .document-two {
+
+                left: -75px;
+
+            }
+
+        }
+
+
+        @media (max-width: 360px) {
+
+            html[dir="rtl"] .page-controls {
+
+                left: 8px;
+
+            }
+
+
+            html[dir="rtl"] .document-one {
+
+                right: -120px;
+
+            }
+
+
+            html[dir="rtl"] .document-two {
+
+                left: -120px;
+
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="coming-page">
+
+
+        <div class="background-glow glow-one"></div>
+
+        <div class="background-glow glow-two"></div>
+
+
+        <div class="orbit"></div>
+
+        <div class="orbit orbit-two"></div>
+
+
+        <div class="floating-document document-one">
+
+            <div class="document-top">
+
+                <div class="document-icon">
+
+                    <i data-lucide="camera"></i>
+
+                </div>
+
+                <span class="document-title"></span>
+
+            </div>
+
+
+            <div class="document-lines">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+        <div class="floating-document document-two">
+
+            <div class="document-top">
+
+                <div class="document-icon">
+
+                    <i data-lucide="file-check-2"></i>
+
+                </div>
+
+                <span class="document-title"></span>
+
+            </div>
+
+
+            <div class="document-lines">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-controls">
+
+
+            <button
+                id="rtlToggle"
+                class="control-button"
+                type="button"
+            >
+                RTL
+            </button>
+
+
+            <button
+                id="themeToggle"
+                class="control-button"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+
+                <i data-lucide="moon"></i>
+
+            </button>
+
+
+        </div>
+
+
+        <section class="coming-content">
+
+
+            <div class="brand">
+
+
+                <a
+                    href="index.html"
+                    class="brand-link"
+                >
+
+                    <img
+                        src="logo.png"
+                        alt="HomeVault - Home Inventory & Valuables Documentation"
+                    >
+
+                    <span class="brand-name">
+                        Home<span>Vault</span>
+                    </span>
+
+                </a>
+
+
+                <div class="coming-badge">
+
+                    <i data-lucide="clock-3"></i>
+
+                    Coming Soon
+
+                </div>
+
+
+            </div>
+
+
+            <h1>
+
+                Your Home Records,
+                <span>Made Simpler.</span>
+
+            </h1>
+
+
+            <p class="coming-description">
+
+                HomeVault is preparing a smarter way to document
+                your belongings, organize photo records, manage
+                appraisals, and generate digital inventory reports.
+
+            </p>
+
+
+            <div class="countdown">
+
+
+                <div class="count-box">
+
+                    <span
+                        id="days"
+                        class="count-number"
+                    >
+                        00
+                    </span>
+
+                    <span class="count-label">
+                        Days
+                    </span>
+
+                </div>
+
+
+                <div class="count-box">
+
+                    <span
+                        id="hours"
+                        class="count-number"
+                    >
+                        00
+                    </span>
+
+                    <span class="count-label">
+                        Hours
+                    </span>
+
+                </div>
+
+
+                <div class="count-box">
+
+                    <span
+                        id="minutes"
+                        class="count-number"
+                    >
+                        00
+                    </span>
+
+                    <span class="count-label">
+                        Minutes
+                    </span>
+
+                </div>
+
+
+                <div class="count-box">
+
+                    <span
+                        id="seconds"
+                        class="count-number"
+                    >
+                        00
+                    </span>
+
+                    <span class="count-label">
+                        Seconds
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <form
+                class="notify-form"
+                id="notifyForm"
+            >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="notify-button"
+                >
+
+                    Notify Me
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <div
+                class="form-message"
+                id="formMessage"
+            ></div>
+
+
+            <div class="feature-row">
+
+
+                <div class="feature-item">
+
+                    <i data-lucide="camera"></i>
+
+                    Photo Documentation
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <i data-lucide="scale"></i>
+
+                    Appraisal Support
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <i data-lucide="file-text"></i>
+
+                    Digital Reports
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add("dark");
+
+        }
+
+
+        function updateThemeIcon() {
+
+            themeToggle.innerHTML =
+                document.body.classList.contains("dark")
+                    ? '<i data-lucide="sun"></i>'
+                    : '<i data-lucide="moon"></i>';
+
+            lucide.createIcons();
+
+        }
+
+
+        updateThemeIcon();
+
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                document.body.classList.toggle("dark");
+
+
+                localStorage.setItem(
+                    "theme",
+                    document.body.classList.contains("dark")
+                        ? "dark"
+                        : "light"
+                );
+
+
+                updateThemeIcon();
+
+            }
+        );
+
+
+        const rtlToggle =
+            document.getElementById("rtlToggle");
+
+
+        const savedDirection =
+            localStorage.getItem("direction") || "ltr";
+
+
+        document.documentElement.setAttribute(
+            "dir",
+            savedDirection
+        );
+
+
+        rtlToggle.textContent =
+            savedDirection === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener(
+            "click",
+            () => {
+
+                const currentDirection =
+                    document.documentElement
+                        .getAttribute("dir");
+
+
+                const newDirection =
+                    currentDirection === "rtl"
+                        ? "ltr"
+                        : "rtl";
+
+
+                document.documentElement.setAttribute(
+                    "dir",
+                    newDirection
+                );
+
+
+                localStorage.setItem(
+                    "direction",
+                    newDirection
+                );
+
+
+                rtlToggle.textContent =
+                    newDirection === "rtl"
+                        ? "LTR"
+                        : "RTL";
+
+            }
+        );
+
+
+        const targetDate =
+            new Date(
+                "2026-12-31T23:59:59"
+            ).getTime();
+
+
+        function updateCountdown() {
+
+            const now =
+                new Date().getTime();
+
+
+            const distance =
+                targetDate - now;
+
+
+            if (distance <= 0) {
+
+                document.getElementById("days").textContent = "00";
+
+                document.getElementById("hours").textContent = "00";
+
+                document.getElementById("minutes").textContent = "00";
+
+                document.getElementById("seconds").textContent = "00";
+
+                return;
+
+            }
+
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const hours =
+                Math.floor(
+                    (distance %
+                        (1000 * 60 * 60 * 24)) /
+                    (1000 * 60 * 60)
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (distance %
+                        (1000 * 60 * 60)) /
+                    (1000 * 60)
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (distance %
+                        (1000 * 60)) /
+                    1000
+                );
+
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+        updateCountdown();
+
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+
+        const notifyForm =
+            document.getElementById("notifyForm");
+
+
+        const formMessage =
+            document.getElementById("formMessage");
+
+
+        notifyForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+
+                const email =
+                    document.getElementById("email")
+                        .value
+                        .trim();
+
+
+                if (!email) {
+                    return;
+                }
+
+
+                formMessage.textContent =
+                    "Thank you! We'll notify you when HomeVault launches.";
+
+
+                notifyForm.reset();
+
+            }
+        );
+
+
+        lucide.createIcons();
+
+    </script>
+
+</body>
+
+</html>

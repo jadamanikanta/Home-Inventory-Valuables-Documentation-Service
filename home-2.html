@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HomeVault - Home Inventory & Valuables Documentation</title>
+
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.png">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home-2.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="navbar-container nav">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="logo.png"
+                     alt="HomeVault - Home Inventory & Valuables Documentation">
+
+                <span class="logo-text">
+                    Home<span class="logo-header-secondary">Vault</span>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <nav class="nav-links" id="navMenu">
+
+            <div class="dropdown">
+
+                <a href="index.html"
+                   class="nav-item nav-link"
+                   data-page="home">
+
+                    Home
+
+                    <i data-lucide="chevron-down"></i>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html"
+                       class="nav-link"
+                       data-page="home">
+
+                        Home 1
+
+                    </a>
+
+                    <a href="home-2.html"
+                       class="nav-link"
+                       data-page="home">
+
+                        Home 2
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="service.html"
+               class="nav-link">
+
+                Services
+
+            </a>
+
+
+            <a href="how-it-works.html"
+               class="nav-link">
+
+                How It Works
+
+            </a>
+
+
+            <a href="pricing.html"
+               class="nav-link">
+
+                Pricing
+
+            </a>
+
+
+            <a href="contact.html"
+               class="nav-link">
+
+                Contact
+
+            </a>
+
+
+            <a href="dashboard.html"
+               class="nav-link">
+
+                Dashboard
+
+            </a>
+
+
+            <button class="btn-primary mobile-login"
+                    id="mobileLoginBtn">
+
+                Login
+
+            </button>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button id="rtlToggle"
+                    class="btn-secondary">
+
+                RTL
+
+            </button>
+
+
+            <button id="themeToggle"
+                    class="icon-btn">
+
+                <i data-lucide="moon"
+                   class="icon"></i>
+
+            </button>
+
+
+            <button class="btn-primary desktop-login"
+                    id="loginBtn">
+
+                Login
+
+            </button>
+
+
+            <button id="menuToggle"
+                    class="hamburger">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="home2-hero">
+
+    <div class="home2-hero-container">
+
+        <div class="home2-hero-content">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="shield-check"></i>
+                Home Inventory & Valuables Documentation
+            </span>
+
+            <h1>
+                Know What You Own.
+                <span>Keep It Documented.</span>
+            </h1>
+
+            <p>
+                Professional home inventory documentation that captures
+                your belongings, valuables, photographs, and essential
+                item details in one organized digital record.
+            </p>
+
+            <div class="home2-hero-actions">
+
+                <a href="services.html" class="home2-hero-primary">
+                    Explore Services
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="pricing.html" class="home2-hero-secondary">
+                    View Pricing
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="home2-hero-trust">
+
+                <div class="home2-trust-item">
+                    <i data-lucide="camera"></i>
+                    <span>Photo Documentation</span>
+                </div>
+
+                <div class="home2-trust-item">
+                    <i data-lucide="file-check-2"></i>
+                    <span>Digital Reports</span>
+                </div>
+
+                <div class="home2-trust-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>Insurance Ready</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="home2-hero-gallery">
+
+            <div class="home2-gallery-card home2-gallery-card-large">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                    alt="Modern living room furniture"
+                >
+
+                <div class="home2-gallery-overlay">
+
+                    <span>
+                        <i data-lucide="sofa"></i>
+                    </span>
+
+                    <div>
+                        <strong>Furniture</strong>
+                        <small>Living Spaces</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-gallery-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=85"
+                    alt="Home electronics documentation"
+                >
+
+                <div class="home2-gallery-overlay">
+
+                    <span>
+                        <i data-lucide="monitor-smartphone"></i>
+                    </span>
+
+                    <div>
+                        <strong>Electronics</strong>
+                        <small>Devices & Equipment</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-gallery-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=85"
+                    alt="Home furniture inventory"
+                >
+
+                <div class="home2-gallery-overlay">
+
+                    <span>
+                        <i data-lucide="armchair"></i>
+                    </span>
+
+                    <div>
+                        <strong>Home Furnishings</strong>
+                        <small>Major Items</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-gallery-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85"
+                    alt="Valuables and jewelry documentation"
+                >
+
+                <div class="home2-gallery-overlay">
+
+                    <span>
+                        <i data-lucide="gem"></i>
+                    </span>
+
+                    <div>
+                        <strong>Valuables</strong>
+                        <small>Jewelry & Collectibles</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-gallery-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?auto=format&fit=crop&w=800&q=85"
+                    alt="Bedroom belongings documentation"
+                >
+
+                <div class="home2-gallery-overlay">
+
+                    <span>
+                        <i data-lucide="house"></i>
+                    </span>
+
+                    <div>
+                        <strong>Household Items</strong>
+                        <small>Room by Room</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-documentation">
+
+    <div class="home2-documentation-container">
+
+        <div class="home2-documentation-visual">
+
+            <img
+                src="Organized-valuables-household.png"
+                alt="Organized valuables and household documentation"
+            >
+
+            <div class="home2-visual-label">
+                <span class="home2-visual-label-icon">
+                    <i data-lucide="shield-check"></i>
+                </span>
+
+                <div>
+                    <strong>Prepared & Organized</strong>
+                    <small>Everything documented in one place</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="home2-documentation-content">
+
+            <div class="home2-section-heading">
+
+                <span class="home2-section-kicker">
+                    <i data-lucide="file-search"></i>
+                    Why Documentation Matters
+                </span>
+
+                <h2>
+                    A Clear Record When
+                    <span>You Need It Most.</span>
+                </h2>
+
+                <p>
+                    A well-organized home inventory gives you a reliable
+                    reference for understanding what you own, documenting
+                    valuable items, and preparing important records before
+                    an unexpected event occurs.
+                </p>
+
+            </div>
+
+
+            <div class="home2-benefit-list">
+
+                <div class="home2-benefit">
+
+                    <div class="home2-benefit-icon">
+                        <i data-lucide="camera"></i>
+                    </div>
+
+                    <div>
+                        <h3>Document Your Belongings</h3>
+                        <p>
+                            Capture photographs and essential details
+                            for important household possessions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-benefit">
+
+                    <div class="home2-benefit-icon">
+                        <i data-lucide="clipboard-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Keep Information Organized</h3>
+                        <p>
+                            Bring item details, categories, and records
+                            together in a structured inventory.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-benefit">
+
+                    <div class="home2-benefit-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+
+                    <div>
+                        <h3>Access a Digital Report</h3>
+                        <p>
+                            Receive a convenient digital record that can
+                            be referenced whenever documentation is needed.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="services.html" class="home2-documentation-link">
+                Discover Documentation Services
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-categories">
+
+    <div class="home2-categories-container">
+
+        <div class="home2-categories-header">
+
+            <div class="home2-categories-heading">
+
+                <span class="home2-categories-kicker">
+                    <i data-lucide="layers-3"></i>
+                    What We Document
+                </span>
+
+                <h2>
+                    Every Important Item
+                    <span>Has Its Place.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                From everyday household belongings to high-value possessions,
+                our documentation process creates a structured visual record
+                that is easy to review and reference.
+            </p>
+
+        </div>
+
+
+        <div class="home2-categories-grid">
+
+            <article class="home2-category-card home2-category-wide">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+                    alt="Furniture and living room inventory"
+                >
+
+                <div class="home2-category-content">
+
+                    <span class="home2-category-number">01</span>
+
+                    <div>
+                        <h3>Furniture</h3>
+                        <p>Tables, seating, beds and major furnishings.</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="home2-category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=900&q=85"
+                    alt="Electronics and devices"
+                >
+
+                <div class="home2-category-content">
+
+                    <span class="home2-category-number">02</span>
+
+                    <div>
+                        <h3>Electronics</h3>
+                        <p>Devices, appliances and equipment.</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="home2-category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=85"
+                    alt="Jewelry and valuables"
+                >
+
+                <div class="home2-category-content">
+
+                    <span class="home2-category-number">03</span>
+
+                    <div>
+                        <h3>Valuables</h3>
+                        <p>Jewelry, collectibles and special possessions.</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="home2-category-card">
+
+                <img
+                    src="Home-appliances-documentation.jpg"
+                    alt="Kitchen appliances and household items"
+                >
+
+                <div class="home2-category-content">
+
+                    <span class="home2-category-number">04</span>
+
+                    <div>
+                        <h3>Household Items</h3>
+                        <p>Appliances, kitchenware and everyday belongings.</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+
+            <article class="home2-category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
+                    alt="Home office equipment and belongings"
+                >
+
+                <div class="home2-category-content">
+
+                    <span class="home2-category-number">05</span>
+
+                    <div>
+                        <h3>Home Office</h3>
+                        <p>Computers, furniture and office equipment.</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-insurance">
+
+    <div class="home2-insurance-container">
+
+        <div class="home2-insurance-content">
+
+            <span class="home2-insurance-kicker">
+                <i data-lucide="shield-check"></i>
+                Insurance-Ready Documentation
+            </span>
+
+            <h2>
+                Be Prepared Before
+                <span>You Need the Record.</span>
+            </h2>
+
+            <p>
+                A structured home inventory can make important information
+                easier to locate when documenting possessions, reviewing
+                property records, or working with insurance professionals.
+            </p>
+
+
+            <div class="home2-insurance-points">
+
+                <div class="home2-insurance-point">
+
+                    <span class="home2-insurance-point-icon">
+                        <i data-lucide="images"></i>
+                    </span>
+
+                    <div>
+                        <strong>Visual Evidence</strong>
+                        <p>
+                            Organized photographs help create a clear
+                            visual record of your belongings.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-insurance-point">
+
+                    <span class="home2-insurance-point-icon">
+                        <i data-lucide="list-checks"></i>
+                    </span>
+
+                    <div>
+                        <strong>Detailed Item Records</strong>
+                        <p>
+                            Important descriptions and item information
+                            stay together in your inventory.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-insurance-point">
+
+                    <span class="home2-insurance-point-icon">
+                        <i data-lucide="folder-check"></i>
+                    </span>
+
+                    <div>
+                        <strong>Organized Digital Report</strong>
+                        <p>
+                            Access your documented information in a
+                            convenient digital format.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="home2-insurance-visual">
+
+            <div class="home2-report-card">
+
+                <div class="home2-report-top">
+
+                    <div class="home2-report-brand">
+
+                        <span>
+                            <i data-lucide="file-check-2"></i>
+                        </span>
+
+                        <div>
+                            <strong>Home Inventory</strong>
+                            <small>Digital Documentation Report</small>
+                        </div>
+
+                    </div>
+
+                    <span class="home2-report-status">
+                        Complete
+                    </span>
+
+                </div>
+
+
+                <div class="home2-report-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Documented home interior"
+                    >
+
+                    <span class="home2-report-photo-count">
+                        <i data-lucide="camera"></i>
+                        24 Photos
+                    </span>
+
+                </div>
+
+
+                <div class="home2-report-details">
+
+                    <div>
+                        <span>Property</span>
+                        <strong>Primary Residence</strong>
+                    </div>
+
+                    <div>
+                        <span>Items Recorded</span>
+                        <strong>128 Items</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-report-categories">
+
+                    <div>
+                        <span class="home2-report-category-icon">
+                            <i data-lucide="sofa"></i>
+                        </span>
+                        <strong>Furniture</strong>
+                    </div>
+
+                    <div>
+                        <span class="home2-report-category-icon">
+                            <i data-lucide="monitor"></i>
+                        </span>
+                        <strong>Electronics</strong>
+                    </div>
+
+                    <div>
+                        <span class="home2-report-category-icon">
+                            <i data-lucide="gem"></i>
+                        </span>
+                        <strong>Valuables</strong>
+                    </div>
+
+                    <div>
+                        <span class="home2-report-category-icon">
+                            <i data-lucide="house"></i>
+                        </span>
+                        <strong>Household</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-process">
+
+    <div class="home2-process-container">
+
+        <div class="home2-process-header">
+
+            <span class="home2-process-kicker">
+                <i data-lucide="route"></i>
+                Our Documentation Process
+            </span>
+
+            <h2>
+                Simple From Start
+                <span>To Finished Report.</span>
+            </h2>
+
+            <p>
+                Our process keeps your home inventory documentation
+                organized, straightforward, and easy to follow.
+            </p>
+
+        </div>
+
+
+        <div class="home2-process-flow">
+
+
+            <div class="home2-process-item">
+
+                <div class="home2-process-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                        alt="Home interior review"
+                    >
+
+                    <span>
+                        <i data-lucide="house"></i>
+                    </span>
+
+                </div>
+
+                <div class="home2-process-content">
+
+                    <h3>Review Your Home</h3>
+
+                    <p>
+                        We identify the rooms, belongings, and categories
+                        that should be included in your inventory.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-process-connector">
+
+                <i data-lucide="arrow-right"></i>
+
+            </div>
+
+
+            <div class="home2-process-item">
+
+                <div class="home2-process-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85"
+                        alt="Professional photography documentation"
+                    >
+
+                    <span>
+                        <i data-lucide="camera"></i>
+                    </span>
+
+                </div>
+
+                <div class="home2-process-content">
+
+                    <h3>Capture Details</h3>
+
+                    <p>
+                        Important belongings are photographed and documented
+                        with relevant item information to the client.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-process-connector">
+
+                <i data-lucide="arrow-right"></i>
+
+            </div>
+
+
+            <div class="home2-process-item">
+
+                <div class="home2-process-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=900&q=85"
+                        alt="Organized inventory documents"
+                    >
+
+                    <span>
+                        <i data-lucide="folder-tree"></i>
+                    </span>
+
+                </div>
+
+                <div class="home2-process-content">
+
+                    <h3>Organize Records</h3>
+
+                    <p>
+                        Information is grouped into clear categories so
+                        your inventory remains structured and easy to review.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="home2-process-connector">
+
+                <i data-lucide="arrow-right"></i>
+
+            </div>
+
+
+            <div class="home2-process-item">
+
+                <div class="home2-process-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=85"
+                        alt="Digital inventory report"
+                    >
+
+                    <span>
+                        <i data-lucide="file-check-2"></i>
+                    </span>
+
+                </div>
+
+                <div class="home2-process-content">
+
+                    <h3>Receive Your Report</h3>
+
+                    <p>
+                        Your completed inventory is delivered as an organized
+                        digital record for convenient reference.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="home2-process-note">
+
+            <span>
+                <i data-lucide="info"></i>
+            </span>
+
+            <p>
+                Appraisal referrals can also be included when professional
+                valuation services may be appropriate for specific items.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-appraisal">
+
+    <div class="home2-appraisal-container">
+
+        <div class="home2-appraisal-visual">
+
+            <div class="home2-appraisal-main-image">
+
+                <img
+                    src="Appraisal-Referrals.png"
+                    alt="Valuable jewelry and collectibles"
+                >
+
+                
+
+            </div>
+
+            <div class="home2-appraisal-mini">
+
+                <span>
+                    <i data-lucide="badge-check"></i>
+                </span>
+
+                <div>
+                    <strong>Trusted Referral</strong>
+                    <small>For items requiring professional valuation</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="home2-appraisal-content">
+
+            <span class="home2-appraisal-kicker">
+                <i data-lucide="scale"></i>
+                Appraisal Referrals
+            </span>
+
+            <h2>
+                When an Item Needs
+                <span>Professional Valuation.</span>
+            </h2>
+
+            <p class="home2-appraisal-intro">
+                Some possessions may require more than photographic
+                documentation. When appropriate, we can help connect
+                you with professional appraisal resources for items
+                that may benefit from a formal valuation.
+            </p>
+
+
+            <div class="home2-appraisal-list">
+
+                <div class="home2-appraisal-item">
+
+                    <span class="home2-appraisal-icon">
+                        <i data-lucide="gem"></i>
+                    </span>
+
+                    <div>
+                        <h3>Jewelry & Fine Items</h3>
+                        <p>
+                            Valuable jewelry and specialty possessions
+                            may benefit from professional evaluation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-appraisal-item">
+
+                    <span class="home2-appraisal-icon">
+                        <i data-lucide="palette"></i>
+                    </span>
+
+                    <div>
+                        <h3>Art & Collectibles</h3>
+                        <p>
+                            Artwork, collections, antiques, and other
+                            specialty items can be referred for valuation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-appraisal-item">
+
+                    <span class="home2-appraisal-icon">
+                        <i data-lucide="watch"></i>
+                    </span>
+
+                    <div>
+                        <h3>Specialty Possessions</h3>
+                        <p>
+                            Certain watches, heirlooms, and unique belongings
+                            may require specialized appraisal expertise.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="contact.html" class="home2-appraisal-link">
+
+                Discuss Your Inventory
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-report">
+
+    <div class="home2-report-container">
+
+        <div class="home2-report-content">
+
+            <span class="home2-report-kicker">
+                <i data-lucide="file-text"></i>
+                Digital Inventory Report
+            </span>
+
+            <h2>
+                Your Home,
+                <span>Clearly Documented.</span>
+            </h2>
+
+            <p class="home2-report-intro">
+                Once your inventory is complete, your information is organized
+                into a structured digital report that makes your documented
+                belongings easier to review and reference.
+            </p>
+
+
+            <div class="home2-report-features">
+
+                <div class="home2-report-feature">
+
+                    <span>
+                        <i data-lucide="images"></i>
+                    </span>
+
+                    <div>
+                        <h3>Photo Documentation</h3>
+                        <p>
+                            Visual records help identify and reference
+                            documented belongings.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-report-feature">
+
+                    <span>
+                        <i data-lucide="list"></i>
+                    </span>
+
+                    <div>
+                        <h3>Organized Item Details</h3>
+                        <p>
+                            Important item information is grouped into
+                            easy-to-review categories.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-report-feature">
+
+                    <span>
+                        <i data-lucide="search"></i>
+                    </span>
+
+                    <div>
+                        <h3>Easy Reference</h3>
+                        <p>
+                            Find documented information without searching
+                            through scattered household records.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="home2-report-preview">
+
+            <div class="home2-report-window">
+
+                <div class="home2-report-window-header">
+
+                    <div class="home2-report-window-title">
+
+                        <span>
+                            <i data-lucide="file-check-2"></i>
+                        </span>
+
+                        <div>
+                            <strong>Home Inventory Report</strong>
+                            <small>Digital Documentation</small>
+                        </div>
+
+                    </div>
+
+                    <span class="home2-report-complete">
+                        Ready
+                    </span>
+
+                </div>
+
+
+                <div class="home2-report-summary">
+
+                    <div>
+                        <span>Total Items</span>
+                        <strong>128</strong>
+                    </div>
+
+                    <div>
+                        <span>Rooms</span>
+                        <strong>08</strong>
+                    </div>
+
+                    <div>
+                        <span>Photos</span>
+                        <strong>246</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="home2-report-room">
+
+                    <div class="home2-report-room-heading">
+
+                        <span>
+                            <i data-lucide="sofa"></i>
+                        </span>
+
+                        <div>
+                            <strong>Living Room</strong>
+                            <small>24 documented items</small>
+                        </div>
+
+                        <i data-lucide="chevron-right"></i>
+
+                    </div>
+
+
+                    <div class="home2-report-item-row">
+
+                        <div class="home2-report-thumb">
+                            <img
+                                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=300&q=80"
+                                alt="Living room sofa"
+                            >
+                        </div>
+
+                        <div>
+                            <strong>Sectional Sofa</strong>
+                            <small>Furniture · Photo documented</small>
+                        </div>
+
+                        <span>01</span>
+
+                    </div>
+
+
+                    <div class="home2-report-item-row">
+
+                        <div class="home2-report-thumb">
+                            <img
+                                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=300&q=80"
+                                alt="Living room furniture"
+                            >
+                        </div>
+
+                        <div>
+                            <strong>Accent Furniture</strong>
+                            <small>Furniture · Photo documented</small>
+                        </div>
+
+                        <span>02</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home2-report-footer">
+
+                    <span>
+                        <i data-lucide="shield-check"></i>
+                        Documentation Complete
+                    </span>
+
+                    <i data-lucide="download"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-benefits">
+
+    <div class="home2-benefits-container">
+
+        <div class="home2-benefits-header">
+
+            <div>
+
+                <span class="home2-benefits-kicker">
+                    <i data-lucide="shield"></i>
+                    Why Documentation Matters
+                </span>
+
+                <h2>
+                    Know What You Own.
+                    <span>Know Where It Is.</span>
+                </h2>
+
+            </div>
+
+            <p>
+                A structured inventory gives you a clearer record of your
+                household belongings and makes important information easier
+                to access when you need it.
+            </p>
+
+        </div>
+
+
+        <div class="home2-benefits-grid">
+
+            <article class="home2-benefit-card">
+
+                <div class="home2-benefit-image">
+
+                    <img
+                        src="Organized-home-records.png"
+                        alt="Organized home records"
+                    >
+
+                </div>
+
+                <div class="home2-benefit-content">
+
+                    <span class="home2-benefit-icon">
+                        <i data-lucide="clipboard-check"></i>
+                    </span>
+
+                    <h3>Stay Organized</h3>
+
+                    <p>
+                        Keep important information about your belongings
+                        together instead of relying on scattered notes,
+                        receipts, or photographs.
+                    </p>
+
+                    <a href="services.html">
+                        Explore Documentation
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="home2-benefit-card home2-benefit-featured">
+
+                <div class="home2-benefit-image">
+
+                    <img
+                        src="Documented-home-interior.png"
+                        alt="Documented home interior"
+                    >
+
+                </div>
+
+                <div class="home2-benefit-content">
+
+                    <span class="home2-benefit-icon">
+                        <i data-lucide="shield-check"></i>
+                    </span>
+
+                    <h3>Be Better Prepared</h3>
+
+                    <p>
+                        A documented household inventory can provide a useful
+                        reference when reviewing possessions or preparing
+                        property records.
+                    </p>
+
+                    <a href="services.html">
+                        See How It Works
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="home2-benefit-card">
+
+                <div class="home2-benefit-image">
+
+                    <img
+                        src="Digital-documentation-records.jpeg"
+                        alt="Digital documentation and records"
+                    >
+
+                </div>
+
+                <div class="home2-benefit-content">
+
+                    <span class="home2-benefit-icon">
+                        <i data-lucide="database"></i>
+                    </span>
+
+                    <h3>Keep a Digital Record</h3>
+
+                    <p>
+                        Access a structured digital inventory that keeps
+                        photographs and item information together for
+                        convenient reference.
+                    </p>
+
+                    <a href="services.html">
+                        View Our Services
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home2-final-cta">
+
+    <div class="home2-final-cta-container">
+
+        <div class="home2-final-cta-content">
+
+            <span class="home2-final-cta-kicker">
+                <i data-lucide="shield-check"></i>
+                Protect Your Records
+            </span>
+
+            <h2>
+                Know What You Own.
+                <span>Be Ready When It Matters.</span>
+            </h2>
+
+            <p>
+                Build a clear, organized record of your household belongings
+                with professional documentation designed for easier reference
+                and insurance-readiness.
+            </p>
+
+            <div class="home2-final-cta-actions">
+
+                <a href="contact.html" class="home2-final-cta-primary">
+                    Start Your Inventory
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="pricing.html" class="home2-final-cta-secondary">
+                    View Pricing
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="home2-final-cta-visual">
+
+            <div class="home2-final-cta-card">
+
+                <div class="home2-final-cta-card-icon">
+                    <i data-lucide="file-check-2"></i>
+                </div>
+
+                <div>
+                    <strong>Inventory Ready</strong>
+                    <span>Organized digital documentation</span>
+                </div>
+
+                <i
+                    data-lucide="check-circle-2"
+                    class="home2-final-cta-check"
+                ></i>
+
+            </div>
+
+
+            <div class="home2-final-cta-stat">
+
+                <strong>100%</strong>
+
+                <span>
+                    Structured<br>
+                    Documentation
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container footer-grid">
+
+        <div class="footer-col">
+
+            <h3 class="footer-title" id="homepage-redirect">
+
+                <img src="logo.png"
+                     alt="HomeVault - Home Inventory & Valuables Documentation"
+                     class="footer-logo">
+
+                <span class="footer-brand">
+
+                    <span class="brand-primary">
+                        Home
+                    </span>
+
+                    <span class="brand-secondary">
+                        Vault
+                    </span>
+
+                </span>
+
+            </h3>
+
+            <p>
+                Helping homeowners document, organize, and protect
+                their valuable possessions with detailed home inventory
+                records designed for easy access, verification, and
+                long-term peace of mind.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Facebook">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Pinterest">
+
+                    <i class="fab fa-pinterest-p"></i>
+
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="LinkedIn">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Quick Links
+            </h4>
+
+            <a href="home-2.html">
+                Home
+            </a>
+
+            <a href="service.html">
+                Service
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="pricing.html">
+               Pricing
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+            <a href="dashboard.html">
+                dashboard
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Our Services
+            </h4>
+
+            <a href="service-details.html?service=photo">
+                Photo Documentation
+            </a>
+
+            <a href="service-details.html?service=appraisal">
+                Appraisal Referrals
+            </a>
+
+            <a href="service-details.html?service=reports">
+                Inventory Reports
+            </a>
+
+            <a href="service-details.html?service=photo">
+                Insurance Documentation
+            </a>
+
+            <a href="service-details.html?service=appraisal">
+                Digital Records
+            </a>
+
+            <a href="service-details.html?service=reports">
+                Inventory Updates
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Resources
+            </h4>
+
+            <a href="service-details.html?service=reports">
+                Inventory Guide
+            </a>
+
+            <a href="service-details.html?service=photo">
+                Documentation Guide
+            </a>
+
+            <a href="service-details.html?service=appraisal">
+                Valuation Records
+            </a>
+
+            <a href="service-details.html?service=reports">
+                Asset Protection
+            </a>
+
+            <a href="404.html">
+                404 page
+            </a>
+
+            <a href="coming-soon.html">
+                Coming-soon page
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Contact Us
+            </h4>
+
+            <p>
+                Email: hello@homevault.com
+            </p>
+
+            <p>
+                Phone: +91 0000000000
+            </p>
+
+            <p>
+                Location: India
+            </p>
+
+            <p>
+                Support Hours: Mon - Sat
+            </p>
+
+            <p>
+                9:00 AM - 6:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-bottom-content">
+
+            <p>
+                © 2026 HomeVault. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms&conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    const loginBtn = document.getElementById("loginBtn");
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const mobileLoginBtn =
+        document.getElementById("mobileLoginBtn");
+
+    if (mobileLoginBtn) {
+
+        mobileLoginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const links =
+        document.querySelectorAll(".nav-link");
+
+    const currentPage =
+        window.location.pathname.split("/").pop() ||
+        "index.html";
+
+
+    links.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const page =
+            href.split("/").pop();
+
+
+        if (page === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const homePages = [
+        "index.html",
+        "home-1.html",
+        "home-2.html"
+    ];
+
+
+    if (homePages.includes(currentPage)) {
+
+        const homeLink =
+            document.querySelector(
+                '.nav-link[href="index.html"]'
+            );
+
+
+        if (homeLink) {
+
+            homeLink.classList.add("active");
+
+        }
+
+    }
+
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (localStorage.getItem("theme") === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    if (themeToggle) {
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+
+        lucide.createIcons();
+
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+
+            if (document.body.classList.contains("dark")) {
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+                themeToggle.innerHTML =
+                    '<i data-lucide="sun"></i>';
+
+            } else {
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+
+                themeToggle.innerHTML =
+                    '<i data-lucide="moon"></i>';
+
+            }
+
+
+            lucide.createIcons();
+
+        });
+
+    }
+
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("direction") ||
+        "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute("dir", "ltr");
+
+                localStorage.setItem(
+                    "direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent = "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute("dir", "rtl");
+
+                localStorage.setItem(
+                    "direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("active");
+
+        });
+
+
+        document.addEventListener("click", (e) => {
+
+            if (
+                !navMenu.contains(e.target) &&
+                !menuToggle.contains(e.target)
+            ) {
+
+                navMenu.classList.remove("active");
+
+
+                document
+                    .querySelectorAll(".dropdown-menu")
+                    .forEach(menu => {
+
+                        menu.classList.remove("show");
+
+                    });
+
+            }
+
+        });
+
+    }
+
+
+    document
+        .querySelectorAll(".dropdown")
+        .forEach(drop => {
+
+            const toggle =
+                drop.querySelector(".nav-item");
+
+            const menu =
+                drop.querySelector(".dropdown-menu");
+
+
+            if (toggle && menu) {
+
+                toggle.addEventListener("click", (e) => {
+
+                    if (window.innerWidth <= 1025) {
+
+                        e.preventDefault();
+
+                        menu.classList.toggle("show");
+
+                    }
+
+                });
+
+            }
+
+        });
+
+
+});
+
+</script>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+</html>

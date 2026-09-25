@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HomeVault - Home Inventory & Valuables Documentation</title>
+
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.png">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="navbar-container nav">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="logo.png"
+                     alt="HomeVault - Home Inventory & Valuables Documentation">
+
+                <span class="logo-text">
+                    Home<span class="logo-header-secondary">Vault</span>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <nav class="nav-links" id="navMenu">
+
+            <div class="dropdown">
+
+                <a href="index.html"
+                   class="nav-item nav-link"
+                   data-page="home">
+
+                    Home
+
+                    <i data-lucide="chevron-down"></i>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html"
+                       class="nav-link"
+                       data-page="home">
+
+                        Home 1
+
+                    </a>
+
+                    <a href="home-2.html"
+                       class="nav-link"
+                       data-page="home">
+
+                        Home 2
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="service.html"
+               class="nav-link">
+
+                Services
+
+            </a>
+
+
+            <a href="how-it-works.html"
+               class="nav-link">
+
+                How It Works
+
+            </a>
+
+
+            <a href="pricing.html"
+               class="nav-link">
+
+                Pricing
+
+            </a>
+
+
+            <a href="contact.html"
+               class="nav-link">
+
+                Contact
+
+            </a>
+
+
+            <a href="dashboard.html"
+               class="nav-link">
+
+                Dashboard
+
+            </a>
+
+
+            <button class="btn-primary mobile-login"
+                    id="mobileLoginBtn">
+
+                Login
+
+            </button>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button id="rtlToggle"
+                    class="btn-secondary">
+
+                RTL
+
+            </button>
+
+
+            <button id="themeToggle"
+                    class="icon-btn">
+
+                <i data-lucide="moon"
+                   class="icon"></i>
+
+            </button>
+
+
+            <button class="btn-primary desktop-login"
+                    id="loginBtn">
+
+                Login
+
+            </button>
+
+
+            <button id="menuToggle"
+                    class="hamburger">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="inventory-hero">
+
+    <div class="inventory-hero-container">
+
+        <div class="inventory-hero-content">
+
+            <span class="inventory-hero-badge">
+                <i data-lucide="clipboard-check"></i>
+                Home Inventory & Valuables Documentation
+            </span>
+
+            <h1>
+                Create a Complete
+                <span>Record of Your Home & Valuables.</span>
+            </h1>
+
+            <p>
+                We professionally document your household belongings through
+                detailed photographs, organized item records, appraisal
+                referrals, and digital inventory reports designed to help you
+                stay prepared for insurance claims and unexpected loss.
+            </p>
+
+            <div class="inventory-hero-highlights">
+
+                <div class="inventory-highlight">
+                    <i data-lucide="camera"></i>
+                    <div>
+                        <strong>Photo Documentation</strong>
+                        <span>Visual records of your belongings</span>
+                    </div>
+                </div>
+
+                <div class="inventory-highlight">
+                    <i data-lucide="file-text"></i>
+                    <div>
+                        <strong>Digital Inventory Reports</strong>
+                        <span>Organized records in one place</span>
+                    </div>
+                </div>
+
+                <div class="inventory-highlight">
+                    <i data-lucide="badge-dollar-sign"></i>
+                    <div>
+                        <strong>Appraisal Referrals</strong>
+                        <span>Support for high-value items</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="inventory-hero-actions">
+
+                <a href="services.html" class="inventory-btn inventory-btn-primary">
+                    Document My Home
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+                <a href="pricing.html" class="inventory-btn inventory-btn-secondary">
+                    View Pricing
+                </a>
+
+            </div>
+
+            <div class="inventory-hero-note">
+                <i data-lucide="shield-check"></i>
+                <span>
+                    Organized documentation that helps you stay prepared
+                    when your records are needed.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="inventory-hero-visual">
+
+            <div class="inventory-document-card">
+
+                <div class="inventory-document-header">
+
+                    <div class="inventory-document-brand">
+                        <div class="inventory-document-logo">
+                            <i data-lucide="home"></i>
+                        </div>
+
+                        <div>
+                            <strong>Home Inventory</strong>
+                            <span>Property Documentation Report</span>
+                        </div>
+                    </div>
+
+                    <div class="inventory-document-status">
+                        <i data-lucide="check-circle-2"></i>
+                        Organized
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-document-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Documented home interior"
+                    >
+
+                    <div class="inventory-photo-label">
+                        <i data-lucide="camera"></i>
+                        Living Room
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-document-items">
+
+                    <div class="inventory-document-item">
+
+                        <div class="inventory-item-icon">
+                            <i data-lucide="tv"></i>
+                        </div>
+
+                        <div>
+                            <strong>Electronics</strong>
+                            <span>12 documented items</span>
+                        </div>
+
+                        <i data-lucide="check"></i>
+
+                    </div>
+
+
+                    <div class="inventory-document-item">
+
+                        <div class="inventory-item-icon">
+                            <i data-lucide="sofa"></i>
+                        </div>
+
+                        <div>
+                            <strong>Furniture</strong>
+                            <span>18 documented items</span>
+                        </div>
+
+                        <i data-lucide="check"></i>
+
+                    </div>
+
+
+                    <div class="inventory-document-item">
+
+                        <div class="inventory-item-icon">
+                            <i data-lucide="gem"></i>
+                        </div>
+
+                        <div>
+                            <strong>Valuables</strong>
+                            <span>8 documented items</span>
+                        </div>
+
+                        <i data-lucide="check"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-document-footer">
+
+                    <div>
+                        <span>Inventory Progress</span>
+                        <strong>78% Complete</strong>
+                    </div>
+
+                    <div class="inventory-progress">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-floating-info inventory-floating-info-top">
+
+                <div class="inventory-floating-icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+
+                <div>
+                    <strong>Insurance Ready</strong>
+                    <span>Documentation organized</span>
+                </div>
+
+            </div>
+
+
+            <div class="inventory-floating-info inventory-floating-info-bottom">
+
+                <div class="inventory-floating-icon">
+                    <i data-lucide="folder-check"></i>
+                </div>
+
+                <div>
+                    <strong>Digital Records</strong>
+                    <span>Easy to access & reference</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-services">
+
+    <div class="inventory-services-container">
+
+        <div class="inventory-section-heading">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="layers-3"></i>
+                Our Services
+            </span>
+
+            <h2>
+                Everything You Need to
+                <span>Document Your Home.</span>
+            </h2>
+
+            <p>
+                From detailed photographs to organized digital records,
+                we help turn your household belongings into a clear,
+                accessible inventory.
+            </p>
+
+        </div>
+
+
+        <div class="inventory-services-grid">
+
+            <article class="inventory-service-card">
+
+                <div class="inventory-service-icon">
+                    <i data-lucide="camera"></i>
+                </div>
+
+                <span class="inventory-service-number">01</span>
+
+                <h3>Photo Documentation</h3>
+
+                <p>
+                    Capture clear visual records of your household
+                    belongings, rooms, and valuable items for organized
+                    documentation.
+                </p>
+
+                <div class="inventory-service-list">
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Room-by-room photographs</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Valuable item documentation</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Organized photo references</span>
+                    </div>
+
+                </div>
+
+                <a href="services.html" class="inventory-service-link">
+                    Learn More
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="inventory-service-card inventory-service-card-featured">
+
+                <div class="inventory-service-icon">
+                    <i data-lucide="badge-dollar-sign"></i>
+                </div>
+
+                <span class="inventory-service-number">02</span>
+
+                <h3>Appraisal Referrals</h3>
+
+                <p>
+                    When certain belongings require professional valuation,
+                    we can help connect you with appropriate appraisal
+                    resources.
+                </p>
+
+                <div class="inventory-service-list">
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>High-value item identification</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Professional referral support</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Valuation documentation</span>
+                    </div>
+
+                </div>
+
+                <a href="services.html" class="inventory-service-link">
+                    Learn More
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="inventory-service-card">
+
+                <div class="inventory-service-icon">
+                    <i data-lucide="file-check-2"></i>
+                </div>
+
+                <span class="inventory-service-number">03</span>
+
+                <h3>Digital Inventory Reports</h3>
+
+                <p>
+                    Receive structured digital records that make it easier
+                    to review, reference, and maintain your home inventory.
+                </p>
+
+                <div class="inventory-service-list">
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Categorized item records</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Photo references</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Easy-to-reference reports</span>
+                    </div>
+
+                </div>
+
+                <a href="services.html" class="inventory-service-link">
+                    Learn More
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+
+        <div class="inventory-services-bottom">
+
+            <div class="inventory-services-bottom-icon">
+                <i data-lucide="shield-check"></i>
+            </div>
+
+            <div>
+                <strong>Prepared documentation starts with an organized inventory.</strong>
+                <span>
+                    Keep important information about your belongings structured
+                    and easier to reference when needed.
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-benefits">
+
+    <div class="inventory-benefits-container">
+
+        <div class="inventory-section-heading">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="shield-check"></i>
+                Why Home Inventory Matters
+            </span>
+
+            <h2>
+                Know What You Own,
+                <span>Before You Need the Record.</span>
+            </h2>
+
+            <p>
+                A well-organized home inventory gives you a clear reference
+                for your belongings, their details, and supporting photographs
+                when documentation is needed.
+            </p>
+
+        </div>
+
+
+        <div class="inventory-benefits-layout">
+
+            <div class="inventory-benefits-visual">
+
+                <div class="inventory-benefits-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Organized home inventory documentation"
+                    >
+
+                    <div class="inventory-image-label">
+
+                        <div class="inventory-image-label-icon">
+                            <i data-lucide="clipboard-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Inventory Organized</strong>
+                            <span>Items documented and categorized</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-benefits-content">
+
+                <div class="inventory-benefit-item">
+
+                    <div class="inventory-benefit-icon">
+                        <i data-lucide="file-check-2"></i>
+                    </div>
+
+                    <div class="inventory-benefit-text">
+
+                        <h3>Insurance Documentation</h3>
+
+                        <p>
+                            Maintain organized records and photographs of
+                            your belongings that can serve as useful
+                            documentation when communicating with your
+                            insurance provider.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-benefit-item">
+
+                    <div class="inventory-benefit-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+
+                    <div class="inventory-benefit-text">
+
+                        <h3>Proof of Ownership</h3>
+
+                        <p>
+                            Keep important details and visual references
+                            together to help establish a documented record
+                            of the belongings in your home.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-benefit-item">
+
+                    <div class="inventory-benefit-icon">
+                        <i data-lucide="folder-tree"></i>
+                    </div>
+
+                    <div class="inventory-benefit-text">
+
+                        <h3>Organized Records</h3>
+
+                        <p>
+                            Replace scattered notes and photographs with
+                            structured information grouped by rooms,
+                            categories, and individual items.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-benefit-item">
+
+                    <div class="inventory-benefit-icon">
+                        <i data-lucide="search-check"></i>
+                    </div>
+
+                    <div class="inventory-benefit-text">
+
+                        <h3>Easier Reference</h3>
+
+                        <p>
+                            Access a clear inventory record when reviewing
+                            household belongings, updating documentation,
+                            or preparing information for a specific need.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="inventory-benefits-note">
+
+            <i data-lucide="info"></i>
+
+            <span>
+                Your inventory is a documentation resource and does not
+                replace your insurance policy, appraisal, or coverage terms.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-categories">
+
+    <div class="inventory-categories-container">
+
+        <div class="inventory-section-heading">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="boxes"></i>
+                What We Document
+            </span>
+
+            <h2>
+                A Clear Record of the
+                <span>Things You Own.</span>
+            </h2>
+
+            <p>
+                From everyday household items to high-value belongings,
+                we organize your inventory into clear, easy-to-reference
+                categories.
+            </p>
+
+        </div>
+
+
+        <div class="inventory-categories-grid">
+
+            <article class="inventory-category-card">
+
+                <div class="inventory-category-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=85"
+                        alt="Furniture documentation"
+                    >
+
+                    <span class="inventory-category-icon">
+                        <i data-lucide="sofa"></i>
+                    </span>
+
+                </div>
+
+                <div class="inventory-category-content">
+
+                    <span class="inventory-category-number">01</span>
+
+                    <h3>Furniture</h3>
+
+                    <p>
+                        Sofas, tables, beds, cabinets, chairs, and other
+                        household furnishings.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="inventory-category-card">
+
+                <div class="inventory-category-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=85"
+                        alt="Electronics documentation"
+                    >
+
+                    <span class="inventory-category-icon">
+                        <i data-lucide="monitor-smartphone"></i>
+                    </span>
+
+                </div>
+
+                <div class="inventory-category-content">
+
+                    <span class="inventory-category-number">02</span>
+
+                    <h3>Electronics</h3>
+
+                    <p>
+                        Televisions, computers, cameras, audio equipment,
+                        gaming devices, and other electronics.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="inventory-category-card">
+
+                <div class="inventory-category-image">
+
+                    <img
+                        src="Home-appliances-documentation.jpg"
+                        alt="Home appliances documentation"
+                    >
+
+                    <span class="inventory-category-icon">
+                        <i data-lucide="refrigerator"></i>
+                    </span>
+
+                </div>
+
+                <div class="inventory-category-content">
+
+                    <span class="inventory-category-number">03</span>
+
+                    <h3>Appliances</h3>
+
+                    <p>
+                        Kitchen appliances, laundry equipment, home systems,
+                        and other major household appliances.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="inventory-category-card">
+
+                <div class="inventory-category-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85"
+                        alt="Jewelry and valuables documentation"
+                    >
+
+                    <span class="inventory-category-icon">
+                        <i data-lucide="gem"></i>
+                    </span>
+
+                </div>
+
+                <div class="inventory-category-content">
+
+                    <span class="inventory-category-number">04</span>
+
+                    <h3>Jewelry & Valuables</h3>
+
+                    <p>
+                        Jewelry, watches, collectibles, and other belongings
+                        that may require additional documentation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="inventory-category-card">
+
+                <div class="inventory-category-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=85"
+                        alt="Art and collectibles documentation"
+                    >
+
+                    <span class="inventory-category-icon">
+                        <i data-lucide="image"></i>
+                    </span>
+
+                </div>
+
+                <div class="inventory-category-content">
+
+                    <span class="inventory-category-number">05</span>
+
+                    <h3>Art & Collectibles</h3>
+
+                    <p>
+                        Artwork, antiques, collections, decorative pieces,
+                        and other specialty belongings.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="inventory-category-card">
+
+                <div class="inventory-category-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85"
+                        alt="Home decor documentation"
+                    >
+
+                    <span class="inventory-category-icon">
+                        <i data-lucide="lamp"></i>
+                    </span>
+
+                </div>
+
+                <div class="inventory-category-content">
+
+                    <span class="inventory-category-number">06</span>
+
+                    <h3>Home & Decor</h3>
+
+                    <p>
+                        Lighting, decorative pieces, rugs, mirrors, accessories,
+                        and other household items.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="inventory-categories-footer">
+
+            <div class="inventory-categories-footer-icon">
+                <i data-lucide="list-checks"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    Not sure what should be included?
+                </strong>
+
+                <span>
+                    We can help you identify and organize the belongings
+                    that are important to document.
+                </span>
+
+            </div>
+
+            <a href="contact.html" class="inventory-categories-footer-link">
+                Talk to Us
+                <i data-lucide="arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-process">
+
+    <div class="inventory-process-container">
+
+        <div class="inventory-section-heading">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="route"></i>
+                How It Works
+            </span>
+
+            <h2>
+                From Your Home to a
+                <span>Complete Inventory Report.</span>
+            </h2>
+
+            <p>
+                Our straightforward process turns your household belongings
+                into organized, documented records that are easy to review
+                and maintain.
+            </p>
+
+        </div>
+
+
+        <div class="inventory-process-grid">
+
+            <article class="inventory-process-card">
+
+                <div class="inventory-process-top">
+
+                    <span class="inventory-process-number">01</span>
+
+                    <div class="inventory-process-icon">
+                        <i data-lucide="calendar-check"></i>
+                    </div>
+
+                </div>
+
+                <h3>Schedule</h3>
+
+                <p>
+                    Choose a service and schedule your home inventory
+                    documentation session at a convenient time.
+                </p>
+
+                <span class="inventory-process-label">
+                    Get Started
+                </span>
+
+            </article>
+
+
+            <div class="inventory-process-connector">
+                <i data-lucide="arrow-right"></i>
+            </div>
+
+
+            <article class="inventory-process-card">
+
+                <div class="inventory-process-top">
+
+                    <span class="inventory-process-number">02</span>
+
+                    <div class="inventory-process-icon">
+                        <i data-lucide="camera"></i>
+                    </div>
+
+                </div>
+
+                <h3>Document</h3>
+
+                <p>
+                    Photograph and record your belongings, including
+                    important details for individual items and categories.
+                </p>
+
+                <span class="inventory-process-label">
+                    Capture Details
+                </span>
+
+            </article>
+
+
+            <div class="inventory-process-connector">
+                <i data-lucide="arrow-right"></i>
+            </div>
+
+
+            <article class="inventory-process-card">
+
+                <div class="inventory-process-top">
+
+                    <span class="inventory-process-number">03</span>
+
+                    <div class="inventory-process-icon">
+                        <i data-lucide="folder-tree"></i>
+                    </div>
+
+                </div>
+
+                <h3>Organize</h3>
+
+                <p>
+                    Sort your documented belongings into structured
+                    categories and organize the information into a
+                    consistent record.
+                </p>
+
+                <span class="inventory-process-label">
+                    Build Your Record
+                </span>
+
+            </article>
+
+
+            <div class="inventory-process-connector">
+                <i data-lucide="arrow-right"></i>
+            </div>
+
+
+            <article class="inventory-process-card">
+
+                <div class="inventory-process-top">
+
+                    <span class="inventory-process-number">04</span>
+
+                    <div class="inventory-process-icon">
+                        <i data-lucide="file-check-2"></i>
+                    </div>
+
+                </div>
+
+                <h3>Receive Your Report</h3>
+
+                <p>
+                    Receive your completed digital inventory report with
+                    organized item information and supporting photographs.
+                </p>
+
+                <span class="inventory-process-label">
+                    Ready to Reference
+                </span>
+
+            </article>
+
+        </div>
+
+
+        <div class="inventory-process-bottom">
+
+            <div class="inventory-process-bottom-icon">
+                <i data-lucide="shield-check"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    A structured inventory makes important information easier to find.
+                </strong>
+
+                <span>
+                    Keep your records organized and update them as your
+                    household belongings change.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-readiness">
+
+    <div class="inventory-readiness-container">
+
+        <div class="inventory-readiness-content">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="shield-check"></i>
+                Insurance Readiness
+            </span>
+
+            <h2>
+                Keep Important Home
+                <span>Documentation Within Reach.</span>
+            </h2>
+
+            <p>
+                A detailed home inventory gives you a structured record of
+                your belongings, photographs, and item information that can
+                be referenced when documentation is needed.
+            </p>
+
+
+            <div class="inventory-readiness-points">
+
+                <div class="inventory-readiness-point">
+
+                    <div class="inventory-readiness-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+
+                    <div>
+                        <h3>Documented Belongings</h3>
+                        <p>
+                            Maintain a clear record of household items,
+                            categories, and supporting details.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-readiness-point">
+
+                    <div class="inventory-readiness-icon">
+                        <i data-lucide="camera"></i>
+                    </div>
+
+                    <div>
+                        <h3>Visual Evidence</h3>
+                        <p>
+                            Keep organized photographs that provide a visual
+                            reference for documented belongings.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-readiness-point">
+
+                    <div class="inventory-readiness-icon">
+                        <i data-lucide="folder-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Structured Records</h3>
+                        <p>
+                            Keep important inventory information grouped
+                            together instead of scattered across devices
+                            and folders.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="services.html" class="inventory-readiness-button">
+                Explore Our Services
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="inventory-readiness-visual">
+
+            <div class="inventory-readiness-card">
+
+                <div class="inventory-readiness-card-header">
+
+                    <div class="inventory-readiness-card-title">
+
+                        <div class="inventory-readiness-card-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Home Inventory</strong>
+                            <span>Documentation Overview</span>
+                        </div>
+
+                    </div>
+
+                    <span class="inventory-ready-badge">
+                        Organized
+                    </span>
+
+                </div>
+
+
+                <div class="inventory-readiness-summary">
+
+                    <div class="inventory-summary-item">
+
+                        <span>Items Documented</span>
+                        <strong>128</strong>
+
+                    </div>
+
+                    <div class="inventory-summary-item">
+
+                        <span>Categories</span>
+                        <strong>08</strong>
+
+                    </div>
+
+                    <div class="inventory-summary-item">
+
+                        <span>Photos</span>
+                        <strong>246</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-readiness-progress">
+
+                    <div class="inventory-progress-heading">
+
+                        <span>Inventory Completion</span>
+                        <strong>92%</strong>
+
+                    </div>
+
+                    <div class="inventory-progress-bar">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-document-list">
+
+                    <div class="inventory-document-item">
+
+                        <span class="inventory-document-icon">
+                            <i data-lucide="sofa"></i>
+                        </span>
+
+                        <div>
+                            <strong>Furniture</strong>
+                            <small>34 documented items</small>
+                        </div>
+
+                        <i data-lucide="check-circle-2"></i>
+
+                    </div>
+
+
+                    <div class="inventory-document-item">
+
+                        <span class="inventory-document-icon">
+                            <i data-lucide="monitor-smartphone"></i>
+                        </span>
+
+                        <div>
+                            <strong>Electronics</strong>
+                            <small>26 documented items</small>
+                        </div>
+
+                        <i data-lucide="check-circle-2"></i>
+
+                    </div>
+
+
+                    <div class="inventory-document-item">
+
+                        <span class="inventory-document-icon">
+                            <i data-lucide="gem"></i>
+                        </span>
+
+                        <div>
+                            <strong>Valuables</strong>
+                            <small>18 documented items</small>
+                        </div>
+
+                        <i data-lucide="check-circle-2"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-readiness-card-footer">
+
+                    <i data-lucide="lock-keyhole"></i>
+
+                    <span>
+                        Organized for easy reference
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-reports">
+
+    <div class="inventory-reports-container">
+
+        <div class="inventory-section-heading">
+
+            <span class="inventory-section-tag">
+                <i data-lucide="file-chart-column"></i>
+                Digital Inventory Reports
+            </span>
+
+            <h2>
+                Your Belongings,
+                <span>Organized in One Place.</span>
+            </h2>
+
+            <p>
+                Receive a structured digital inventory report that brings
+                item information, categories, and supporting photographs
+                together in an easy-to-reference format.
+            </p>
+
+        </div>
+
+
+        <div class="inventory-reports-layout">
+
+            <div class="inventory-report-preview">
+
+                <div class="inventory-report-window">
+
+                    <div class="inventory-report-header">
+
+                        <div class="inventory-report-brand">
+
+                            <div class="inventory-report-logo">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+
+                            <div>
+                                <strong>Home Inventory Report</strong>
+                                <span>Household Documentation</span>
+                            </div>
+
+                        </div>
+
+                        <span class="inventory-report-status">
+                            Complete
+                        </span>
+
+                    </div>
+
+
+                    <div class="inventory-report-stats">
+
+                        <div class="inventory-report-stat">
+
+                            <span>Total Items</span>
+
+                            <strong>128</strong>
+
+                            <small>
+                                <i data-lucide="package"></i>
+                                Documented
+                            </small>
+
+                        </div>
+
+
+                        <div class="inventory-report-stat">
+
+                            <span>Categories</span>
+
+                            <strong>08</strong>
+
+                            <small>
+                                <i data-lucide="layers-3"></i>
+                                Organized
+                            </small>
+
+                        </div>
+
+
+                        <div class="inventory-report-stat">
+
+                            <span>Photos</span>
+
+                            <strong>246</strong>
+
+                            <small>
+                                <i data-lucide="camera"></i>
+                                Attached
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inventory-report-body">
+
+                        <div class="inventory-report-body-heading">
+
+                            <div>
+                                <strong>Inventory Overview</strong>
+                                <span>Recent documented items</span>
+                            </div>
+
+                            <i data-lucide="more-horizontal"></i>
+
+                        </div>
+
+
+                        <div class="inventory-report-items">
+
+                            <div class="inventory-report-item">
+
+                                <div class="inventory-report-item-image">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80"
+                                        alt="Furniture inventory item"
+                                    >
+                                </div>
+
+                                <div class="inventory-report-item-info">
+                                    <strong>Living Room Sofa</strong>
+                                    <span>Furniture · Living Room</span>
+                                </div>
+
+                                <span class="inventory-report-item-value">
+                                    $2,400
+                                </span>
+
+                            </div>
+
+
+                            <div class="inventory-report-item">
+
+                                <div class="inventory-report-item-image">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=200&q=80"
+                                        alt="Laptop inventory item"
+                                    >
+                                </div>
+
+                                <div class="inventory-report-item-info">
+                                    <strong>MacBook Pro</strong>
+                                    <span>Electronics · Office</span>
+                                </div>
+
+                                <span class="inventory-report-item-value">
+                                    $2,100
+                                </span>
+
+                            </div>
+
+
+                            <div class="inventory-report-item">
+
+                                <div class="inventory-report-item-image">
+                                    <img
+                                        src="Watch-inventory-item.jpg"
+                                        alt="Watch inventory item"
+                                    >
+                                </div>
+
+                                <div class="inventory-report-item-info">
+                                    <strong>Wrist Watch</strong>
+                                    <span>Valuables · Bedroom</span>
+                                </div>
+
+                                <span class="inventory-report-item-value">
+                                    $1,850
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inventory-report-footer">
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            Last updated today
+                        </span>
+
+                        <span>
+                            <i data-lucide="lock"></i>
+                            Private record
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-reports-content">
+
+                <div class="inventory-report-feature">
+
+                    <div class="inventory-report-feature-icon">
+                        <i data-lucide="folder-tree"></i>
+                    </div>
+
+                    <div>
+                        <h3>Organized by Category</h3>
+                        <p>
+                            Group household belongings by rooms, item types,
+                            or other useful categories.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-report-feature">
+
+                    <div class="inventory-report-feature-icon">
+                        <i data-lucide="image"></i>
+                    </div>
+
+                    <div>
+                        <h3>Supporting Photographs</h3>
+                        <p>
+                            Connect documented items with clear visual
+                            references for easier identification.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-report-feature">
+
+                    <div class="inventory-report-feature-icon">
+                        <i data-lucide="clipboard-list"></i>
+                    </div>
+
+                    <div>
+                        <h3>Item Details</h3>
+                        <p>
+                            Keep relevant information such as item names,
+                            categories, descriptions, and other available
+                            details together.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="inventory-report-feature">
+
+                    <div class="inventory-report-feature-icon">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+
+                    <div>
+                        <h3>Easy to Maintain</h3>
+                        <p>
+                            Update your inventory over time as belongings
+                            are added, removed, or replaced.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <a href="services.html" class="inventory-reports-button">
+                    View Service Details
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="inventory-cta">
+
+    <div class="inventory-cta-container">
+
+        <div class="inventory-cta-icon">
+            <i data-lucide="shield-check"></i>
+        </div>
+
+        <span class="inventory-section-tag">
+            <i data-lucide="arrow-right"></i>
+            Get Started
+        </span>
+
+        <h2>
+            Start Building a Clear Record
+            <span>of What You Own.</span>
+        </h2>
+
+        <p>
+            Get your household belongings documented, organized, and
+            prepared in a digital inventory you can reference when needed.
+        </p>
+
+        <div class="inventory-cta-actions">
+
+            <a href="services.html" class="inventory-cta-primary">
+                Explore Our Services
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="contact.html" class="inventory-cta-secondary">
+                Contact Us
+                <i data-lucide="message-circle"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container footer-grid">
+
+        <div class="footer-col">
+
+            <h3 class="footer-title" id="homepage-redirect">
+
+                <img src="logo.png"
+                     alt="HomeVault - Home Inventory & Valuables Documentation"
+                     class="footer-logo">
+
+                <span class="footer-brand">
+
+                    <span class="brand-primary">
+                        Home
+                    </span>
+
+                    <span class="brand-secondary">
+                        Vault
+                    </span>
+
+                </span>
+
+            </h3>
+
+            <p>
+                Helping homeowners document, organize, and protect
+                their valuable possessions with detailed home inventory
+                records designed for easy access, verification, and
+                long-term peace of mind.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Facebook">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Pinterest">
+
+                    <i class="fab fa-pinterest-p"></i>
+
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="LinkedIn">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Quick Links
+            </h4>
+
+            <a href="home-2.html">
+                Home
+            </a>
+
+            <a href="service.html">
+                Service
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="pricing.html">
+               Pricing
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+            <a href="dashboard.html">
+                dashboard
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Our Services
+            </h4>
+
+            <a href="service-details.html?service=photo">
+                Photo Documentation
+            </a>
+
+            <a href="service-details.html?service=appraisal">
+                Appraisal Referrals
+            </a>
+
+            <a href="service-details.html?service=reports">
+                Inventory Reports
+            </a>
+
+            <a href="service-details.html?service=photo">
+                Insurance Documentation
+            </a>
+
+            <a href="service-details.html?service=appraisal">
+                Digital Records
+            </a>
+
+            <a href="service-details.html?service=reports">
+                Inventory Updates
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Resources
+            </h4>
+
+            <a href="service-details.html?service=reports">
+                Inventory Guide
+            </a>
+
+            <a href="service-details.html?service=photo">
+                Documentation Guide
+            </a>
+
+            <a href="service-details.html?service=appraisal">
+                Valuation Records
+            </a>
+
+            <a href="service-details.html?service=reports">
+                Asset Protection
+            </a>
+
+            <a href="404.html">
+                404 page
+            </a>
+
+            <a href="coming-soon.html">
+                Coming-soon page
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Contact Us
+            </h4>
+
+            <p>
+                Email: hello@homevault.com
+            </p>
+
+            <p>
+                Phone: +91 0000000000
+            </p>
+
+            <p>
+                Location: India
+            </p>
+
+            <p>
+                Support Hours: Mon - Sat
+            </p>
+
+            <p>
+                9:00 AM - 6:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-bottom-content">
+
+            <p>
+                © 2026 HomeVault. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms&conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    const loginBtn = document.getElementById("loginBtn");
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const mobileLoginBtn =
+        document.getElementById("mobileLoginBtn");
+
+    if (mobileLoginBtn) {
+
+        mobileLoginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const links =
+        document.querySelectorAll(".nav-link");
+
+    const currentPage =
+        window.location.pathname.split("/").pop() ||
+        "index.html";
+
+
+    links.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const page =
+            href.split("/").pop();
+
+
+        if (page === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const homePages = [
+        "index.html",
+        "home-1.html",
+        "home-2.html"
+    ];
+
+
+    if (homePages.includes(currentPage)) {
+
+        const homeLink =
+            document.querySelector(
+                '.nav-link[href="index.html"]'
+            );
+
+
+        if (homeLink) {
+
+            homeLink.classList.add("active");
+
+        }
+
+    }
+
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (localStorage.getItem("theme") === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    if (themeToggle) {
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+
+        lucide.createIcons();
+
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+
+            if (document.body.classList.contains("dark")) {
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+                themeToggle.innerHTML =
+                    '<i data-lucide="sun"></i>';
+
+            } else {
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+
+                themeToggle.innerHTML =
+                    '<i data-lucide="moon"></i>';
+
+            }
+
+
+            lucide.createIcons();
+
+        });
+
+    }
+
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("direction") ||
+        "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute("dir", "ltr");
+
+                localStorage.setItem(
+                    "direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent = "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute("dir", "rtl");
+
+                localStorage.setItem(
+                    "direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("active");
+
+        });
+
+
+        document.addEventListener("click", (e) => {
+
+            if (
+                !navMenu.contains(e.target) &&
+                !menuToggle.contains(e.target)
+            ) {
+
+                navMenu.classList.remove("active");
+
+
+                document
+                    .querySelectorAll(".dropdown-menu")
+                    .forEach(menu => {
+
+                        menu.classList.remove("show");
+
+                    });
+
+            }
+
+        });
+
+    }
+
+
+    document
+        .querySelectorAll(".dropdown")
+        .forEach(drop => {
+
+            const toggle =
+                drop.querySelector(".nav-item");
+
+            const menu =
+                drop.querySelector(".dropdown-menu");
+
+
+            if (toggle && menu) {
+
+                toggle.addEventListener("click", (e) => {
+
+                    if (window.innerWidth <= 1025) {
+
+                        e.preventDefault();
+
+                        menu.classList.toggle("show");
+
+                    }
+
+                });
+
+            }
+
+        });
+
+
+});
+
+</script>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+
+lucide.createIcons();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sign Up | HomeVault</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link
+        rel="stylesheet"
+        href="signup.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="auth-main">
+
+
+    <div class="inventory-scene">
+
+
+        <div class="scene-photo scene-item">
+
+            <div class="scene-image">
+                <i data-lucide="camera"></i>
+            </div>
+
+            <div>
+                <strong>Photo Documentation</strong>
+                <span>Organized visual records</span>
+            </div>
+
+        </div>
+
+
+        <div class="scene-appraisal scene-item">
+
+            <div class="scene-image">
+                <i data-lucide="scale"></i>
+            </div>
+
+            <div>
+                <strong>Appraisal Referrals</strong>
+                <span>Professional valuation support</span>
+            </div>
+
+        </div>
+
+
+        <div class="scene-report scene-item">
+
+            <div class="scene-image">
+                <i data-lucide="file-text"></i>
+            </div>
+
+            <div>
+                <strong>Digital Inventory Reports</strong>
+                <span>Structured household records</span>
+            </div>
+
+        </div>
+
+
+        <div class="scene-document scene-document-one">
+            <i data-lucide="image"></i>
+        </div>
+
+
+        <div class="scene-document scene-document-two">
+            <i data-lucide="files"></i>
+        </div>
+
+
+        <div class="scene-document scene-document-three">
+            <i data-lucide="clipboard-check"></i>
+        </div>
+
+
+        <div class="scene-line scene-line-one"></div>
+
+        <div class="scene-line scene-line-two"></div>
+
+        <div class="scene-line scene-line-three"></div>
+
+
+        <div class="scene-glow scene-glow-one"></div>
+
+        <div class="scene-glow scene-glow-two"></div>
+
+
+    </div>
+
+
+    <div class="auth-controls">
+
+        <button
+            type="button"
+            id="rtlToggle"
+            class="auth-rtl-button"
+        >
+            RTL
+        </button>
+
+
+        <button
+            type="button"
+            id="themeToggle"
+            class="auth-theme-button"
+            aria-label="Toggle dark mode"
+        >
+
+            <i data-lucide="moon"></i>
+
+        </button>
+
+    </div>
+
+
+    <section class="signup-card">
+
+
+        <div class="signup-logo">
+
+            <a href="index.html">
+
+                <img
+                    src="logo.png"
+                    alt="HomeVault - Home Inventory & Valuables Documentation"
+                >
+
+                <span class="signup-logo-text">
+                    Home<span>Vault</span>
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="signup-heading">
+
+            <span class="signup-eyebrow">
+
+                <i data-lucide="shield-check"></i>
+
+                Create Your Account
+
+            </span>
+
+
+            <h1>
+                Start Your
+                <span>HomeVault</span>
+                Journey
+            </h1>
+
+
+            <p>
+                Create your account to organize, document and manage
+                your household inventory securely.
+            </p>
+
+        </div>
+
+
+        <form
+            class="signup-form"
+            id="signupForm"
+        >
+
+
+            <div class="signup-field">
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+                <div class="signup-input-wrapper">
+
+                    <i data-lucide="user"></i>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="signup-field">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <div class="signup-input-wrapper">
+
+                    <i data-lucide="mail"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="signup-field">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="signup-input-wrapper password-wrapper">
+
+                    <i data-lucide="lock-keyhole"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="password"
+                        aria-label="Show password"
+                    >
+                        <i data-lucide="eye"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="signup-field">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <div class="signup-input-wrapper password-wrapper">
+
+                    <i data-lucide="lock-keyhole"></i>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="confirmPassword"
+                        aria-label="Show password"
+                    >
+                        <i data-lucide="eye"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <label class="signup-terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    required
+                >
+
+                <span>
+                    I agree to the
+                    <a href="#">Terms of Service</a>
+                    and
+                    <a href="#">Privacy Policy</a>.
+                </span>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="signup-submit"
+            >
+
+                Create Account
+
+                <i data-lucide="arrow-right"></i>
+
+            </button>
+
+
+        </form>
+
+
+        <div class="signup-divider">
+            <span>or continue with</span>
+        </div>
+
+
+        <div class="social-signup">
+
+
+            <button
+                type="button"
+                class="social-button"
+                id="googleSignup"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        fill="#4285F4"
+                        d="M21.35 12.27c0-.71-.06-1.4-.18-2.05H12v3.88h5.23a4.47 4.47 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.92-4.18 2.92-7.19z"
+                    />
+
+                    <path
+                        fill="#34A853"
+                        d="M12 21.8c2.63 0 4.84-.87 6.45-2.34l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.51A9.74 9.74 0 0 0 12 21.8z"
+                    />
+
+                    <path
+                        fill="#FBBC05"
+                        d="M6.54 13.92A5.86 5.86 0 0 1 6.23 12c0-.67.11-1.32.31-1.92V7.57H3.3A9.76 9.76 0 0 0 2.25 12c0 1.57.38 3.05 1.05 4.43l3.24-2.51z"
+                    />
+
+                    <path
+                        fill="#EA4335"
+                        d="M12 6.05c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.15 14.63 2.2 12 2.2a9.74 9.74 0 0 0-8.7 5.37l3.24 2.51C7.31 7.77 9.46 6.05 12 6.05z"
+                    />
+
+                </svg>
+
+                Google
+
+            </button>
+
+
+            <button
+                type="button"
+                class="social-button"
+                id="appleSignup"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M16.77 12.72c.02 2.07 1.82 2.76 1.84 2.77-.02.05-.29.99-.95 1.96-.57.84-1.16 1.68-2.09 1.7-.91.02-1.21-.55-2.26-.55-1.05 0-1.38.53-2.24.57-.9.03-1.58-.91-2.15-1.75-1.17-1.69-2.06-4.77-.86-6.84.6-1.03 1.68-1.68 2.84-1.7.88-.02 1.71.59 2.24.59.53 0 1.52-.73 2.56-.62.44.02 1.68.18 2.48 1.34-.06.04-1.48.87-1.47 2.53z"
+                    />
+
+                    <path
+                        d="M15.36 7.98c.47-.57.79-1.37.7-2.16-.68.03-1.5.45-1.99 1.02-.43.5-.81 1.31-.71 2.08.76.06 1.53-.38 2-.94z"
+                    />
+
+                </svg>
+
+                Apple
+
+            </button>
+
+
+        </div>
+
+
+        <div class="signup-login">
+
+            Already have an account?
+
+            <a href="login.html">
+                Sign In
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+    const passwordToggles =
+        document.querySelectorAll(".password-toggle");
+
+    const googleSignup =
+        document.getElementById("googleSignup");
+
+    const appleSignup =
+        document.getElementById("appleSignup");
+
+
+    const savedTheme =
+        localStorage.getItem("theme") || "light";
+
+    const savedDirection =
+        localStorage.getItem("direction") || "ltr";
+
+
+    if (savedTheme === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDirection
+    );
+
+
+    updateThemeIcon();
+
+    updateRTLButton();
+
+    createIcons();
+
+
+    function createIcons() {
+
+        if (
+            typeof lucide !== "undefined"
+        ) {
+
+            lucide.createIcons();
+
+        }
+
+    }
+
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) {
+            return;
+        }
+
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+
+        createIcons();
+
+    }
+
+
+    function updateRTLButton() {
+
+        if (!rtlToggle) {
+            return;
+        }
+
+
+        const direction =
+            document.documentElement
+                .getAttribute("dir");
+
+
+        rtlToggle.textContent =
+            direction === "rtl"
+                ? "LTR"
+                : "RTL";
+
+    }
+
+
+    if (themeToggle) {
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                document.body.classList.toggle("dark");
+
+
+                const isDark =
+                    document.body.classList.contains("dark");
+
+
+                localStorage.setItem(
+                    "theme",
+                    isDark
+                        ? "dark"
+                        : "light"
+                );
+
+
+                updateThemeIcon();
+
+            }
+        );
+
+    }
+
+
+    if (rtlToggle) {
+
+        rtlToggle.addEventListener(
+            "click",
+            () => {
+
+                const currentDirection =
+                    document.documentElement
+                        .getAttribute("dir");
+
+
+                const newDirection =
+                    currentDirection === "rtl"
+                        ? "ltr"
+                        : "rtl";
+
+
+                document.documentElement.setAttribute(
+                    "dir",
+                    newDirection
+                );
+
+
+                localStorage.setItem(
+                    "direction",
+                    newDirection
+                );
+
+
+                updateRTLButton();
+
+            }
+        );
+
+    }
+
+
+    passwordToggles.forEach(
+        (toggle) => {
+
+            toggle.addEventListener(
+                "click",
+                () => {
+
+                    const target =
+                        toggle.getAttribute(
+                            "data-target"
+                        );
+
+
+                    const input =
+                        document.getElementById(
+                            target
+                        );
+
+
+                    if (!input) {
+                        return;
+                    }
+
+
+                    const showPassword =
+                        input.type === "password";
+
+
+                    input.type =
+                        showPassword
+                            ? "text"
+                            : "password";
+
+
+                    toggle.innerHTML =
+                        showPassword
+                            ? '<i data-lucide="eye-off"></i>'
+                            : '<i data-lucide="eye"></i>';
+
+
+                    toggle.setAttribute(
+                        "aria-label",
+                        showPassword
+                            ? "Hide password"
+                            : "Show password"
+                    );
+
+
+                    createIcons();
+
+                }
+            );
+
+        }
+    );
+
+
+    if (signupForm) {
+
+        signupForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+
+                const password =
+                    document.getElementById(
+                        "password"
+                    );
+
+
+                const confirmPassword =
+                    document.getElementById(
+                        "confirmPassword"
+                    );
+
+
+                const terms =
+                    document.getElementById(
+                        "terms"
+                    );
+
+
+                if (
+                    password.value !==
+                    confirmPassword.value
+                ) {
+
+                    confirmPassword.setCustomValidity(
+                        "Passwords do not match."
+                    );
+
+                    confirmPassword.reportValidity();
+
+                    return;
+
+                }
+
+
+                confirmPassword.setCustomValidity("");
+
+
+                if (!terms.checked) {
+
+                    terms.reportValidity();
+
+                    return;
+
+                }
+
+
+                const submitButton =
+                    signupForm.querySelector(
+                        ".signup-submit"
+                    );
+
+
+                submitButton.disabled = true;
+
+
+                submitButton.innerHTML =
+                    '<i data-lucide="loader-circle"></i> Creating Account...';
+
+
+                createIcons();
+
+
+                setTimeout(() => {
+
+                    submitButton.innerHTML =
+                        'Account Created <i data-lucide="check"></i>';
+
+                    createIcons();
+
+
+                }, 1000);
+
+            }
+        );
+
+    }
+
+
+    if (googleSignup) {
+
+        googleSignup.addEventListener(
+            "click",
+            () => {
+
+                googleSignup.classList.add(
+                    "social-loading"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (appleSignup) {
+
+        appleSignup.addEventListener(
+            "click",
+            () => {
+
+                appleSignup.classList.add(
+                    "social-loading"
+                );
+
+            }
+        );
+
+    }
+
+
+    const inputs =
+        document.querySelectorAll(
+            ".signup-input-wrapper input"
+        );
+
+
+    inputs.forEach(
+        (input) => {
+
+            input.addEventListener(
+                "input",
+                () => {
+
+                    input.setCustomValidity("");
+
+                }
+            );
+
+        }
+    );
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1921 @@
+:root {
+    --font-family: "Manrope", sans-serif;
+
+    --primary: #123B5D;
+    --primary-dark: #0B263D;
+
+    --secondary: #16A6A1;
+    --secondary-dark: #0F817D;
+
+    --bg-color: #F6F9FB;
+    --text-color: #17212B;
+
+    --card-bg: #FFFFFF;
+    --border-color: #D9E2E8;
+
+    --primary-light: rgba(18, 59, 93, 0.12);
+    --secondary-light: rgba(22, 166, 161, 0.12);
+
+    --text-color-rgb: 23, 33, 43;
+
+    --bg: #F6F9FB;
+    --text: #17212B;
+
+    --heading-color: #102A43;
+    --text-light: #64748B;
+}
+
+body.dark {
+    --bg-color: #0D1720;
+    --text-color: #E8EEF2;
+
+    --card-bg: #14232E;
+    --border-color: #29404D;
+
+    --primary: #3B82C4;
+    --primary-dark: #256A9C;
+
+    --secondary: #20C4BE;
+    --secondary-dark: #0F817D;
+
+    --primary-light: rgba(59, 130, 196, 0.18);
+    --secondary-light: rgba(32, 196, 190, 0.15);
+
+    --text-color-rgb: 232, 238, 242;
+
+    --bg: #0D1720;
+    --text: #E8EEF2;
+
+    --heading-color: #F4F8FA;
+    --text-light: #9BAFBB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: var(--font-family);
+
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    overflow: hidden;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.auth-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255,255,255,0.96),
+            rgba(246,249,251,0.94)
+        );
+}
+
+body.dark .auth-page {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(20,35,46,0.96),
+            rgba(13,23,32,0.99)
+        );
+}
+
+.auth-controls {
+    position: fixed;
+
+    top: 22px;
+    right: 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 100;
+}
+
+.auth-rtl-button,
+.auth-theme-button {
+    height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+
+    background: rgba(255,255,255,0.86);
+
+    color: var(--text-color);
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(18,59,93,0.07);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+body.dark .auth-rtl-button,
+body.dark .auth-theme-button {
+    background: rgba(20,35,46,0.9);
+}
+
+.auth-rtl-button {
+    min-width: 48px;
+    padding: 0 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.auth-theme-button {
+    width: 38px;
+}
+
+.auth-theme-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.auth-rtl-button:hover,
+.auth-theme-button:hover {
+    color: var(--secondary);
+
+    border-color: var(--secondary);
+
+    transform: translateY(-2px);
+}
+
+.auth-main {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 20px;
+
+    z-index: 5;
+}
+
+.login-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 455px;
+    min-height:550px;
+
+    padding: 20px 38px;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border: 1px solid
+        rgba(217,226,232,0.95);
+
+    border-radius: 22px;
+
+    box-shadow:
+    0 40px 90px rgba(18, 59, 93, 0.20),
+    0 18px 45px rgba(18, 59, 93, 0.13),
+    0 6px 16px rgba(18, 59, 93, 0.09);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    animation:
+        loginCardIn
+        0.8s
+        cubic-bezier(.22,1,.36,1)
+        both;
+}
+
+body.dark .login-card {
+    background:
+        rgba(20,35,46,0.95);
+
+    border-color:
+        rgba(59,130,196,0.2);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,0.35);
+}
+
+.auth-logo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+.auth-logo a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-family: var(--font-family);
+}
+
+.auth-logo img {
+    width: 46px;
+    height: 46px;
+
+    object-fit: contain;
+}
+
+.auth-logo-text {
+    color: var(--primary);
+
+    font-size: 23px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -0.6px;
+}
+
+.auth-logo-text span {
+    color: var(--secondary);
+}
+
+.login-heading {
+    text-align: center;
+
+    margin-bottom: 13px;
+}
+
+.login-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--secondary);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
+
+    text-transform: uppercase;
+}
+
+.login-heading h1 {
+    color: var(--heading-color);
+
+    font-size: 25px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+}
+
+.login-heading p {
+    max-width: 350px;
+
+    margin: 9px auto 0;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--heading-color);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.input-wrapper > svg {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    width: 17px;
+    height: 17px;
+
+    transform: translateY(-50%);
+
+    color: var(--text-light);
+
+    pointer-events: none;
+
+    transition: color 0.25s ease;
+}
+
+html[dir="rtl"] .input-wrapper > svg {
+    left: auto;
+    right: 14px;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0 44px 0 43px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--bg-color);
+
+    color: var(--text-color);
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+html[dir="rtl"] .input-wrapper input {
+    padding:
+        0 43px 0 44px;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px var(--secondary-light);
+
+    background: var(--card-bg);
+}
+
+.input-wrapper:focus-within > svg {
+    color: var(--secondary);
+}
+
+.password-toggle {
+    position: absolute;
+
+    right: 11px;
+    top: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    background: transparent;
+
+    color: var(--text-light);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+html[dir="rtl"] .password-toggle {
+    right: auto;
+    left: 11px;
+}
+
+.password-toggle:hover {
+    color: var(--secondary);
+}
+
+.password-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.login-options {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin: 5px 0 19px;
+}
+
+.remember-option {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.remember-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.custom-checkbox {
+    width: 15px;
+    height: 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 4px;
+
+    background: var(--bg-color);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.remember-option input:checked + .custom-checkbox {
+    background: var(--secondary);
+
+    border-color: var(--secondary);
+}
+
+.remember-option input:checked + .custom-checkbox::after {
+    content: "";
+
+    width: 6px;
+    height: 3px;
+
+    border-left: 1.5px solid #ffffff;
+    border-bottom: 1.5px solid #ffffff;
+
+    transform: rotate(-45deg) translateY(-1px);
+}
+
+.forgot-link {
+    color: var(--secondary);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: var(--secondary-dark);
+}
+
+.login-button {
+    width: 100%;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(18,59,93,0.18);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.login-button:hover {
+    background: var(--secondary);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(18,59,93,0.23);
+}
+
+.login-button svg {
+    width: 16px;
+    height: 16px;
+
+    transition: transform 0.25s ease;
+}
+
+html[dir="rtl"] .login-button svg {
+    transform: rotate(180deg);
+}
+
+.login-button:hover svg {
+    transform: translateX(3px);
+}
+
+html[dir="rtl"] .login-button:hover svg {
+    transform: rotate(180deg) translateX(3px);
+}
+
+.login-divider {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 12px 0 12px;
+}
+
+.login-divider::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background: var(--border-color);
+}
+
+.login-divider span {
+    position: relative;
+
+    padding: 0 12px;
+
+    background: var(--card-bg);
+
+    color: var(--text-light);
+
+    font-size: 9px;
+
+    z-index: 1;
+}
+
+.social-login {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.social-button {
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 9px;
+
+    background: var(--card-bg);
+
+    color: var(--text-color);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.social-button:hover {
+    border-color: var(--secondary);
+
+    background: var(--secondary-light);
+
+    transform: translateY(-2px);
+}
+
+.social-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.apple-button svg {
+    color: var(--text-color);
+}
+
+.signup-text {
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+}
+
+.signup-text a {
+    margin-left: 3px;
+
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+html[dir="rtl"] .signup-text a {
+    margin-left: 0;
+    margin-right: 3px;
+}
+
+.inventory-animation {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.inventory-animation::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: -260px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,166,161,0.14),
+            transparent 68%
+        );
+
+    filter: blur(10px);
+
+    animation:
+        inventoryGlowLeft
+        8s ease-in-out
+        infinite;
+}
+
+.inventory-animation::after {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    right: -300px;
+    top: 45%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(18,59,93,0.13),
+            transparent 68%
+        );
+
+    filter: blur(12px);
+
+    animation:
+        inventoryGlowRight
+        10s ease-in-out
+        infinite;
+}
+
+.inventory-float {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 235px;
+
+    padding: 13px 16px;
+
+    background:
+        rgba(255,255,255,0.82);
+
+    border: 1px solid
+        rgba(255,255,255,0.95);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(18,59,93,0.11);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    color: var(--heading-color);
+
+    z-index: 2;
+}
+
+body.dark .inventory-float {
+    background:
+        rgba(20,35,46,0.86);
+
+    border-color:
+        rgba(59,130,196,0.2);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,0.28);
+}
+
+.inventory-float-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--secondary);
+
+    background:
+        var(--secondary-light);
+
+    border-radius: 10px;
+}
+
+.inventory-float-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.inventory-float strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.inventory-float span {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 8px;
+
+    line-height: 1.4;
+}
+
+.inventory-photo {
+    left: 8%;
+    top: 25%;
+
+    animation:
+        inventoryPhoto
+        7s ease-in-out
+        infinite;
+}
+
+.inventory-appraisal {
+    left: 7%;
+    bottom: 21%;
+
+    animation:
+        inventoryAppraisal
+        8s ease-in-out
+        infinite;
+}
+
+.inventory-report {
+    right: 7%;
+    top: 29%;
+
+    animation:
+        inventoryReport
+        9s ease-in-out
+        infinite;
+}
+
+.inventory-document {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 64px;
+
+    color: var(--primary);
+
+    background:
+        rgba(255,255,255,0.55);
+
+    border: 1px solid
+        rgba(255,255,255,0.8);
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(18,59,93,0.08);
+
+    backdrop-filter: blur(8px);
+
+    opacity: 0.65;
+}
+
+body.dark .inventory-document {
+    background:
+        rgba(20,35,46,0.62);
+
+    border-color:
+        rgba(59,130,196,0.16);
+}
+
+.inventory-document svg {
+    width: 20px;
+    height: 20px;
+}
+
+.inventory-document-one {
+    left: 22%;
+    top: 16%;
+
+    transform: rotate(-10deg);
+
+    animation:
+        documentFloatOne
+        6s ease-in-out
+        infinite;
+}
+
+.inventory-document-two {
+    right: 21%;
+    bottom: 16%;
+
+    transform: rotate(9deg);
+
+    animation:
+        documentFloatTwo
+        7s ease-in-out
+        infinite;
+}
+
+.inventory-document-three {
+    right: 14%;
+    top: 14%;
+
+    transform: rotate(-7deg);
+
+    animation:
+        documentFloatThree
+        8s ease-in-out
+        infinite;
+}
+
+@keyframes loginCardIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes inventoryPhoto {
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translate3d(18px,-14px,0)
+            rotate(1deg);
+    }
+}
+
+@keyframes inventoryAppraisal {
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(2deg);
+    }
+
+    50% {
+        transform:
+            translate3d(20px,12px,0)
+            rotate(-1deg);
+    }
+}
+
+@keyframes inventoryReport {
+    0%,
+    100% {
+        transform:
+            translate3d(0,0,0)
+            rotate(2deg);
+    }
+
+    50% {
+        transform:
+            translate3d(-18px,-15px,0)
+            rotate(-1deg);
+    }
+}
+
+@keyframes documentFloatOne {
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -18px;
+    }
+}
+
+@keyframes documentFloatTwo {
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 15px;
+    }
+}
+
+@keyframes documentFloatThree {
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -13px;
+    }
+}
+
+@keyframes inventoryGlowLeft {
+    0%,
+    100% {
+        transform:
+            translateY(-50%)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-50%)
+            scale(1.12);
+    }
+}
+
+@keyframes inventoryGlowRight {
+    0%,
+    100% {
+        transform:
+            translateY(-50%)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-50%)
+            scale(1.08);
+    }
+}
+
+html[dir="rtl"] .inventory-photo {
+    left: auto;
+    right: 8%;
+}
+
+html[dir="rtl"] .inventory-appraisal {
+    left: auto;
+    right: 7%;
+}
+
+html[dir="rtl"] .inventory-report {
+    right: auto;
+    left: 7%;
+}
+
+html[dir="rtl"] .inventory-document-one {
+    left: auto;
+    right: 22%;
+}
+
+html[dir="rtl"] .inventory-document-two {
+    right: auto;
+    left: 21%;
+}
+
+html[dir="rtl"] .inventory-document-three {
+    right: auto;
+    left: 14%;
+}
+
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}
+
+
+
+
+@media (max-width: 360px) {
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .auth-page {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .auth-controls {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        gap: 6px;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 12px;
+    }
+
+    .auth-rtl-button,
+    .auth-theme-button {
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .auth-rtl-button {
+        min-width: 42px;
+        padding: 0 9px;
+        font-size: 10px;
+    }
+
+    .auth-theme-button {
+        width: 34px;
+    }
+
+    .auth-theme-button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .auth-main {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 49px 12px 20px;
+        align-items: flex-start;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        padding: 24px 18px 24px;
+        border-radius: 17px;
+    }
+
+    .auth-logo {
+        margin-bottom: 7px;
+    }
+
+    .auth-logo img {
+        width: 39px;
+        height: 39px;
+    }
+
+    .auth-logo-text {
+        font-size: 20px;
+    }
+
+    .login-heading {
+        margin-bottom: 10px;
+    }
+
+    .login-heading h1 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .login-heading p {
+        max-width: 270px;
+        font-size: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 7px;
+    }
+
+    .form-group label {
+        font-size: 10px;
+    }
+
+    .input-wrapper input {
+        height: 40px;
+        font-size: 12px;
+        border-radius: 9px;
+        padding: 0 42px 0 40px;
+    }
+
+    html[dir="rtl"] .input-wrapper input {
+        padding: 0 40px 0 42px;
+    }
+
+    .input-wrapper > svg {
+        left: 12px;
+        width: 16px;
+        height: 16px;
+    }
+
+    html[dir="rtl"] .input-wrapper > svg {
+        left: auto;
+        right: 12px;
+    }
+
+    .password-toggle {
+        right: 8px;
+        width: 29px;
+        height: 29px;
+    }
+
+    html[dir="rtl"] .password-toggle {
+        right: auto;
+        left: 8px;
+    }
+
+    .login-options {
+        margin: 3px 0 18px;
+        gap: 6px;
+    }
+
+    .remember-option,
+    .forgot-link {
+        font-size: 9px;
+    }
+
+    .custom-checkbox {
+        width: 14px;
+        height: 14px;
+    }
+
+    .login-button {
+        height: 38px;
+        border-radius: 9px;
+        font-size: 11px;
+    }
+
+    .login-divider {
+        margin: 12px 0 14px;
+    }
+
+    .social-login {
+        gap: 8px;
+    }
+
+    .social-button {
+        height: 32px;
+        gap: 6px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+    .signup-text {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    .inventory-animation {
+        display: none;
+    }
+}
+
+
+@media (width: 768px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .auth-page {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .auth-controls {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        gap: 8px;
+        z-index: 100;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 14px;
+    }
+
+    .auth-rtl-button,
+    .auth-theme-button {
+        height: 36px;
+        border-radius: 9px;
+    }
+
+    .auth-rtl-button {
+        min-width: 45px;
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .auth-theme-button {
+        width: 36px;
+    }
+
+    .auth-theme-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .auth-main {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 20px 20px 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .login-card {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 455px;
+        min-height: 0;
+        border-radius: 21px;
+    }
+
+    .auth-logo {
+        margin-bottom: 14px;
+    }
+
+    .auth-logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .auth-logo-text {
+        font-size: 22px;
+    }
+
+    .login-heading {
+        margin-bottom: 18px;
+    }
+
+    .login-eyebrow {
+        margin-bottom: 7px;
+        font-size: 8px;
+    }
+
+    .login-heading h1 {
+        font-size: 25px;
+        line-height: 1.25;
+    }
+
+    .login-heading p {
+        max-width: 350px;
+        margin-top: 8px;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    .form-group label {
+        margin-bottom: 6px;
+        font-size: 11px;
+    }
+
+    .input-wrapper input {
+        height: 44px;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 0 44px 0 43px;
+    }
+
+    html[dir="rtl"] .input-wrapper input {
+        padding: 0 43px 0 44px;
+    }
+
+    .input-wrapper > svg {
+        left: 14px;
+        width: 17px;
+        height: 17px;
+    }
+
+    html[dir="rtl"] .input-wrapper > svg {
+        left: auto;
+        right: 14px;
+    }
+
+    .password-toggle {
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    html[dir="rtl"] .password-toggle {
+        right: auto;
+        left: 10px;
+    }
+
+    .login-options {
+        margin: 4px 0 17px;
+        gap: 10px;
+    }
+
+    .remember-option,
+    .forgot-link {
+        font-size: 10px;
+    }
+
+    .login-button {
+        height: 41px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .login-divider {
+        margin: 15px 0 13px;
+    }
+
+    .social-login {
+        gap: 10px;
+    }
+
+    .social-button {
+        height: 39px;
+        font-size: 11px;
+    }
+
+    .signup-text {
+        margin-top: 19px;
+        font-size: 10px;
+    }
+
+    .inventory-float {
+        z-index: 2;
+        min-width: 185px;
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 11px;
+        opacity: 0.85;
+    }
+
+    .inventory-float-icon {
+        width: 33px;
+        height: 33px;
+        border-radius: 9px;
+    }
+
+    .inventory-float-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .inventory-float strong {
+        font-size: 9px;
+    }
+
+    .inventory-float span {
+        font-size: 7px;
+    }
+
+    .inventory-photo {
+        left: 2%;
+        top: 18%;
+    }
+
+    .inventory-appraisal {
+        left: 2%;
+        bottom: 10%;
+    }
+
+    .inventory-report {
+        right: 2%;
+        top: 20%;
+    }
+
+    html[dir="rtl"] .inventory-photo {
+        left: auto;
+        right: 2%;
+    }
+
+    html[dir="rtl"] .inventory-appraisal {
+        left: auto;
+        right: 2%;
+    }
+
+    html[dir="rtl"] .inventory-report {
+        right: auto;
+        left: 2%;
+    }
+
+    .inventory-document {
+        z-index: 1;
+        width: 45px;
+        height: 54px;
+    }
+
+    .inventory-document-one {
+        left: 10%;
+        top: 12%;
+    }
+
+    .inventory-document-two {
+        right: 10%;
+        bottom: 10%;
+    }
+
+    .inventory-document-three {
+        right: 7%;
+        top: 10%;
+    }
+
+    html[dir="rtl"] .inventory-document-one {
+        left: auto;
+        right: 10%;
+    }
+
+    html[dir="rtl"] .inventory-document-two {
+        right: auto;
+        left: 10%;
+    }
+
+    html[dir="rtl"] .inventory-document-three {
+        right: auto;
+        left: 7%;
+    }
+}
+
+
+
+@media (width: 1024px) {
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .auth-page {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .auth-controls {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        gap: 8px;
+        z-index: 100;
+    }
+
+    html[dir="rtl"] .auth-controls {
+        right: auto;
+        left: 24px;
+    }
+
+    .auth-rtl-button,
+    .auth-theme-button {
+        height: 38px;
+        border-radius: 9px;
+    }
+
+    .auth-rtl-button {
+        min-width: 46px;
+        padding: 0 11px;
+        font-size: 10px;
+    }
+
+    .auth-theme-button {
+        width: 38px;
+    }
+
+    .auth-theme-button svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .auth-main {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .login-card {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 430px;
+        min-height: 0;
+        padding: 15px 35px;
+        border-radius: 21px;
+    }
+
+    .auth-logo {
+        margin-bottom: 15px;
+    }
+
+    .auth-logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .auth-logo-text {
+        font-size: 22px;
+    }
+
+    .login-heading {
+        margin-bottom: 20px;
+    }
+
+    .login-eyebrow {
+        margin-bottom: 8px;
+        font-size: 8px;
+    }
+
+    .login-heading h1 {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .login-heading p {
+        max-width: 330px;
+        margin-top: 9px;
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        margin-bottom: 7px;
+        font-size: 11px;
+    }
+
+    .input-wrapper input {
+        height: 44px;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 0 43px 0 42px;
+    }
+
+    html[dir="rtl"] .input-wrapper input {
+        padding: 0 42px 0 43px;
+    }
+
+    .input-wrapper > svg {
+        left: 13px;
+        width: 17px;
+        height: 17px;
+    }
+
+    html[dir="rtl"] .input-wrapper > svg {
+        left: auto;
+        right: 13px;
+    }
+
+    .password-toggle {
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    html[dir="rtl"] .password-toggle {
+        right: auto;
+        left: 10px;
+    }
+
+    .login-options {
+        margin: 4px 0 18px;
+        gap: 10px;
+    }
+
+    .remember-option,
+    .forgot-link {
+        font-size: 10px;
+    }
+
+    .login-button {
+        height: 41px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .login-divider {
+        margin: 16px 0 14px;
+    }
+
+    .social-login {
+        gap: 10px;
+    }
+
+    .social-button {
+        height: 39px;
+        font-size: 10px;
+    }
+
+    .signup-text {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    .inventory-float {
+        z-index: 2;
+        min-width: 205px;
+        padding: 12px 14px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+
+    .inventory-float-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .inventory-float-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .inventory-float strong {
+        font-size: 9px;
+    }
+
+    .inventory-float span {
+        font-size: 7px;
+    }
+
+    .inventory-photo {
+        left: 3%;
+        top: 23%;
+    }
+
+    .inventory-appraisal {
+        left: 3%;
+        bottom: 16%;
+    }
+
+    .inventory-report {
+        right: 3%;
+        top: 26%;
+    }
+
+    html[dir="rtl"] .inventory-photo {
+        left: auto;
+        right: 3%;
+    }
+
+    html[dir="rtl"] .inventory-appraisal {
+        left: auto;
+        right: 3%;
+    }
+
+    html[dir="rtl"] .inventory-report {
+        right: auto;
+        left: 3%;
+    }
+
+    .inventory-document {
+        z-index: 1;
+        width: 48px;
+        height: 58px;
+    }
+
+    .inventory-document-one {
+        left: 14%;
+        top: 14%;
+    }
+
+    .inventory-document-two {
+        right: 14%;
+        bottom: 13%;
+    }
+
+    .inventory-document-three {
+        right: 9%;
+        top: 12%;
+    }
+
+    html[dir="rtl"] .inventory-document-one {
+        left: auto;
+        right: 14%;
+    }
+
+    html[dir="rtl"] .inventory-document-two {
+        right: auto;
+        left: 14%;
+    }
+
+    html[dir="rtl"] .inventory-document-three {
+        right: auto;
+        left: 9%;
+    }
+}
