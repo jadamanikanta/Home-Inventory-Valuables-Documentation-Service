@@ -3176,9 +3176,7 @@ html[dir="rtl"] .notification-item.unread {
     }
 
 
-    /* =====================================================
-       SIDEBAR
-    ===================================================== */
+    
 
     .dashboard-sidebar {
         width: 230px;
@@ -3197,7 +3195,7 @@ html[dir="rtl"] .notification-item.unread {
     }
 
 
-    /* Logo */
+    
 
     .logo {
         height: 60px;
@@ -3219,7 +3217,7 @@ html[dir="rtl"] .notification-item.unread {
     }
 
 
-    /* Navigation */
+    
 
     .dashboard-nav-link {
         min-height: 41px;
@@ -3284,9 +3282,7 @@ html[dir="rtl"] .notification-item.unread {
     }
 
 
-    /* =====================================================
-       TOPBAR
-    ===================================================== */
+    
 
     .dashboard-topbar {
         min-height: 60px;
@@ -3312,9 +3308,7 @@ html[dir="rtl"] .notification-item.unread {
     }
 
 
-    /* =====================================================
-       CONTENT
-    ===================================================== */
+  
 
     .dashboard-content {
         padding: 15px;
@@ -3370,7 +3364,7 @@ html[dir="rtl"] .notification-item.unread {
 
 
     .dashboard-profile-dropdown {
-        right: -65px;
+        right: 5px;
 
         width: 205px;
     }
@@ -3405,7 +3399,7 @@ html[dir="rtl"] .notification-item.unread {
     html[dir="rtl"] .dashboard-profile-dropdown {
         right: auto;
 
-        left: -65px;
+        left: 5px;
     }
 
 

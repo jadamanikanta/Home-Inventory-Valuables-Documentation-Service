@@ -725,6 +725,10 @@
     line-height: 1;
     font-weight: 800;
 }
+html[dir="rtl"] .inventory-service-number {
+    left: 25px;
+    right: auto;
+}
 
 .inventory-service-card h3 {
     margin: 0;
@@ -1319,6 +1323,10 @@
     font-weight: 800;
 }
 
+html[dir="rtl"] .inventory-category-number {
+    left: 17px;
+    right: auto;
+}
 .inventory-category-content h3 {
     margin: 0 0 7px;
     color: var(--heading-color);
