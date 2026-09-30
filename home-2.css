@@ -134,7 +134,7 @@
     align-items: center;
     gap: 5px;
     color: var(--text-light);
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 700;
 }
 
@@ -145,7 +145,7 @@
 }
 
 
-/* GALLERY */
+
 
 .home2-hero-gallery {
     display: grid;
@@ -239,14 +239,14 @@
 
 .home2-gallery-overlay strong {
     display: block;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .home2-gallery-overlay small {
     display: block;
     margin-top: 2px;
     color: rgba(255, 255, 255, 0.65);
-    font-size: 6px;
+    font-size: 10px;
 }
 
 
@@ -460,14 +460,14 @@
 .home2-visual-label strong {
     display: block;
     color: #ffffff;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .home2-visual-label small {
     display: block;
     margin-top: 3px;
     color: rgba(255, 255, 255, 0.58);
-    font-size: 7px;
+    font-size: 10px;
 }
 
 
@@ -561,7 +561,7 @@
 .home2-benefit h3 {
     margin: 0;
     color: var(--heading-color);
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
 }
 
@@ -569,7 +569,7 @@
     max-width: 440px;
     margin: 5px 0 0;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.7;
 }
 
@@ -828,7 +828,7 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     color: var(--secondary);
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -845,7 +845,7 @@
 .home2-category-content p {
     margin: 4px 0 0;
     color: rgba(255, 255, 255, 0.66);
-    font-size: 7px;
+    font-size: 11px;
     line-height: 1.5;
 }
 
@@ -1048,7 +1048,7 @@
 .home2-insurance-point strong {
     display: block;
     color: #ffffff;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -1056,7 +1056,7 @@
     max-width: 390px;
     margin: 4px 0 0;
     color: rgba(255, 255, 255, 0.48);
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.6;
 }
 
@@ -1116,14 +1116,14 @@
 .home2-report-brand strong {
     display: block;
     color: #102A43;
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .home2-report-brand small {
     display: block;
     margin-top: 2px;
     color: #64748B;
-    font-size: 6px;
+    font-size: 10px;
 }
 
 .home2-report-status {
@@ -1131,7 +1131,7 @@
     border-radius: 5px;
     background: rgba(22, 166, 161, 0.1);
     color: #0F817D;
-    font-size: 6px;
+    font-size: 10px;
     font-weight: 800;
 }
 
@@ -1161,7 +1161,7 @@
     border-radius: 5px;
     background: rgba(13, 23, 32, 0.72);
     color: #ffffff;
-    font-size: 6px;
+    font-size: 10px;
     backdrop-filter: blur(8px);
 }
 
@@ -1187,14 +1187,14 @@
 .home2-report-details span {
     display: block;
     color: #64748B;
-    font-size: 6px;
+    font-size: 11px;
 }
 
 .home2-report-details strong {
     display: block;
     margin-top: 3px;
     color: #102A43;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .home2-report-categories {
@@ -1232,7 +1232,7 @@
 
 .home2-report-categories strong {
     color: #64748B;
-    font-size: 6px;
+    font-size: 11px;
 }
 
 
@@ -1382,7 +1382,7 @@
 }
 
 
-/* PROCESS CARD */
+
 
 .home2-process-item {
     min-width: 0;
@@ -1460,7 +1460,7 @@
 }
 
 
-/* CONTENT */
+
 
 .home2-process-content {
     padding: 17px 13px 20px;
@@ -1489,6 +1489,7 @@
     align-items: center;
     justify-content: center;
     color: var(--secondary);
+    
 }
 
 .home2-process-connector i {
@@ -1549,7 +1550,7 @@ html[dir="rtl"] .home2-process:hover .home2-process-connector{
 .home2-process-note p {
     margin: 0;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.6;
 }
 
@@ -1740,7 +1741,7 @@ html[dir="rtl"] .home2-process:hover .home2-process-connector{
     display: block;
     margin-top: 4px;
     color: rgba(255, 255, 255, 0.62);
-    font-size: 10px;
+    font-size: 11px;
 }
 
 
@@ -1788,7 +1789,7 @@ html[dir="rtl"] .home2-process:hover .home2-process-connector{
     display: block;
     margin-top: 3px;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 10px;
 }
 
 
@@ -2244,7 +2245,7 @@ html[dir="rtl"] .home2-appraisal-link i {
 .home2-report-summary span {
     display: block;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .home2-report-summary strong {
@@ -2295,14 +2296,14 @@ html[dir="rtl"] .home2-appraisal-link i {
 .home2-report-room-heading strong {
     display: block;
     color: var(--heading-color);
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .home2-report-room-heading small {
     display: block;
     margin-top: 3px;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .home2-report-room-heading > i {
@@ -2324,7 +2325,7 @@ html[dir="rtl"] .home2-appraisal-link i {
 }
 
 .home2-report-thumb {
-    width: 50px;
+    width: 55px;
     height: 45px;
     overflow: hidden;
     border-radius: 6px;
@@ -2340,14 +2341,14 @@ html[dir="rtl"] .home2-appraisal-link i {
 .home2-report-item-row strong {
     display: block;
     color: var(--heading-color);
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .home2-report-item-row small {
     display: block;
     margin-top: 3px;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 11px;
 }
 
 .home2-report-item-row > span {

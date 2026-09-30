@@ -244,7 +244,7 @@ html[dir="rtl"] .contact-hero {
     display: block;
     margin-bottom: 4px;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.7px;
@@ -301,7 +301,7 @@ html[dir="rtl"] .contact-hero {
     max-width: 270px;
     margin: 0;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.65;
 }
 
@@ -346,7 +346,7 @@ html[dir="rtl"] .contact-hero {
 .contact-details-form-heading p {
     margin: 10px 0 27px;
     color: var(--text-light);
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.7;
 }
 
@@ -410,7 +410,7 @@ html[dir="rtl"] .contact-hero {
     border-radius: 7px;
     outline: none;
     font-family: var(--font-family);
-    font-size: 11px;
+    font-size: 13px;
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease;
@@ -473,7 +473,7 @@ body.dark .contact-enquiry-input select option {
     gap: 7px;
     margin: 0;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .contact-enquiry-bottom p i {
@@ -483,7 +483,7 @@ body.dark .contact-enquiry-input select option {
 }
 
 
-/* BUTTON */
+
 
 .contact-enquiry-submit {
     min-height: 43px;
@@ -635,7 +635,7 @@ html[dir="rtl"] .contact-enquiry-submit i {
 }
 
 
-/* HEADING */
+
 
 .contact-services-heading {
     max-width: 720px;
@@ -785,7 +785,7 @@ html[dir="rtl"] .contact-enquiry-submit i {
     display: inline-block;
     margin-bottom: 8px;
     color: var(--secondary);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.8px;
@@ -802,7 +802,7 @@ html[dir="rtl"] .contact-enquiry-submit i {
     min-height: 68px;
     margin: 11px 0 20px;
     color: var(--text-light);
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.75;
 }
 
@@ -1241,7 +1241,7 @@ body.dark .contact-service-card:hover {
     display: block;
     margin-bottom: 4px;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.7px;
@@ -1600,12 +1600,12 @@ body.dark .contact-map-marker-card {
     display: block;
     margin-bottom: 3px;
     color: var(--heading-color);
-    font-size: 9px;
+    font-size: 13px;
 }
 
 .contact-cta-card span {
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 11px;
 }
 
 

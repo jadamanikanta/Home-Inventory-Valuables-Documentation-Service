@@ -119,14 +119,14 @@
     display: block;
     margin-bottom: 2px;
     color: var(--heading-color);
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.25;
 }
 
 .inventory-highlight span {
     display: block;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.35;
 }
 
@@ -349,14 +349,14 @@
 .inventory-document-item strong {
     display: block;
     color: var(--heading-color);
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .inventory-document-item span {
     display: block;
     margin-top: 1px;
     color: var(--text-light);
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .inventory-document-item > i {
@@ -596,13 +596,11 @@
     }
 
     .inventory-floating-info-top {
-        top: 10px;
-        left: 5px;
+       display:none;
     }
 
     .inventory-floating-info-bottom {
-        right: 5px;
-        bottom: 10px;
+        display:none;
     }
 }
 
@@ -1332,12 +1330,12 @@
     max-width: 280px;
     margin: 0;
     color: var(--text-light);
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.65;
 }
 
 
-/* FOOTER STRIP */
+
 
 .inventory-categories-footer {
     display: flex;
@@ -1381,7 +1379,7 @@
 .inventory-categories-footer span {
     display: block;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 10px;
     line-height: 1.5;
 }
 
@@ -1392,7 +1390,7 @@
     flex-shrink: 0;
     color: var(--primary);
     text-decoration: none;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -1486,7 +1484,7 @@
     }
 
     .inventory-category-content p {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .inventory-categories-footer {
@@ -1587,7 +1585,7 @@
     min-height: 78px;
     margin: 0;
     color: var(--text-light);
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.7;
     text-align: center;
 }
@@ -1675,12 +1673,12 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-process-bottom span {
     display: block;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.5;
 }
 
 
-/* 1024 */
+
 
 @media (max-width: 1024px) {
 
@@ -1704,7 +1702,7 @@ html[dir="rtl"] .inventory-process-connector{
 }
 
 
-/* 768 */
+
 
 @media (max-width: 768px) {
 
@@ -1859,7 +1857,7 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-readiness-point p {
     margin: 0;
     color: var(--text-light);
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.6;
 }
 
@@ -1950,7 +1948,7 @@ html[dir="rtl"] .inventory-process-connector{
     display: block;
     margin-top: 3px;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .inventory-ready-badge {
@@ -1983,7 +1981,7 @@ html[dir="rtl"] .inventory-process-connector{
     display: block;
     margin-bottom: 5px;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .inventory-summary-item strong {
@@ -1992,7 +1990,7 @@ html[dir="rtl"] .inventory-process-connector{
 }
 
 
-/* PROGRESS */
+
 
 .inventory-readiness-progress {
     margin-bottom: 18px;
@@ -2071,14 +2069,14 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-document-item strong {
     display: block;
     color: var(--heading-color);
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .inventory-document-item small {
     display: block;
     margin-top: 2px;
     color: var(--text-light);
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .inventory-document-item > i {
@@ -2264,14 +2262,14 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-report-brand strong {
     display: block;
     color: var(--heading-color);
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .inventory-report-brand span {
     display: block;
     margin-top: 2px;
     color: var(--text-light);
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .inventory-report-status {
@@ -2303,7 +2301,7 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-report-stat > span {
     display: block;
     color: var(--text-light);
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .inventory-report-stat > strong {
@@ -2318,7 +2316,7 @@ html[dir="rtl"] .inventory-process-connector{
     align-items: center;
     gap: 4px;
     color: var(--secondary);
-    font-size: 6px;
+    font-size: 10px;
 }
 
 .inventory-report-stat small i {
@@ -2345,14 +2343,14 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-report-body-heading strong {
     display: block;
     color: var(--heading-color);
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .inventory-report-body-heading span {
     display: block;
     margin-top: 2px;
     color: var(--text-light);
-    font-size: 6px;
+    font-size: 10px;
 }
 
 .inventory-report-body-heading > i {
@@ -2380,8 +2378,8 @@ html[dir="rtl"] .inventory-process-connector{
 }
 
 .inventory-report-item-image {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 45px;
     overflow: hidden;
     flex-shrink: 0;
     border-radius: 5px;
@@ -2403,7 +2401,7 @@ html[dir="rtl"] .inventory-process-connector{
     display: block;
     overflow: hidden;
     color: var(--heading-color);
-    font-size: 8px;
+    font-size: 11px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -2412,12 +2410,12 @@ html[dir="rtl"] .inventory-process-connector{
     display: block;
     margin-top: 2px;
     color: var(--text-light);
-    font-size: 6px;
+    font-size: 10px;
 }
 
 .inventory-report-item-value {
     color: var(--primary);
-    font-size: 7px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -2438,7 +2436,7 @@ html[dir="rtl"] .inventory-process-connector{
     align-items: center;
     gap: 4px;
     color: var(--text-light);
-    font-size: 6px;
+    font-size: 10px;
 }
 
 .inventory-report-footer i {
@@ -2487,7 +2485,7 @@ html[dir="rtl"] .inventory-process-connector{
 .inventory-report-feature p {
     margin: 0;
     color: var(--text-light);
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.65;
 }
 

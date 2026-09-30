@@ -273,7 +273,7 @@ body.dark {
 
     text-decoration: none;
 
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 700;
 
     transition: var(--transition);
@@ -335,7 +335,7 @@ body.dark {
 
     border-radius: 50%;
 
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 800;
 }
 
@@ -421,14 +421,14 @@ body.dark {
 .sidebar-help strong {
     color: var(--heading-color);
 
-    font-size: 8px;
+    font-size: 11px;
 }
 
 
 .sidebar-help span {
     color: var(--text-light);
 
-    font-size: 6.5px;
+    font-size: 10px;
 
     line-height: 1.4;
 }
@@ -450,7 +450,7 @@ body.dark {
 
     text-decoration: none;
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 700;
 
     transition: var(--transition);
@@ -499,9 +499,7 @@ body.dark {
 }
 
 
-/* =========================================================
-   TOPBAR
-========================================================= */
+
 
 .dashboard-topbar {
     position: sticky;
@@ -709,14 +707,14 @@ body.dark .dashboard-topbar {
 .dashboard-profile-details strong {
     color: var(--heading-color);
 
-    font-size: 8px;
+    font-size: 11px;
 }
 
 
 .dashboard-profile-details small {
     color: var(--text-light);
 
-    font-size: 6.5px;
+    font-size: 10px;
 }
 
 
@@ -730,9 +728,7 @@ body.dark .dashboard-topbar {
 }
 
 
-/* =========================================================
-   PROFILE DROPDOWN
-========================================================= */
+
 
 .dashboard-profile-dropdown {
     position: absolute;
@@ -1005,7 +1001,7 @@ body.dark .dashboard-topbar {
 
     color: var(--text-light);
 
-    font-size: 10px;
+    font-size: 12px;
 
     line-height: 1.75;
 }
@@ -1150,7 +1146,7 @@ body.dark .dashboard-topbar {
 .dashboard-progress-info span:first-child {
     color: var(--text-light);
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 700;
 }
 
@@ -1165,7 +1161,7 @@ body.dark .dashboard-topbar {
 .dashboard-progress-info > span {
     color: var(--secondary);
 
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 700;
 }
 
@@ -1208,7 +1204,7 @@ body.dark .dashboard-topbar {
 
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -1233,9 +1229,7 @@ body.dark .dashboard-topbar {
 }
 
 
-/* =========================================================
-   METRICS
-========================================================= */
+
 
 .dashboard-metrics {
     display: grid;
@@ -1312,7 +1306,7 @@ body.dark .dashboard-topbar {
 .dashboard-metric-card span {
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 700;
 }
 
@@ -1329,13 +1323,11 @@ body.dark .dashboard-topbar {
 .dashboard-metric-card small {
     color: var(--secondary);
 
-    font-size: 6.5px;
+    font-size: 11px;
 }
 
 
-/* =========================================================
-   OVERVIEW GRID
-========================================================= */
+
 
 .dashboard-overview-grid {
     display: grid;
@@ -1348,9 +1340,7 @@ body.dark .dashboard-topbar {
 }
 
 
-/* =========================================================
-   PANELS
-========================================================= */
+
 
 .dashboard-panel {
     padding: 20px;
@@ -1387,7 +1377,7 @@ body.dark .dashboard-topbar {
 .dashboard-panel-heading span {
     color: var(--secondary);
 
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -1413,7 +1403,7 @@ body.dark .dashboard-topbar {
 
     text-decoration: none;
 
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -1489,14 +1479,14 @@ body.dark .dashboard-topbar {
 .dashboard-room-info strong {
     color: var(--heading-color);
 
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
 .dashboard-room-info span {
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -1530,7 +1520,7 @@ body.dark .dashboard-topbar {
 
     text-align: right;
 
-    font-size: 8px;
+    font-size: 10px;
 }
 
 
@@ -1600,14 +1590,14 @@ body.dark .dashboard-topbar {
 .dashboard-activity-item strong {
     color: var(--heading-color);
 
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
 .dashboard-activity-item span {
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -1670,7 +1660,7 @@ body.dark .dashboard-topbar {
 .dashboard-upcoming-content span {
     color: var(--secondary);
 
-    font-size: 7px;
+    font-size: 12px;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -1687,13 +1677,11 @@ body.dark .dashboard-topbar {
 .dashboard-upcoming-content small {
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
-/* =========================================================
-   INVENTORY TOOLBAR
-========================================================= */
+
 
 .inventory-toolbar {
     display: flex;
@@ -1743,7 +1731,7 @@ body.dark .dashboard-topbar {
 
     background: transparent;
 
-    font-size: 9px;
+    font-size: 10px;
 }
 
 
@@ -1767,7 +1755,7 @@ body.dark .dashboard-topbar {
 
     outline: 0;
 
-    font-size: 9px;
+    font-size: 10px;
 }
 
 
@@ -1821,7 +1809,7 @@ body.dark select option {
 
     border-bottom: 1px solid var(--border-color);
 
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -1855,8 +1843,8 @@ body.dark select option {
 
 
 .inventory-item-image {
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
 
     display: flex;
     align-items: center;
@@ -1891,14 +1879,14 @@ body.dark select option {
 .inventory-item strong {
     color: var(--heading-color);
 
-    font-size: 9px;
+    font-size: 12px;
 }
 
 
 .inventory-item span {
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -1919,7 +1907,7 @@ body.dark select option {
 
     cursor: pointer;
 
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 800;
 
     transition: var(--transition);
@@ -1936,7 +1924,7 @@ body.dark select option {
 .status-complete {
     color: var(--secondary);
 
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 800;
 }
 
@@ -1944,14 +1932,11 @@ body.dark select option {
 .status-pending {
     color: var(--warning);
 
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 800;
 }
 
 
-/* =========================================================
-   ROOM CARDS
-========================================================= */
 
 .room-dashboard-grid {
     display: grid;
@@ -2037,7 +2022,7 @@ body.dark select option {
 
     color: var(--text-light);
 
-    font-size: 8px;
+    font-size: 11px;
 }
 
 
@@ -2055,7 +2040,7 @@ body.dark select option {
 
     cursor: pointer;
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -2071,9 +2056,7 @@ body.dark select option {
 }
 
 
-/* =========================================================
-   UPLOAD
-========================================================= */
+
 
 .upload-dashboard-grid {
     display: grid;
@@ -2145,7 +2128,7 @@ body.dark select option {
 
     color: var(--text-light);
 
-    font-size: 9px;
+    font-size: 11px;
 
     line-height: 1.7;
 }
@@ -2156,7 +2139,7 @@ body.dark select option {
 
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -2176,7 +2159,7 @@ body.dark select option {
 
     color: var(--text-color);
 
-    font-size: 9px;
+    font-size: 11px;
 }
 
 
@@ -2188,9 +2171,7 @@ body.dark select option {
 }
 
 
-/* =========================================================
-   REPORTS
-========================================================= */
+
 
 .report-dashboard-grid {
     display: grid;
@@ -2249,7 +2230,7 @@ body.dark select option {
 .report-card span {
     color: var(--secondary);
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -2266,7 +2247,7 @@ body.dark select option {
 .report-card p {
     color: var(--text-light);
 
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
@@ -2299,7 +2280,7 @@ body.dark select option {
 
     cursor: pointer;
 
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 800;
 
     transition: var(--transition);
@@ -2319,9 +2300,7 @@ body.dark select option {
 }
 
 
-/* =========================================================
-   APPOINTMENTS
-========================================================= */
+
 
 .appointment-card {
     display: flex;
@@ -2362,7 +2341,7 @@ body.dark select option {
 
 
 .appointment-date span {
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -2375,7 +2354,7 @@ body.dark select option {
 
 
 .appointment-date small {
-    font-size: 7px;
+    font-size: 13px;
 }
 
 
@@ -2392,7 +2371,7 @@ body.dark select option {
 .appointment-details > span {
     color: var(--secondary);
 
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -2409,7 +2388,7 @@ body.dark select option {
 .appointment-details p {
     color: var(--text-color);
 
-    font-size: 9px;
+    font-size: 11px;
 }
 
 
@@ -2418,7 +2397,7 @@ body.dark select option {
 
     color: var(--text-light);
 
-    font-size: 8px;
+    font-size: 12px;
 
     line-height: 1.6;
 }
@@ -2433,14 +2412,12 @@ body.dark select option {
 
     border-radius: 20px;
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 800;
 }
 
 
-/* =========================================================
-   NOTIFICATIONS
-========================================================= */
+
 
 .notification-list {
     display: flex;
@@ -2507,14 +2484,14 @@ body.dark select option {
 .notification-item strong {
     color: var(--heading-color);
 
-    font-size: 10px;
+    font-size: 15px;
 }
 
 
 .notification-item p {
     color: var(--text-light);
 
-    font-size: 8px;
+    font-size: 12px;
 
     line-height: 1.6;
 }
@@ -2523,13 +2500,11 @@ body.dark select option {
 .notification-item small {
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
-/* =========================================================
-   PROFILE PAGE
-========================================================= */
+
 
 .profile-dashboard-card {
     display: flex;
@@ -2583,7 +2558,7 @@ body.dark select option {
 .profile-main-info span {
     color: var(--secondary);
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 800;
 
     text-transform: uppercase;
@@ -2600,7 +2575,7 @@ body.dark select option {
 .profile-main-info p {
     color: var(--text-light);
 
-    font-size: 8px;
+    font-size: 12px;
 }
 
 

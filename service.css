@@ -1428,7 +1428,7 @@ html[dir="rtl"] .services-process-card {
 .services-coverage-content p {
     margin: 8px 0 0;
     color: var(--text-light);
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.7;
 }
 
@@ -1517,7 +1517,7 @@ html[dir="rtl"] .services-coverage-card {
 }
 
 .services-final-cta {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--bg-color);
 }
 
