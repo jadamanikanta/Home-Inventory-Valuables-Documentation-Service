@@ -70,7 +70,7 @@
 .inventory-hero h1 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4.3vw, 58px);
+    font-size: clamp(38px, 3.1vw, 69px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -85,7 +85,7 @@
     max-width: 600px;
     margin: 17px 0 18px;
     color: var(--text-light);
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.65;
 }
 
@@ -126,7 +126,7 @@
 .inventory-highlight span {
     display: block;
     color: var(--text-light);
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.35;
 }
 
@@ -256,7 +256,7 @@
     display: block;
     margin-top: 2px;
     color: var(--text-light);
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .inventory-document-status {
@@ -267,7 +267,7 @@
     border-radius: 999px;
     background: var(--secondary-light);
     color: var(--secondary-dark);
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 700;
 }
 
@@ -450,14 +450,14 @@
 .inventory-floating-info strong {
     display: block;
     color: var(--heading-color);
-    font-size: 9px;
+    font-size: 12px;
     margin-bottom: 2px;
 }
 
 .inventory-floating-info span {
     display: block;
     color: var(--text-light);
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -2616,7 +2616,7 @@ html[dir="rtl"] .inventory-process-connector{
 
 .inventory-cta {
     padding: 70px 0;
-    background: var(--bg-color);
+    background: var(--primary-light);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }

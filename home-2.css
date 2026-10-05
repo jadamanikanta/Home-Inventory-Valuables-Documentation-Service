@@ -42,7 +42,7 @@
 .home2-hero h1 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(42px, 5vw, 68px);
+    font-size: clamp(42px, 5vw, 52px);
     line-height: 1.04;
     letter-spacing: -2.5px;
     font-weight: 800;
@@ -57,7 +57,7 @@
     max-width: 500px;
     margin: 19px 0 0;
     color: var(--text-light);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
 }
 
@@ -81,7 +81,7 @@
     padding: 10px 15px;
     border-radius: 7px;
     text-decoration: none;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     transition: 0.25s ease;
 }
@@ -580,12 +580,16 @@
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    margin-top: 23px;
-    color: var(--primary);
+    margin-top: 13px;
+    color: white;
+    background: var(--primary);
     text-decoration: none;
     font-size: 9px;
     font-weight: 800;
     transition: 0.25s ease;
+    border:1px solid var(--primary);
+    padding:10px;
+    border-radius:7px;
 }
 
 .home2-documentation-link i {
@@ -594,7 +598,9 @@
 }
 
 .home2-documentation-link:hover {
-    color: var(--secondary);
+    color: white;
+    background: var(--secondary);
+    border-color: var(--secondary);
 }
 
 
