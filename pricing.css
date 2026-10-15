@@ -161,10 +161,7 @@ body.dark .pricing-hero-tag {
     color: var(--secondary);
 }
 
-body.dark .pricing-hero-secondary {
-    background: var(--card-bg);
-    color: var(--primary);
-}
+
 
 html[dir="rtl"] .pricing-hero {
     direction: rtl;
