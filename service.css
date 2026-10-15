@@ -109,7 +109,7 @@
 .inventory-services-hero-content h1 {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(44px, 6vw, 76px);
+    font-size: clamp(40px, 4vw, 64px);
     line-height: 1.02;
     letter-spacing: -3px;
     font-weight: 800;
@@ -145,13 +145,13 @@
 
 .inventory-services-hero-primary,
 .inventory-services-hero-secondary {
-    min-height: 46px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 0 19px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 800;
@@ -342,7 +342,7 @@ html[dir="rtl"] .inventory-services-hero-primary i {
 .services-core-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(40px, 4.5vw, 58px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -861,7 +861,7 @@ html[dir="rtl"] .services-core-content > a i {
 .services-value-content h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4vw, 54px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1091,7 +1091,7 @@ html[dir="rtl"] .services-value-stat {
 .services-process-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4.5vw, 56px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1326,7 +1326,7 @@ html[dir="rtl"] .services-process-card {
 .services-coverage-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4.5vw, 56px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1594,7 +1594,7 @@ html[dir="rtl"] .services-coverage-card {
 .services-final-cta-content h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 5vw, 60px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1627,13 +1627,13 @@ html[dir="rtl"] .services-coverage-card {
 
 .services-final-cta-primary,
 .services-final-cta-secondary {
-    min-height: 45px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 0 19px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 800;
@@ -1663,16 +1663,16 @@ html[dir="rtl"] .services-coverage-card {
 /* SECONDARY */
 
 .services-final-cta-secondary {
-    color: var(--primary);
+    color: var(--secondary);
     background: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .services-final-cta-secondary:hover {
     color: #ffffff;
-    background: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    
 }
 
 .services-final-cta-primary i,

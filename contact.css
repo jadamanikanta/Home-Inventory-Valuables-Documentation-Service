@@ -57,7 +57,7 @@
 .contact-hero-container h1 {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(42px, 5vw, 64px);
+   font-size: clamp(40px, 4vw, 64px);
     line-height: 1.05;
     letter-spacing: -2px;
 }
@@ -190,7 +190,7 @@ html[dir="rtl"] .contact-hero {
 .contact-details-info h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: 34px;
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.12;
     letter-spacing: -0.8px;
 }
@@ -486,7 +486,7 @@ body.dark .contact-enquiry-input select option {
 
 
 .contact-enquiry-submit {
-    min-height: 43px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -495,10 +495,10 @@ body.dark .contact-enquiry-input select option {
     color: #ffffff;
     background: var(--primary);
     border: 1px solid var(--primary);
-    border-radius: 7px;
+    border-radius: 10px;
     cursor: pointer;
     font-family: var(--font-family);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
     transition:
         background 0.25s ease,
@@ -664,7 +664,7 @@ html[dir="rtl"] .contact-enquiry-submit i {
 .contact-services-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 50px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.5px;
 }
@@ -981,7 +981,7 @@ body.dark .contact-service-card:hover {
 .contact-location-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 50px);
+    font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.5px;
 }
@@ -1429,7 +1429,7 @@ body.dark .contact-map-marker-card {
 .contact-cta-content h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(35px, 4vw, 52px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.5px;
 }
@@ -1460,15 +1460,15 @@ body.dark .contact-map-marker-card {
 
 .contact-cta-primary,
 .contact-cta-secondary {
-    min-height: 43px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
     padding: 0 17px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
     transition:
         background 0.25s ease,
@@ -1490,16 +1490,16 @@ body.dark .contact-map-marker-card {
 }
 
 .contact-cta-secondary {
-    color: var(--primary);
+    color: var(--secondary);
     background: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .contact-cta-secondary:hover {
     color: #ffffff;
-    background: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    
 }
 
 .contact-cta-primary i,

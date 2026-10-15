@@ -78,7 +78,7 @@
 .service-details-hero h1 {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(45px, 6vw, 57px);
+   font-size: clamp(40px, 4vw, 64px);
     line-height: 1.04;
     letter-spacing: -2.5px;
     font-weight: 800;
@@ -97,13 +97,13 @@
 
 .service-details-primary,
 .service-details-secondary {
-    min-height: 45px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 0 18px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 800;
@@ -127,16 +127,16 @@
 }
 
 .service-details-secondary {
-    color: var(--primary);
+    color: var(--secondary);
     background: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .service-details-secondary:hover {
     color: #ffffff;
-    background: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    
 }
 
 .service-details-primary i,
@@ -170,7 +170,7 @@
 .service-details-overview-heading h2 {
     margin: 17px 0 0;
     color: var(--heading-color);
-    font-size: clamp(35px, 4vw, 40px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
 }
@@ -194,7 +194,7 @@
 .service-details-section-heading h2 {
     margin: 16px 0 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4.5vw, 57px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.07;
     letter-spacing: -2px;
 }
@@ -291,7 +291,7 @@
 .service-details-deliverables-content h2 {
     margin: 17px 0 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 52px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
 }
@@ -483,7 +483,7 @@
 .service-details-cta-content h2 {
     margin: 16px 0 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4.5vw, 57px);
+    font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.07;
     letter-spacing: -2px;
 }

@@ -32,7 +32,7 @@
 }
 
 body.dark {
-    --bg-color: #0D1720;
+    --bg-color: #0f0f0f;
     --text-color: #E8EEF2;
 
     --card-bg: #14232E;
@@ -145,11 +145,18 @@ body.dark .logo-dark {
     white-space: nowrap;
 }
 
+
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     order: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo img {
+        filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+    }
 }
 
 .logo-header-secondary {
@@ -582,8 +589,8 @@ body.dark .dropdown-menu {
 }
 
 .footer-logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     display: block;
     flex-shrink: 0;

@@ -68,7 +68,7 @@
 .how-works-hero-content h1 {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(45px, 6vw, 60px);
+    font-size: clamp(40px, 4vw, 64px);
     line-height: 1.04;
     letter-spacing: -2.5px;
     font-weight: 800;
@@ -97,13 +97,13 @@
 
 .how-works-primary,
 .how-works-secondary {
-    min-height: 45px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 0 18px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 800;
@@ -127,16 +127,16 @@
 }
 
 .how-works-secondary {
-    color: #ffffff;
+    color: var(--secondary);
     background: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .how-works-secondary:hover {
     
-    background: var(--primary);
-    border-color: none;
-    transform: translateY(-2px);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color:white;
 }
 
 .how-works-primary i,
@@ -327,7 +327,7 @@ html[dir="rtl"] .how-works-primary i {
 .how-process-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(34px, 4vw, 48px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.12;
     letter-spacing: -1.5px;
 }
@@ -581,7 +581,7 @@ html[dir="rtl"] .how-process-icon {
 .how-documentation-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(34px, 4vw, 48px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.12;
     letter-spacing: -1.5px;
 }
@@ -862,7 +862,7 @@ html[dir="rtl"] .how-documentation-card {
 .how-receive-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(34px, 4vw, 48px);
+    font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.12;
     letter-spacing: -1.5px;
 }
@@ -1156,7 +1156,7 @@ html[dir="rtl"] .how-receive-image-badge {
 .how-benefits-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 50px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.1;
     letter-spacing: -1.6px;
 }
@@ -1517,7 +1517,7 @@ html[dir="rtl"] .how-benefit-line {
 .inventory-maintenance-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 50px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.1;
     letter-spacing: -1.6px;
 }
@@ -1913,7 +1913,7 @@ html[dir="rtl"] .inventory-maintenance-note {
     max-width: 700px;
     margin: 0 auto;
     color: var(--heading-color);
-    font-size: clamp(34px, 4vw, 48px);
+    font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.12;
     letter-spacing: -1.5px;
 }
@@ -1945,13 +1945,13 @@ html[dir="rtl"] .inventory-maintenance-note {
 
 .how-works-cta-primary,
 .how-works-cta-secondary {
-    min-height: 45px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
     padding: 0 19px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 800;
@@ -1976,16 +1976,16 @@ html[dir="rtl"] .inventory-maintenance-note {
 }
 
 .how-works-cta-secondary {
-    color: var(--primary);
+    color: var(--secondary);
     background: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .how-works-cta-secondary:hover {
     color: #ffffff;
-    background: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    
 }
 
 .how-works-cta-primary i,

@@ -1,13 +1,42 @@
+
 .home2-hero {
+    position: relative;
     min-height: 90vh;
     display: flex;
     align-items: center;
     overflow: hidden;
     padding: 45px 0;
-    background: var(--bg-color);
+    isolation: isolate;
+    background-color: #000000;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.86) 43%,
+            rgba(0, 0, 0, 0.76) 68%,
+            rgba(0, 0, 0, 0.58) 100%
+        ),
+        url("hero2-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+[dir="rtl"] .home2-hero {
+    background-image:
+        linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0.96) 0%,
+            rgba(0, 0, 0, 0.90) 38%,
+            rgba(0, 0, 0, 0.76) 68%,
+            rgba(0, 0, 0, 0.58) 100%
+        ),
+        url("hero2-banner.jpeg");
 }
 
 .home2-hero-container {
+    position: relative;
+    z-index: 1;
     width: min(1200px, calc(100% - 50px));
     margin: 0 auto;
     display: grid;
@@ -15,8 +44,6 @@
     align-items: center;
     gap: 60px;
 }
-
-
 
 .home2-hero-content {
     max-width: 500px;
@@ -41,33 +68,33 @@
 
 .home2-hero h1 {
     margin: 0;
-    color: var(--heading-color);
-    font-size: clamp(42px, 5vw, 52px);
-    line-height: 1.04;
-    letter-spacing: -2.5px;
+    color: #FFFFFF;
+    font-size: clamp(40px, 4vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -2px;
     font-weight: 800;
 }
 
 .home2-hero h1 span {
     display: block;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .home2-hero-content > p {
     max-width: 500px;
     margin: 19px 0 0;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.78);
     font-size: 14px;
     line-height: 1.8;
 }
-
 
 /* BUTTONS */
 
 .home2-hero-actions {
     display: flex;
     align-items: center;
-    gap: 9px;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 27px;
 }
 
@@ -77,47 +104,48 @@
     align-items: center;
     justify-content: center;
     gap: 7px;
-    min-height: 41px;
-    padding: 10px 15px;
-    border-radius: 7px;
+    min-height: 43px;
+    padding: 11px 17px;
+    border-radius: 10px;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
-    transition: 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .home2-hero-primary {
     border: 1px solid var(--primary);
     background: var(--primary);
-    color: #ffffff;
-    
+    color: white;
 }
 
 .home2-hero-primary:hover {
-    border-color: var(--secondary);
     background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+   
 }
 
 .home2-hero-secondary {
-    border: 1px solid var(--primary);
-    background: transparent;
-    color: var(--primary);
+    border: 1px solid var(--secondary);
+    background: rgba(0, 0, 0, 0.18);
+    color: var(--secondary);
 }
 
 .home2-hero-secondary:hover {
-    background: var(--primary);
-    color:white;
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: white;
     
 }
 
 .home2-hero-primary i,
 .home2-hero-secondary i {
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
 }
 
-
-
+/* TRUST ITEMS */
 
 .home2-hero-trust {
     display: flex;
@@ -126,14 +154,14 @@
     gap: 13px;
     margin-top: 27px;
     padding-top: 17px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .home2-trust-item {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.78);
     font-size: 11px;
     font-weight: 700;
 }
@@ -144,8 +172,7 @@
     color: var(--secondary);
 }
 
-
-
+/* IMAGE GALLERY */
 
 .home2-hero-gallery {
     display: grid;
@@ -158,9 +185,9 @@
     position: relative;
     overflow: hidden;
     min-width: 0;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 13px;
-    background: var(--card-bg);
+    background: #111111;
 }
 
 .home2-gallery-card-large {
@@ -171,14 +198,8 @@
     grid-column: span 3;
 }
 
-.home2-gallery-card:nth-child(3) {
-    grid-column: span 2;
-}
-
-.home2-gallery-card:nth-child(4) {
-    grid-column: span 2;
-}
-
+.home2-gallery-card:nth-child(3),
+.home2-gallery-card:nth-child(4),
 .home2-gallery-card:nth-child(5) {
     grid-column: span 2;
 }
@@ -201,9 +222,10 @@
     inset: 0;
     background: linear-gradient(
         180deg,
-        transparent 35%,
-        rgba(5, 18, 27, 0.82) 100%
+        rgba(0, 0, 0, 0.02) 25%,
+        rgba(0, 0, 0, 0.84) 100%
     );
+    pointer-events: none;
 }
 
 .home2-gallery-overlay {
@@ -215,7 +237,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 .home2-gallery-overlay > span {
@@ -227,7 +249,7 @@
     flex-shrink: 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 7px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
 }
 
@@ -245,15 +267,33 @@
 .home2-gallery-overlay small {
     display: block;
     margin-top: 2px;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 10px;
 }
 
+/* RTL */
+
+[dir="rtl"] .home2-hero-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .home2-hero-content {
+    text-align: right;
+}
+
+[dir="rtl"] .home2-hero-actions,
+[dir="rtl"] .home2-hero-trust {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .home2-gallery-overlay {
+    right: 11px;
+    left: 11px;
+}
 
 /* 1024 */
 
 @media (max-width: 1024px) {
-
     .home2-hero {
         padding: 40px 0;
     }
@@ -263,24 +303,39 @@
     }
 
     .home2-hero h1 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .home2-hero-gallery {
         grid-template-rows: 145px 145px;
         gap: 8px;
     }
-
 }
-
 
 /* 768 */
 
 @media (max-width: 768px) {
-
     .home2-hero {
         min-height: auto;
         padding: 65px 0;
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.88) 0%,
+                rgba(0, 0, 0, 0.92) 100%
+            ),
+            url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=90");
+        background-position: center;
+    }
+
+    [dir="rtl"] .home2-hero {
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.88) 0%,
+                rgba(0, 0, 0, 0.92) 100%
+            ),
+            url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1920&q=90");
     }
 
     .home2-hero-container {
@@ -291,12 +346,12 @@
 
     .home2-hero-content {
         max-width: 600px;
-        text-align: center;
         margin: 0 auto;
+        text-align: center;
     }
 
     .home2-hero h1 {
-        font-size: clamp(40px, 8vw, 55px);
+        font-size: clamp(40px, 7vw, 52px);
     }
 
     .home2-hero-content > p {
@@ -309,18 +364,24 @@
         justify-content: center;
     }
 
+    [dir="rtl"] .home2-hero-content {
+        text-align: center;
+    }
+
+    [dir="rtl"] .home2-hero-actions,
+    [dir="rtl"] .home2-hero-trust {
+        justify-content: center;
+    }
+
     .home2-hero-gallery {
         width: 100%;
         grid-template-rows: 170px 150px;
     }
-
 }
-
 
 /* 360 */
 
 @media (max-width: 360px) {
-
     .home2-hero {
         padding: 50px 0;
     }
@@ -331,12 +392,12 @@
     }
 
     .home2-hero h1 {
-        font-size: 36px;
-        letter-spacing: -1.3px;
+        font-size: 34px;
+        letter-spacing: -1.2px;
     }
 
     .home2-hero-content > p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .home2-hero-actions {
@@ -356,15 +417,12 @@
     }
 
     .home2-hero-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: 145px 125px 125px;
         gap: 7px;
     }
 
-    .home2-gallery-card-large {
-        grid-column: span 2;
-    }
-
+    .home2-gallery-card-large,
     .home2-gallery-card:nth-child(2) {
         grid-column: span 2;
     }
@@ -379,6 +437,7 @@
         right: 7px;
         bottom: 7px;
         left: 7px;
+        gap: 5px;
     }
 
     .home2-gallery-overlay > span {
@@ -386,7 +445,15 @@
         height: 26px;
     }
 
+    .home2-gallery-overlay strong {
+        font-size: 10px;
+    }
+
+    .home2-gallery-overlay small {
+        font-size: 9px;
+    }
 }
+
 
 .home2-documentation {
     padding: 90px 0;
@@ -500,7 +567,7 @@
 .home2-section-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(32px, 4vw, 52px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.8px;
     font-weight: 800;
@@ -589,7 +656,7 @@
     transition: 0.25s ease;
     border:1px solid var(--primary);
     padding:10px;
-    border-radius:7px;
+    border-radius:10px;
 }
 
 .home2-documentation-link i {
@@ -599,12 +666,14 @@
 
 .home2-documentation-link:hover {
     color: white;
-    background: var(--secondary);
+   background: var(--secondary);
     border-color: var(--secondary);
+    transform: translateY(-2px);
+
 }
 
 
-/* 1024 */
+
 
 @media (max-width: 1024px) {
 
@@ -742,7 +811,7 @@
 .home2-categories-heading h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(34px, 4vw, 52px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.8px;
     font-weight: 800;
@@ -995,7 +1064,7 @@
 .home2-insurance-content h2 {
     margin: 0;
     color: #ffffff;
-    font-size: clamp(34px, 4vw, 52px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.8px;
     font-weight: 800;
@@ -1358,7 +1427,7 @@
 .home2-process-header h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(34px, 4vw, 52px);
+    font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -1.8px;
     font-weight: 800;
@@ -1825,7 +1894,7 @@ html[dir="rtl"] .home2-process:hover .home2-process-connector{
 .home2-appraisal-content h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 38px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
     font-weight: 800;
@@ -2090,7 +2159,7 @@ html[dir="rtl"] .home2-appraisal-link i {
 .home2-report-content h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 54px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
     font-weight: 800;
@@ -2531,7 +2600,7 @@ html[dir="rtl"] .home2-report-room-heading > i {
 .home2-benefits-header h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(36px, 4vw, 54px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
     font-weight: 800;
@@ -2818,7 +2887,7 @@ html[dir="rtl"] .home2-benefit-content a i {
 .home2-final-cta-content h2 {
     margin: 0;
     color: var(--heading-color);
-    font-size: clamp(38px, 4.2vw, 56px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.07;
     letter-spacing: -2px;
     font-weight: 800;
@@ -2856,7 +2925,7 @@ html[dir="rtl"] .home2-benefit-content a i {
     justify-content: center;
     gap: 8px;
     padding: 0 17px;
-    border-radius: 7px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 800;
@@ -2881,16 +2950,16 @@ html[dir="rtl"] .home2-benefit-content a i {
 }
 
 .home2-final-cta-secondary {
-    color: var(--primary);
+    color: var(--secondary);
     background: transparent;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
 }
 
 .home2-final-cta-secondary:hover {
     color: #ffffff;
-    background: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    
 }
 
 .home2-final-cta-primary i,

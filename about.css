@@ -44,7 +44,7 @@
     margin: 22px 0 20px;
     max-width: 600px;
     color: var(--heading-color);
-    font-size: clamp(42px, 5vw, 66px);
+    font-size: clamp(40px, 4vw, 64px);
     line-height: 1.05;
     letter-spacing: -2.5px;
     font-weight: 800;
@@ -76,13 +76,13 @@
 
 .about-primary-btn,
 .about-secondary-btn {
-    min-height: 46px;
+    min-height: 44px;
     padding: 0 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border-radius: 9px;
+    border-radius: 10px;
     font-size: 10px;
     font-weight: 800;
     text-decoration: none;
@@ -100,22 +100,22 @@
 
 
 .about-primary-btn:hover {
-    background: var(--primary-dark);
+    background: var(--secondary);
     transform: translateY(-3px);
 }
 
 
 .about-secondary-btn {
-    border: 1px solid var(--primary);
-    color: var(--primary);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
     background: transparent;
 }
 
 
 .about-secondary-btn:hover {
-    background: var(--primary);
+    background: var(--secondary);
     color: #ffffff;
-    transform: translateY(-3px);
+    
 }
 
 
@@ -713,12 +713,12 @@
 }
 
 .purpose-mini-one {
-    top: 80px;
+    top: 5px;
     right: 5px;
 }
 
 .purpose-mini-two {
-    bottom: 75px;
+    bottom: 2px;
     left: 0;
     animation-delay: -2s;
 }
@@ -742,7 +742,7 @@
     margin: 22px 0 20px;
     max-width: 560px;
     color: var(--heading-color);
-    font-size: clamp(40px, 4.2vw, 36px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.08;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1089,7 +1089,7 @@ html[dir="rtl"] .purpose-point:hover {
 .about-story-heading h2 {
     margin: 20px 0 18px;
     color: var(--heading-color);
-    font-size: clamp(40px, 4.5vw, 38px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1435,7 +1435,7 @@ html[dir="rtl"] .story-card-number {
 .about-values-heading h2 {
     margin: 20px 0 18px;
     color: var(--heading-color);
-    font-size: clamp(40px, 4.5vw, 38px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -1783,7 +1783,7 @@ html[dir="rtl"] .about-value-card::after {
 .about-expertise-heading h2 {
     margin: 20px 0 18px;
     color: var(--heading-color);
-    font-size: clamp(40px, 4.5vw, 38px);
+    font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2px;
     font-weight: 800;
@@ -2161,7 +2161,7 @@ html[dir="rtl"] .expertise-row:hover .expertise-arrow {
 .about-expertise-intro h2 {
     margin: 24px 0 20px;
     color: var(--heading-color);
-    font-size: clamp(42px, 4.5vw, 38px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.06;
     letter-spacing: -2.2px;
     font-weight: 800;
@@ -2468,7 +2468,7 @@ html[dir="rtl"] .expertise-line:hover {
 
 .about-final {
     position: relative;
-    padding: 35px 0;
+    padding: 25px 0;
     overflow: hidden;
     background: var(--bg-color);
 }
@@ -2503,7 +2503,7 @@ html[dir="rtl"] .expertise-line:hover {
     max-width: 700px;
     margin: 24px 0 20px;
     color: var(--heading-color);
-    font-size: clamp(45px, 5vw, 38px);
+     font-size: clamp(30px, 3.5vw, 44px);
     line-height: 1.02;
     letter-spacing: -2.8px;
     font-weight: 800;
@@ -2531,7 +2531,7 @@ html[dir="rtl"] .expertise-line:hover {
 
 .about-final-primary,
 .about-final-secondary {
-    min-height: 50px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2556,7 +2556,7 @@ html[dir="rtl"] .expertise-line:hover {
 
 .about-final-primary:hover {
     background: var(--secondary);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .about-final-primary svg {
@@ -2565,16 +2565,16 @@ html[dir="rtl"] .expertise-line:hover {
 }
 
 .about-final-secondary {
-    border: 1px solid var(--primary);
-    color: var(--primary);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
     background: transparent;
 }
 
 .about-final-secondary:hover {
-    border-color: var(--primary);
-    background: var(--primary);
+    border-color: var(--secondary);
+    background: var(--secondary);
     color: #ffffff;
-    transform: translateY(-3px);
+    
 }
 
 
